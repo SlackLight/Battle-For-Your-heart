@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BackWall
-  - FrontWall
+  - Difference
   layers:
   - Default
   - TransparentFX
