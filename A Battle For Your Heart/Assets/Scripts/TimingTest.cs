@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class TimingTest : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class TimingTest : MonoBehaviour
     public bool testingMode = true;
     public int sceneToTransferTo;
 
+    [SerializeField] UnityEvent scored;
+    [SerializeField] UnityEvent miss;
+    [SerializeField] UnityEvent clear;
+
     private void Start()
     {
         score.text = "Score - 0";
@@ -60,6 +65,7 @@ public class TimingTest : MonoBehaviour
                 missText.text = "Too few...";
                 missTextParent.SetActive(true);
             }
+
 
             //If its time to scene transfer
             if(sceneTransferTimer <= 0)
@@ -122,11 +128,13 @@ public class TimingTest : MonoBehaviour
                         scoreValue++;
                         score.text = "Score - " + scoreValue;
                         successTextParent.SetActive(true);
+                        scored.Invoke();
                     }
                     //Otherwise
                     else
                     {
                         missTextParent.SetActive(true);
+                        miss.Invoke();
                     }
                 }
             }
@@ -139,6 +147,7 @@ public class TimingTest : MonoBehaviour
                     //Disable the text
                     successTextParent.SetActive(false);
                     missTextParent.SetActive(false);
+                    clear.Invoke();
 
                     //Resets the pressing
                     notPressed = true;
@@ -148,6 +157,7 @@ public class TimingTest : MonoBehaviour
 
                     //Reset slider to random value to start
                     slider.value = Random.Range(slider.minValue, slider.maxValue);
+                    goingUp = (Random.value > 0.5f);
                 }
                 else
                 {
