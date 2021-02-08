@@ -62,7 +62,7 @@ public class TimingTest : MonoBehaviour
             }
             else
             {
-                missText.text = "Too few...";
+                missText.text = "Lose...";
                 missTextParent.SetActive(true);
             }
 
@@ -75,11 +75,13 @@ public class TimingTest : MonoBehaviour
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
+                //Otherwise loads the scene specified in inspector
                 else
                 {
                     SceneManager.LoadScene(sceneToTransferTo);
                 }
             }
+            //Counts down scene transfer as soon as main timers done
             else
             {
                 sceneTransferTimer -= Time.deltaTime;
@@ -98,7 +100,7 @@ public class TimingTest : MonoBehaviour
             //Moves the slider when not in pressed mode
             if (notPressed)
             {
-                //Moves the slider
+                //Moves the slider right
                 if (goingUp == true)
                 {
                     slider.value += sliderSpeed * Time.deltaTime;
@@ -107,6 +109,7 @@ public class TimingTest : MonoBehaviour
                         goingUp = false;
                     }
                 }
+                //Moves the slider left
                 if(goingUp == false)
                 {
                     slider.value -= sliderSpeed * Time.deltaTime;
@@ -134,6 +137,7 @@ public class TimingTest : MonoBehaviour
                     else
                     {
                         missTextParent.SetActive(true);
+                        //Runs everthing in miss unity event
                         miss.Invoke();
                     }
                 }
@@ -147,6 +151,7 @@ public class TimingTest : MonoBehaviour
                     //Disable the text
                     successTextParent.SetActive(false);
                     missTextParent.SetActive(false);
+                    //Runs everything in the clear unity event
                     clear.Invoke();
 
                     //Resets the pressing
