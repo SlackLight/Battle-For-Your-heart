@@ -16,6 +16,13 @@ public class LevelGeneration : MonoBehaviour
 
     public Vector3 currentPosition;
 
+    Grid grid;
+
+    private void Start()
+    {
+        grid = this.GetComponent<Grid>();
+    }
+
     public void GenerateLines()
     {
         //Clears the list of lines
@@ -56,14 +63,16 @@ public class LevelGeneration : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if(lines.Count > 0 && lines[0] != null)
-        {
-            for (int i = 0; i < lines.Count; i++)
-            {
-                Gizmos.DrawRay(lines[i].GetPosition(0), Vector3.forward * 200);
-            }
-        }
+        //if(lines.Count > 0 && lines[0] != null)
+        //{
+        //    for (int i = 0; i < lines.Count; i++)
+        //    {
+        //        Gizmos.DrawRay(lines[i].GetPosition(0), Vector3.forward * 200);
+        //    }
+        //}
         
+        
+
     }
 
 
