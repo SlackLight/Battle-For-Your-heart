@@ -12,9 +12,17 @@ public class LevelGeneration : MonoBehaviour
     //Local use variable
     private float currentSpacing;
     private GameObject currentLine;
-    public float bpm;
 
     public Vector3 currentPosition;
+
+    public GameObject gridNotes;
+
+    //Stores right, down, up, left
+    public List<GameObject> blockPrefabs;
+
+    public int gridBeatNumber = 100;
+    public int gridSpacing = 1;
+
 
     public void GenerateLines()
     {
@@ -54,16 +62,48 @@ public class LevelGeneration : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    public void GenerateGrid()
     {
-        if(lines.Count > 0 && lines[0] != null)
+        //Checks that the lines have already been made
+        if(lines.Count <= 3)
         {
-            for (int i = 0; i < lines.Count; i++)
+            Debug.Log("Not enough lines generated");
+        }
+        else if(blockPrefabs.Count < 4)
+        {
+            Debug.Log("Not enough block prefabs");
+        }
+        //If they have then makes toggleable gameobjects at each beat point
+        else
+        {
+            //For each line
+            for (int i = 0; i < 4; i++)
             {
-                Gizmos.DrawRay(lines[i].GetPosition(0), Vector3.forward * 200);
+                //Sets the current position to the first position of the current line
+                currentPosition = lines[i].GetPosition(0);
+                
+                //Instantiates all the beats blocks on that line
+                for (int a = 0; a < gridBeatNumber; a++)
+                {
+                    Instantiate(blockPrefabs[i], currentPosition, Quaternion.identity, gridNotes.transform);
+                    currentPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z + gridSpacing);
+                }
             }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        //if(lines.Count > 0 && lines[0] != null)
+        //{
+        //    for (int i = 0; i < lines.Count; i++)
+        //    {
+        //        Gizmos.DrawRay(lines[i].GetPosition(0), Vector3.forward * 200);
+        //    }
+        //}
         
+        
+
     }
 
 
