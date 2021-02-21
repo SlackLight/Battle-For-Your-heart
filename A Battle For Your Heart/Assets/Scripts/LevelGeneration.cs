@@ -12,16 +12,17 @@ public class LevelGeneration : MonoBehaviour
     //Local use variable
     private float currentSpacing;
     private GameObject currentLine;
-    public float bpm;
 
     public Vector3 currentPosition;
 
-    Grid grid;
+    public GameObject gridNotes;
 
-    private void Start()
-    {
-        grid = this.GetComponent<Grid>();
-    }
+    //Stores right, down, up, left
+    public List<GameObject> blockPrefabs;
+
+    public int gridBeatNumber = 100;
+    public int gridSpacing = 1;
+
 
     public void GenerateLines()
     {
@@ -58,6 +59,36 @@ public class LevelGeneration : MonoBehaviour
             currentPosition = lines[i].GetPosition(1);
             lines[i].SetPosition(1, new Vector3(currentSpacing * lineSpacing, currentPosition.y, currentPosition.z));
 
+        }
+    }
+
+    public void GenerateGrid()
+    {
+        //Checks that the lines have already been made
+        if(lines.Count <= 3)
+        {
+            Debug.Log("Not enough lines generated");
+        }
+        else if(blockPrefabs.Count < 4)
+        {
+            Debug.Log("Not enough block prefabs");
+        }
+        //If they have then makes toggleable gameobjects at each beat point
+        else
+        {
+            //For each line
+            for (int i = 0; i < 4; i++)
+            {
+                //Sets the current position to the first position of the current line
+                currentPosition = lines[i].GetPosition(0);
+                
+                //Instantiates all the beats blocks on that line
+                for (int a = 0; a < gridBeatNumber; a++)
+                {
+                    Instantiate(blockPrefabs[i], currentPosition, Quaternion.identity, gridNotes.transform);
+                    currentPosition = new Vector3(currentPosition.x, currentPosition.y, currentPosition.z + gridSpacing);
+                }
+            }
         }
     }
 
