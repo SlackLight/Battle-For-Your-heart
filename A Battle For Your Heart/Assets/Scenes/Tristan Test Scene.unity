@@ -150,10 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17a482be1e267f4c94d2c7a73ebc97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Strenght: 0
+  Strength: 0
   Defence: 0
   Health: 0
   incomingDamage: 0
+  AppliedDamage: 0
 --- !u!4 &507220097
 Transform:
   m_ObjectHideFlags: 0
@@ -210,9 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a595c5ef86f724e8163739328bd7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Strenght: 91
-  Defence: 30
-  Health: 10
+  Strength: 10
+  Defence: 2
+  Health: 100
 --- !u!4 &1596587143
 Transform:
   m_ObjectHideFlags: 0

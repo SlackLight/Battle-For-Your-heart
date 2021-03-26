@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StatManager : MonoBehaviour
 {
-    public int Strenght;
+    public int Strength;
     public int Defence;
     public int Health;
 
