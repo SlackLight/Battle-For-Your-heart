@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Difference
+  - LeftBlock
+  - RightBlock
+  - UpBlock
+  - DownBlock
   - NoteBlock
   layers:
   - Default
