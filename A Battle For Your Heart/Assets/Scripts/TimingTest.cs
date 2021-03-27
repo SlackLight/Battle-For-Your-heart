@@ -78,7 +78,7 @@ public class TimingTest : MonoBehaviour
                 //Otherwise loads the scene specified in inspector
                 else
                 {
-                    SceneManager.LoadScene(sceneToTransferTo);
+                    TimeManager.instance.LoadEndHallwayScene();
                 }
             }
             //Counts down scene transfer as soon as main timers done
