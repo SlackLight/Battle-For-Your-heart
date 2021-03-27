@@ -5,6 +5,7 @@ using UnityEngine;
 public class StairsScript : MonoBehaviour
 {
     public GameObject otherDoor;
+    public GameObject otherDoorSpawnPosition;
 
     public GameObject player;
 
@@ -31,7 +32,7 @@ public class StairsScript : MonoBehaviour
         if(cooldownTimer <= 0 && Input.GetKey(KeyCode.Space))
         {
            otherDoor.GetComponent<StairsScript>().cooldownTimer = timerStartValue;
-           player.transform.position = otherDoor.transform.position;
+           player.transform.position = otherDoorSpawnPosition.transform.position;
            cooldownTimer = timerStartValue;
         }
         
