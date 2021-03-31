@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
 
     public Renderer spriteRenderer;
-    private void Start()
+    private void Awake()
     {
-        if (PlayerController.instance)
+        if (PlayerController.instance != null)
         {
             Destroy(this);
         }
@@ -37,6 +37,16 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (NPCManager.instance.convoInProgress)
+        {
+            canMove = false;
+            rb.velocity = Vector3.zero;
+        }
+        else
+        {
+            canMove = true;
+        }
+
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
 
