@@ -1,17 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
+    [SerializeField]Image healthbar;
 
     [SerializeField] int Strength;
     [SerializeField] int Defence;
     [SerializeField] int Health;
+    [SerializeField] int currentHealth;
 
     private int outgoingDamage;
     public int incomingDamage;
    [SerializeField] private int AppliedDamage;
+    int missedCount = 0;
+    int perfectCount = 0;
+    int earlyCount = 0;
+    int lateCount = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,7 +27,7 @@ public class CombatManager : MonoBehaviour
             Defence = StatManager.Stats.Defence;
             Strength = StatManager.Stats.Strength;
             Health = StatManager.Stats.Health;
-
+            currentHealth = Health;
             //incomingDamage = GetHashCode enemy stats
 
         }
@@ -29,6 +36,7 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthbar.fillAmount = (float)currentHealth / Health;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(Random.Range(1,20));
@@ -38,6 +46,7 @@ public class CombatManager : MonoBehaviour
 
 
     }
+    //temp damage testing
     void TakeDamage(int inwardDamage)
     {
         incomingDamage = inwardDamage;
@@ -50,16 +59,21 @@ public class CombatManager : MonoBehaviour
         ResolveDamage();
     }
 
-    public void Perfect(int inwardDamage)
+    public void Perfect()
     {
+        incomingDamage = 0;
+        perfectCount++;
         AppliedDamage = 0;
         outgoingDamage = Strength;
-        CalculateDamage();
+        ResolveDamage();
 
     }
     public void TooEarly(int inwardDamage)
     {
-        AppliedDamage = AppliedDamage/4;
+        earlyCount++;
+        incomingDamage = inwardDamage;
+
+        incomingDamage = incomingDamage / 4;
         outgoingDamage = Strength/2;
 
         CalculateDamage();
@@ -67,7 +81,10 @@ public class CombatManager : MonoBehaviour
     }
     public void TooLate(int inwardDamage)
     {
-        AppliedDamage = AppliedDamage / 4;
+        lateCount++;
+        incomingDamage = inwardDamage;
+
+        incomingDamage = incomingDamage / 4;
         outgoingDamage = Strength / 2;
         CalculateDamage();
 
@@ -75,6 +92,10 @@ public class CombatManager : MonoBehaviour
     }
     public void Missed(int inwardDamage)
     {
+        incomingDamage = inwardDamage;
+
+        missedCount++;
+       
         //Health = Health- AppliedDamage; dont do this here
         outgoingDamage = 0;
         CalculateDamage();
@@ -82,8 +103,10 @@ public class CombatManager : MonoBehaviour
     }
     public void ResolveDamage()
     {
-        Health = Health - AppliedDamage;
-        if (Health <= 0)
+        print("took " + AppliedDamage + " damage");
+
+        currentHealth = currentHealth - AppliedDamage;
+        if (currentHealth <= 0)
         {
             print("oh lord she dead");
         }
