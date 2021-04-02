@@ -16,6 +16,8 @@ public class ClassRoom : MonoBehaviour
     public SpriteRenderer sr;
     public BoxCollider bc;
 
+    bool inTrigger;
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -26,18 +28,28 @@ public class ClassRoom : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && inTrigger)
+        {
+            TimeManager.instance.LoadClassMinigame(sceneIDToBeLoaded, classRoomNumber);
+        }
+    }
+
     public void NotActive()
     {
         sr.color = Color.black;
         bc.enabled = false;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            TimeManager.instance.LoadClassMinigame(sceneIDToBeLoaded, classRoomNumber);
-        }
+        inTrigger = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        inTrigger = false;
     }
 
 }
