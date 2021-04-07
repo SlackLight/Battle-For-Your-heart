@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour
         RightArrow.DisableKeyword("_EMISSION");
         LeftArrow.DisableKeyword("_EMISSION");
         UpArrow.DisableKeyword("_EMISSION");
+        
 
 
     }
@@ -99,6 +100,7 @@ public class InputManager : MonoBehaviour
                 else if (gameObject.name == "HitBox Early")
                 {
                     combatManagerRef.TooEarly(EnemyAttack);
+
                     //print("Left Early");
 
                 }
