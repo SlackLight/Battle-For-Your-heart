@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
 
     public float hInput;
     public float vInput;
@@ -17,24 +18,42 @@ public class PlayerController : MonoBehaviour
     bool frontWall;
     bool backWall;
 
+    public bool canMove = true;
+
     public Renderer spriteRenderer;
-    private void Start()
+    private void Awake()
     {
-       rb = this.GetComponent<Rigidbody>();
+        if (PlayerController.instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            PlayerController.instance = this;
+        }
+        rb = this.GetComponent<Rigidbody>();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
+        if (NPCManager.instance.convoInProgress)
+        {
+            canMove = false;
+            rb.velocity = Vector3.zero;
+        }
+        else
+        {
+            canMove = true;
+        }
+
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
 
-        //Checks if currently stunned before moving (should check this also if someone is trying to damage (maybe add an invisible period as well), or if they are trying to attack). 
-        if(stunned == false)
+        if (canMove)
         {
             rb.velocity = new Vector3(hInput * hMovementSpeed, 0, vInput * vMovementSpeed);
         }
-
     }
 
 
