@@ -102,14 +102,14 @@ public class InputManager : MonoBehaviour
                     //print("Left Early");
 
                 }
-                if (gameObject.name == "HitBox Perfect")
+                else if (gameObject.name == "HitBox Perfect")
                 {
                     combatManagerRef.Perfect();
                     //print("Left Perfect");
 
 
                 }
-                if (gameObject.name == "HitBox Late")
+                else if (gameObject.name == "HitBox Late")
                 {
                     combatManagerRef.TooLate(EnemyAttack);
                     //print("Left Late");
@@ -140,7 +140,7 @@ public class InputManager : MonoBehaviour
                     //print("Right early");
 
                 }
-                if (gameObject.name == "HitBox Perfect")
+                else if (gameObject.name == "HitBox Perfect")
                 {
                     RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -150,7 +150,7 @@ public class InputManager : MonoBehaviour
                     //print("Right Perfect");
 
                 }
-                if (gameObject.name == "HitBox Late")
+                else if (gameObject.name == "HitBox Late")
                 {
                     RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -184,8 +184,8 @@ public class InputManager : MonoBehaviour
                     downAvailable = false;
                     combatManagerRef.TooEarly(EnemyAttack);
                 }
-               
-                if (gameObject.name == "HitBox Perfect")
+
+                else if (gameObject.name == "HitBox Perfect")
                 {
                     DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -194,7 +194,7 @@ public class InputManager : MonoBehaviour
                     combatManagerRef.Perfect();
                     //print("Down Perfect");
                 }
-                if (gameObject.name == "HitBox Late")
+                else if (gameObject.name == "HitBox Late")
                 {
                     DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -230,7 +230,7 @@ public class InputManager : MonoBehaviour
                     //print("Up Early");
 
                 }
-                if (gameObject.name == "HitBox Perfect")
+                else if (gameObject.name == "HitBox Perfect")
                 {
                     UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -240,7 +240,7 @@ public class InputManager : MonoBehaviour
                     //print("Up Perfect");
 
                 }
-                if (gameObject.name == "HitBox Late")
+                else if (gameObject.name == "HitBox Late")
                 {
                     UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
                     UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
