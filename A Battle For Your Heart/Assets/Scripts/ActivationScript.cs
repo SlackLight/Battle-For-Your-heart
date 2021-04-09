@@ -7,7 +7,23 @@ public class ActivationScript : MonoBehaviour
     public Collider colliderToActivate;
     public GameObject alsoDeactivate;
     public GameObject alsoReactivate;
+    public bool isEnabled;
+    private void Start()
+    {
+        if (gameObject.GetComponent<MeshRenderer>() != null)
+        {
+            if (this.GetComponent<MeshRenderer>().enabled == true)
+            {
+                isEnabled = true;
+            }
+            else
+            {
+                isEnabled = false;
 
+
+            }
+        }
+    }
     private void OnMouseDown()
     {
         OnClickThisCollider();
