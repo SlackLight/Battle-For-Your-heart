@@ -132,8 +132,10 @@ GameObject:
   - component: {fileID: 197757006}
   - component: {fileID: 197757005}
   - component: {fileID: 197757004}
+  - component: {fileID: 197757007}
+  - component: {fileID: 197757008}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: Shou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,17 +186,17 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: Shou/Start
   conversationConversant: {fileID: 197757006}
   conversationActor: {fileID: 1758621904}
   startConversationEntryID: -1
   exclusive: 0
-  skipIfNoValidEntries: 1
+  skipIfNoValidEntries: 0
   stopConversationOnTriggerExit: 0
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -263,13 +265,43 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197757003}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.54, y: -4.18, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 10.4116335, y: 2.359519, z: -33.124504}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 983391366}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &197757007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197757003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e753bcd97f2b784aa8bca2c1abaf0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talkedToVariableName: talkedTo.Shou
+  convoIDs: 
+  convoCounter: 0
+  linear: 1
+  cooldownTimerStart: 0.1
+--- !u!65 &197757008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197757003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3, y: 7.3, z: 0.2}
+  m_Center: {x: -0.00000023841858, y: -0.00000011920929, z: 0}
 --- !u!1001 &223820457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -414,6 +446,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &983391365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983391366}
+  m_Layer: 0
+  m_Name: NPCManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983391366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983391365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8716338, y: -6.539519, z: 33.124504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 197757006}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540614296
 GameObject:
@@ -571,7 +634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758621902
 GameObject:
