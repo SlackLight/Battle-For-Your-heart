@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 452336229}
   - component: {fileID: 452336228}
   m_Layer: 0
-  m_Name: Shou
+  m_Name: Kana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452336226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.4116335, y: 2.359519, z: -33.124504}
+  m_LocalPosition: {x: 10.4116335, y: 1.74, z: -33.124504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1440549365}
@@ -313,7 +313,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Shou/Start
+  conversation: Kana/Start
   conversationConversant: {fileID: 452336227}
   conversationActor: {fileID: 461160011}
   startConversationEntryID: -1
@@ -374,7 +374,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b99293f11cd915a41bc7a4e132569401, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4f202fc43ebbac4ba043777d6d9d6fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
