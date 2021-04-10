@@ -362,6 +362,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ff99c770cb4f9654fbc2a188034b4d09,
         type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &511189261
