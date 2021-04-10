@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 5183129623565663882}
   - component: {fileID: 299192527978613227}
   - component: {fileID: 7755770211854696250}
+  - component: {fileID: -1148584574883620367}
   m_Layer: 0
   m_Name: DownBlock
   m_TagString: DownBlock
@@ -180,6 +181,22 @@ MonoBehaviour:
   colliderToActivate: {fileID: 6620389012464589135}
   alsoDeactivate: {fileID: 6826692404521922987}
   alsoReactivate: {fileID: 0}
+--- !u!54 &-1148584574883620367
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130729124100089811}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6826692404521922987
 GameObject:
   m_ObjectHideFlags: 0
