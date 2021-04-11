@@ -31,15 +31,15 @@ public class TimeManager : MonoBehaviour
     private void Awake()
     {
         //Checks it it exists and assigns it if not
-        if(instance == null)
+        if(TimeManager.instance == null)
         {
-            instance = this;
+            TimeManager.instance = this;
             DontDestroyOnLoad(this);
             dayCounter = 1;
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
@@ -67,6 +67,9 @@ public class TimeManager : MonoBehaviour
 
     public void LoadHallwayScene()
     {
+        //Increment the NPCs convo changes from the hallway scene
+        NPCManager.instance.IncrementLinearNPCs();
+
         beginningOfDay = true;
         //Increment the NPCs convo changes from the hallway end scene
         //NPCManager.instance.IncrementLinearNPCs();

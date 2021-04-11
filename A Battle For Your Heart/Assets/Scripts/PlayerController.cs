@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerController.instance != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {

@@ -34,7 +34,7 @@ public class NPCManager : MonoBehaviour
     {
         if (NPCManager.instance)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -110,34 +110,30 @@ public class NPCManager : MonoBehaviour
             }
         }
         
-
         //Checks if there are enough positions to spawn the NPCs
-        if (NPCSpawnSpots.Count < NPCList.Count)
+        if (NPCSpawnSpots.Count < currentWeekList[currentDay - 1].list.Count)
         {
             print("Not enough spawn points for the number of NPCs.");
         }
-        else
+        //If there are NPCs on the current day
+        else if (currentWeekList[currentDay - 1].list.Count > 0)
         {
-            //If there are NPCs on the current day
-            if (currentWeekList[currentDay - 1].list.Count > 0)
+            //For each NPC
+            for (int i = 0; i < currentWeekList[currentDay - 1].list.Count; i++)
+            {
+                //Comesup with a random spawn point to be at
+                randomSpawnNumber = Random.Range(0, NPCSpawnSpots.Count);
+                //While the spawnpoint already exists comes up with new spawnpoints
+                while (temporaryValues.Contains(randomSpawnNumber))
                 {
-                    //For each NPC
-                    for (int i = 0; i < currentWeekList[currentDay - 1].list.Count; i++)
-                    {
-                        //Comesup with a random spawn point to be at
-                        randomSpawnNumber = Random.Range(0, NPCSpawnSpots.Count);
-                        //While the spawnpoint already exists comes up with new spawnpoints
-                        while (temporaryValues.Contains(randomSpawnNumber))
-                        {
-                            randomSpawnNumber = Random.Range(0, NPCSpawnSpots.Count);
-                        }
-                        //Adds the value to a for next NPC to check against
-                        temporaryValues.Add(randomSpawnNumber);
-                        //Move the NPC to the position
-                        NPCList[i].transform.position = NPCSpawnSpots[randomSpawnNumber].position;
-
-                    }
+                    randomSpawnNumber = Random.Range(0, NPCSpawnSpots.Count);
                 }
+                //Adds the value to a for next NPC to check against
+                temporaryValues.Add(randomSpawnNumber);
+                //Move the NPC to the position
+                currentWeekList[currentDay - 1].list[i].transform.position = NPCSpawnSpots[randomSpawnNumber].position;
+
+            }
         }
     }
 
