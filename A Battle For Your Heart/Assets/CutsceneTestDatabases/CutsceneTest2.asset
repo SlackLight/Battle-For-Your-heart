@@ -719,7 +719,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 2
@@ -1593,8 +1593,8 @@ MonoBehaviour:
         y: 592.44336
         width: 160
         height: 30
-    canvasScrollPosition: {x: 83.132225, y: 364.19174}
-    canvasZoom: 1.2999997
+    canvasScrollPosition: {x: 0, y: 247.05876}
+    canvasZoom: 0.85000014
   - id: 3
     fields:
     - title: Title
@@ -2356,8 +2356,8 @@ MonoBehaviour:
         y: 459
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 181}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7900002
   - id: 4
     fields:
     - title: Title
@@ -2969,7 +2969,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0
