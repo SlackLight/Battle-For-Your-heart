@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: New Dialogue Database (Auto-Backup)
+  m_Name: New Dialogue Database
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -7550,11 +7550,11 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8500002
+    canvasZoom: 0.79000026
   - id: 38
     fields:
     - title: Title
-      value: New Conversation 38
+      value: Shou/Lose1
       type: 0
       typeString: 
     - title: Pictures
@@ -7669,7 +7669,7 @@ MonoBehaviour:
   - id: 39
     fields:
     - title: Title
-      value: New Conversation 39
+      value: Shou/Lose2
       type: 0
       typeString: 
     - title: Pictures
@@ -7784,7 +7784,7 @@ MonoBehaviour:
   - id: 40
     fields:
     - title: Title
-      value: New Conversation 40
+      value: Kana/Start
       type: 0
       typeString: 
     - title: Pictures
