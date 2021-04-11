@@ -1,17 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
-
+    Image healthbar;
+    Text comboCounter;
+    int comboCount = 0;
     [SerializeField] int Strength;
     [SerializeField] int Defence;
     [SerializeField] int Health;
+    [SerializeField] int currentHealth;
 
     private int outgoingDamage;
     public int incomingDamage;
-   [SerializeField] private int AppliedDamage;
+    [SerializeField] private int AppliedDamage;
+    int missedCount = 0;
+    int perfectCount = 0;
+    int earlyCount = 0;
+    int lateCount = 0;
+    public string LatestRating;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,7 +30,9 @@ public class CombatManager : MonoBehaviour
             Defence = StatManager.Stats.Defence;
             Strength = StatManager.Stats.Strength;
             Health = StatManager.Stats.Health;
-
+            currentHealth = Health;
+            healthbar = GameObject.Find("Tomomi Health").GetComponent<Image>();
+            comboCounter = GameObject.Find("Combo Counter").GetComponent<Text>();
             //incomingDamage = GetHashCode enemy stats
 
         }
@@ -29,20 +41,26 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(Random.Range(1,20));
-            
-        }
-      
+        healthbar.fillAmount = (float)currentHealth / Health;
+        comboCounter.text =( "Combo Count: " + comboCount);
+
+
+        ////Test Damage
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TakeDamage(Random.Range(1, 20));
+
+        //}
+
 
 
     }
+    //temp damage testing
     void TakeDamage(int inwardDamage)
     {
         incomingDamage = inwardDamage;
         CalculateDamage();
-       
+
     }
     private void CalculateDamage()
     {
@@ -50,24 +68,39 @@ public class CombatManager : MonoBehaviour
         ResolveDamage();
     }
 
-    public void Perfect(int inwardDamage)
+    public void Perfect()
     {
+        LatestRating = "Perfect!";
+      
+           incomingDamage = 0;
+        perfectCount++;
         AppliedDamage = 0;
         outgoingDamage = Strength;
-        CalculateDamage();
+        comboCount++;
+        ResolveDamage();
 
     }
     public void TooEarly(int inwardDamage)
     {
-        AppliedDamage = AppliedDamage/4;
-        outgoingDamage = Strength/2;
+        LatestRating = "Too Early!";
+
+        comboCount++;
+        earlyCount++;
+        incomingDamage = inwardDamage;
+        incomingDamage = incomingDamage / 4;
+        outgoingDamage = Strength / 2;
 
         CalculateDamage();
 
     }
     public void TooLate(int inwardDamage)
     {
-        AppliedDamage = AppliedDamage / 4;
+        LatestRating = "Too Late!";
+
+        comboCount++;
+        lateCount++;
+        incomingDamage = inwardDamage;
+        incomingDamage = incomingDamage / 4;
         outgoingDamage = Strength / 2;
         CalculateDamage();
 
@@ -75,6 +108,12 @@ public class CombatManager : MonoBehaviour
     }
     public void Missed(int inwardDamage)
     {
+        LatestRating = "Miss!";
+
+        incomingDamage = inwardDamage;
+        comboCount = 0;
+        missedCount++;
+
         //Health = Health- AppliedDamage; dont do this here
         outgoingDamage = 0;
         CalculateDamage();
@@ -82,10 +121,13 @@ public class CombatManager : MonoBehaviour
     }
     public void ResolveDamage()
     {
-        Health = Health - AppliedDamage;
-        if (Health <= 0)
+        print("took " + AppliedDamage + " damage");
+
+        currentHealth = currentHealth - AppliedDamage;
+        if (currentHealth <= 0)
         {
             print("oh lord she dead");
         }
+        OpponentManager.OManager.TakeDamage(outgoingDamage);
     }
 }
