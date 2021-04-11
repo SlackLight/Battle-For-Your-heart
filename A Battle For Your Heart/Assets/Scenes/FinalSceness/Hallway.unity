@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 12051155}
   - component: {fileID: 12051159}
   m_Layer: 0
-  m_Name: Jenny
+  m_Name: Energetic Girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e753bcd97f2b784aa8bca2c1abaf0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkedToVariableName: talkedTo.Jenny
-  convoIDs: 0100000003000000
+  talkedToVariableName: talkedTo.EnergeticGirl
+  convoIDs: 01000000
   convoCounter: 0
-  linear: 1
+  linear: 0
   cooldownTimerStart: 0.1
 --- !u!65 &12051156
 BoxCollider:
@@ -706,7 +706,7 @@ SpriteRenderer:
   m_Size: {x: 0.6, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &349735062
@@ -2293,7 +2293,7 @@ SpriteRenderer:
   m_Size: {x: 1.0546875, y: 1.09375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1733500712
@@ -2969,7 +2969,7 @@ SpriteRenderer:
   m_Size: {x: 1.0546875, y: 1.09375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2096144918
