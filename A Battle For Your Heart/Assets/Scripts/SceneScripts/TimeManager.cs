@@ -61,6 +61,8 @@ public class TimeManager : MonoBehaviour
         //Sets current classroom for return spawn
         currentClassroom = classRoomNumber;
         SceneManager.LoadScene(sceneToLoad);
+        //Turns of the interaction text
+        InteractionText.instance.gameObject.SetActive(false);
         NPCManager.instance.DespawnTheNPCs();
         NPCManager.instance.enabled = false;
     }
@@ -69,6 +71,8 @@ public class TimeManager : MonoBehaviour
     {
         //Increment the NPCs convo changes from the hallway scene
         NPCManager.instance.IncrementLinearNPCs();
+
+        InteractionText.instance.gameObject.SetActive(false);
 
         beginningOfDay = true;
         //Increment the NPCs convo changes from the hallway end scene
