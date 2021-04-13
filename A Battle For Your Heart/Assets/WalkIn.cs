@@ -48,10 +48,12 @@ public class WalkIn : MonoBehaviour
     {
         print("tried to wak");
         walk = true;
+        walkOut = false;
     }
 
     public void WalkOut()
     {
+        walk = false;
         print("tried to wak out");
         walkOut = true;
     }
