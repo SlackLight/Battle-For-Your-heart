@@ -121,12 +121,12 @@ public class CombatManager : MonoBehaviour
     }
     public void ResolveDamage()
     {
-        print("took " + AppliedDamage + " damage");
+
 
         currentHealth = currentHealth - AppliedDamage;
         if (currentHealth <= 0)
         {
-            print("oh lord she dead");
+
         }
         OpponentManager.OManager.TakeDamage(outgoingDamage);
     }
