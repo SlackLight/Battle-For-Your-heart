@@ -799,7 +799,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: TutorialGrunt/Win
+  conversation: TutorialGrunt/Start
   conversationConversant: {fileID: 156741724}
   conversationActor: {fileID: 266598}
   startConversationEntryID: -1
