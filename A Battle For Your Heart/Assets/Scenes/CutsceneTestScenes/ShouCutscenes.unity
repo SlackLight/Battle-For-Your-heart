@@ -1269,6 +1269,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2062511566}
+          m_MethodName: transitionBackground
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - guid: 64e596b4-6d8b-488a-b8b5-4b6e3e40a603
     onExecute:
       m_PersistentCalls:
@@ -1312,6 +1323,21 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1645840814}
           m_MethodName: Walk
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: ba2015cd-d316-424f-8fed-bc02bb6779c5
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2062511566}
+          m_MethodName: nextConvo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4684,6 +4710,17 @@ PrefabInstance:
       propertyPath: convoIDsToBeStarted.Array.data[3]
       value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
+        type: 3}
+      propertyPath: backgroundPrefabsToChangeTo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
+        type: 3}
+      propertyPath: backgroundPrefabsToChangeTo.Array.data[0]
+      value: 
+      objectReference: {fileID: 460941676314896405, guid: f0c9282436378254c80d311fc2cfca03,
+        type: 3}
     - target: {fileID: 686424190529634725, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
       propertyPath: m_RootOrder
@@ -6447,6 +6484,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2062511566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1466142089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba371d11430a37f47808c0cbe7bdb212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2093926667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3214055932388222541, guid: 88cedd4cbf3139a4582ada5db966a54c,
