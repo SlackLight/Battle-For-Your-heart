@@ -11,9 +11,14 @@ public class OpponentManager : MonoBehaviour
     public int Strength;
     public int Defence;
     public int Health;
-   [SerializeField]int currentHealth;
+    [SerializeField] int currentHealth;
     [SerializeField] Image healthBar;
     [SerializeField] InputManager input;
+
+    [SerializeField] GameObject ShouBattle;
+    [SerializeField] GameObject KanaBattle;
+    [SerializeField] GameObject HimekoBattle;
+
 
     public static OpponentManager _OpponentManager;
     public static OpponentManager OManager
@@ -63,16 +68,41 @@ public class OpponentManager : MonoBehaviour
                 Defence = 10;
                 Health = 100;
 
+                if (!ShouBattle.activeInHierarchy)
+                {
+                    ShouBattle.SetActive(true);
+                    KanaBattle.SetActive(false);
+                    HimekoBattle.SetActive(false);
+                }
+
+
                 break;
             case Opponents.Kana:
                 Strength = 30;
                 Defence = 60;
                 Health = 100;
+
+                if (!KanaBattle.activeInHierarchy)
+                {
+                    ShouBattle.SetActive(false);
+                    KanaBattle.SetActive(true);
+                    HimekoBattle.SetActive(false);
+                }
+
+
                 break;
             case Opponents.Himeko:
                 Strength = 75;
                 Defence = 75;
                 Health = 100;
+
+                if (!HimekoBattle.activeInHierarchy)
+                {
+                    ShouBattle.SetActive(false);
+                    KanaBattle.SetActive(false);
+                    HimekoBattle.SetActive(true);
+                }
+
                 break;
 
 
