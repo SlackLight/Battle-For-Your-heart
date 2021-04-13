@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] GameObject perfect;
     [SerializeField] GameObject early;
     [SerializeField] GameObject late;
-    
+
     [SerializeField] GameObject upPrefab;
     [SerializeField] GameObject DownPrefab;
     [SerializeField] GameObject LeftPrefab;
@@ -43,14 +43,16 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         combatManagerRef = GameObject.FindGameObjectWithTag("Player").GetComponent<CombatManager>();
+        if (noteController == null)
+        {
+
+            noteController = FindObjectOfType<NoteController>().transform;
+
+        }
         DownArrow.DisableKeyword("_EMISSION");
         RightArrow.DisableKeyword("_EMISSION");
         LeftArrow.DisableKeyword("_EMISSION");
         UpArrow.DisableKeyword("_EMISSION");
-
-
-
-
 
 
     }
@@ -87,21 +89,25 @@ public class InputManager : MonoBehaviour
         {
             case mode.Edit:
                 editing = true;
-                if (name == "HitBox Perfect")
-                    miss.SetActive(false);
+                miss.SetActive(false);
 
 
                 break;
             case mode.Play:
                 editing = false;
-                if (name == "HitBox Perfect")
-                    miss.SetActive(true);
+
+                miss.SetActive(true);
 
                 break;
 
         }
-
-
+        if (noteController != null)
+        {
+            if (!noteController.gameObject.activeInHierarchy)
+            {
+                noteController = FindObjectOfType<NoteController>().transform;
+            }
+        }
         //visuals for buttons
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
