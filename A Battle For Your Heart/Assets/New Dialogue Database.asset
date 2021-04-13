@@ -56,8 +56,12 @@ MonoBehaviour:
       value: '#ffb9bbff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Tomomi
+      type: 0
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 21300000, guid: b9c5a9a4d96c97c4b91192517dc6ea14, type: 3}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   - id: 2
@@ -131,7 +135,7 @@ MonoBehaviour:
     - title: Name
       value: Tomomi
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -139,7 +143,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: IsPlayer
       value: False
       type: 2
@@ -147,9 +151,13 @@ MonoBehaviour:
     - title: NodeColor
       value: '#ffb8baff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Tomomi
+      type: 0
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 21300000, guid: b9c5a9a4d96c97c4b91192517dc6ea14, type: 3}
+    spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
   items: []
@@ -7109,6 +7117,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: e31720f7-2cc2-452b-b910-6d5b531928cd
+        type: 0
+        typeString: 
       conversationID: 37
       isRoot: 0
       isGroup: 0
@@ -7557,8 +7569,8 @@ MonoBehaviour:
         y: 570.29407
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.82000023
+    canvasScrollPosition: {x: 0, y: 126.31575}
+    canvasZoom: 0.7600003
   - id: 38
     fields:
     - title: Title
