@@ -4,23 +4,40 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    public enum mode { Edit, Play };
+    public mode Mode;
     [SerializeField] Material UpArrow, DownArrow, RightArrow, LeftArrow;
     public int EnemyAttack = 8;
+    bool editing = false;
     [SerializeField] CombatManager combatManagerRef;
 
     [SerializeField] List<GameObject> DownNoteList = new List<GameObject>();
     [SerializeField] List<GameObject> UpNoteList = new List<GameObject>();
     [SerializeField] List<GameObject> LeftNoteList = new List<GameObject>();
     [SerializeField] List<GameObject> RightNoteList = new List<GameObject>();
-    [SerializeField] bool leftAvailable;
-    [SerializeField] bool rightAvailable;
-    [SerializeField] bool upAvailable;
-    [SerializeField] bool downAvailable;
+    [SerializeField] List<GameObject> earlyNoteList = new List<GameObject>();
+    [SerializeField] List<GameObject> perfectNoteList = new List<GameObject>();
+    [SerializeField] List<GameObject> lateNoteList = new List<GameObject>();
     [SerializeField] GameObject perfect;
+    [SerializeField] GameObject early;
     [SerializeField] GameObject late;
-
-   
     
+    [SerializeField] GameObject upPrefab;
+    [SerializeField] GameObject DownPrefab;
+    [SerializeField] GameObject LeftPrefab;
+    [SerializeField] GameObject RightPrefab;
+
+
+    [SerializeField] GameObject Up;
+    [SerializeField] GameObject Down;
+    [SerializeField] GameObject Left;
+    [SerializeField] GameObject Right;
+    [SerializeField] Transform noteController;
+    [SerializeField] GameObject miss;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +47,10 @@ public class InputManager : MonoBehaviour
         RightArrow.DisableKeyword("_EMISSION");
         LeftArrow.DisableKeyword("_EMISSION");
         UpArrow.DisableKeyword("_EMISSION");
-        
+
+
+
+
 
 
     }
@@ -40,6 +60,7 @@ public class InputManager : MonoBehaviour
         DownArrow.EnableKeyword("_EMISSION");
         yield return new WaitForSeconds(.1f);
         DownArrow.DisableKeyword("_EMISSION");
+
     }
     IEnumerator UpPress()
     {
@@ -61,339 +82,282 @@ public class InputManager : MonoBehaviour
     }
 
     void Update()
-    {//visuals for buttons
-        if (name == "HitBox Perfect")
+    {
+        switch (Mode)
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-            {
-                StartCoroutine("DownPress");
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-            {
-                StartCoroutine("UpPress");
+            case mode.Edit:
+                editing = true;
+                if (name == "HitBox Perfect")
+                    miss.SetActive(false);
 
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-            {
-                StartCoroutine("LeftPress");
 
-            }
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-            {
-                StartCoroutine("RightPress");
+                break;
+            case mode.Play:
+                editing = false;
+                if (name == "HitBox Perfect")
+                    miss.SetActive(true);
 
-            }
+                break;
+
         }
-        //INPUTS
-        if (leftAvailable)
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-            {
-                if (late.GetComponent<InputManager>().leftAvailable)
-                {
-                    late.GetComponent<InputManager>().LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    late.GetComponent<InputManager>().LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    late.GetComponent<InputManager>().LeftNoteList.RemoveAt(0);
-                    late.GetComponent<InputManager>().leftAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-
-                }
-                else if (gameObject.name == "HitBox Early")
-                {
-                    combatManagerRef.TooEarly(EnemyAttack);
-
-                    //print("Left Early");
-
-                }
-                else if (gameObject.name == "HitBox Perfect")
-                {
-                    combatManagerRef.Perfect();
-                    //print("Left Perfect");
 
 
-                }
-                else if (gameObject.name == "HitBox Late")
-                {
-                    combatManagerRef.TooLate(EnemyAttack);
-                    //print("Left Late");
+        //visuals for buttons
 
-
-                }
-            }
-        if (rightAvailable)
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            if (editing)
             {
-                if (late.GetComponent<InputManager>().rightAvailable)
-                {
-                    late.GetComponent<InputManager>().RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    late.GetComponent<InputManager>().RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    late.GetComponent<InputManager>().RightNoteList.RemoveAt(0);
-                    late.GetComponent<InputManager>().rightAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-
-                }
-                else if (gameObject.name == "HitBox Early")
-                {
-                    RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    RightNoteList.RemoveAt(0);
-                    rightAvailable = false;
-                    combatManagerRef.TooEarly(EnemyAttack);
-                    //print("Right early");
-
-                }
-                else if (gameObject.name == "HitBox Perfect")
-                {
-                    RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    RightNoteList.RemoveAt(0);
-                    rightAvailable = false;
-                    combatManagerRef.Perfect();
-                    //print("Right Perfect");
-
-                }
-                else if (gameObject.name == "HitBox Late")
-                {
-                    RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    RightNoteList.RemoveAt(0);
-                    rightAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-                    //print("Right Late");
-
-                }
+                GameObject temp = Instantiate(DownPrefab, noteController.transform);
+                temp.transform.position = Down.transform.position;
+                temp.transform.rotation = Down.transform.rotation;
             }
+            StartCoroutine("DownPress");
+
         }
-        if (downAvailable)
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            StartCoroutine("UpPress");
+            if (editing)
             {
-              
-                if (late.GetComponent<InputManager>().downAvailable)
-                {
-                    late.GetComponent<InputManager>().DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    late.GetComponent<InputManager>().DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    late.GetComponent<InputManager>().DownNoteList.RemoveAt(0);
-                    late.GetComponent<InputManager>().downAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-
-                }
-                else if(gameObject.name == "HitBox Early")
-                {
-                    DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    DownNoteList.RemoveAt(0);
-                    downAvailable = false;
-                    combatManagerRef.TooEarly(EnemyAttack);
-                }
-
-                else if (gameObject.name == "HitBox Perfect")
-                {
-                    DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    DownNoteList.RemoveAt(0);
-                    downAvailable = false;
-                    combatManagerRef.Perfect();
-                    //print("Down Perfect");
-                }
-                else if (gameObject.name == "HitBox Late")
-                {
-                    DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    DownNoteList.RemoveAt(0);
-                    downAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-                    //print("Down Late");
-                }
-
+                GameObject temp = Instantiate(upPrefab, noteController.transform);
+                temp.transform.position = Up.transform.position;
+                temp.transform.rotation = Up.transform.rotation;
             }
+
         }
-        if (upAvailable)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            StartCoroutine("LeftPress");
+            if (editing)
             {
-                if (late.GetComponent<InputManager>().upAvailable)
-                {
-                    late.GetComponent<InputManager>().UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    late.GetComponent<InputManager>().UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    late.GetComponent<InputManager>().UpNoteList.RemoveAt(0);
-                    late.GetComponent<InputManager>().upAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-
-                }
-
-                else if (gameObject.name == "HitBox Early")
-                {
-                    UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    UpNoteList.RemoveAt(0);
-                    upAvailable = false;
-                    combatManagerRef.TooEarly(EnemyAttack);
-                    //print("Up Early");
-
-                }
-                else if (gameObject.name == "HitBox Perfect")
-                {
-                    UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    UpNoteList.RemoveAt(0);
-                    upAvailable = false;
-                    combatManagerRef.Perfect();
-                    //print("Up Perfect");
-
-                }
-                else if (gameObject.name == "HitBox Late")
-                {
-                    UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                    UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    UpNoteList.RemoveAt(0);
-                    upAvailable = false;
-                    combatManagerRef.TooLate(EnemyAttack);
-                    //print("Up Late");
-
-
-                }
+                GameObject temp = Instantiate(LeftPrefab, noteController.transform);
+                temp.transform.position = Left.transform.position;
+                temp.transform.rotation = Left.transform.rotation;
             }
+
         }
-        //REMOVE FROM THIS LIST IF OVERLAPPING WITH LATER LIST
-
-        if (name == "HitBox Early")
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            if (UpNoteList.Count != 0)
+            StartCoroutine("RightPress");
+            if (editing)
             {
-                if (perfect.GetComponent<InputManager>().UpNoteList.Contains(UpNoteList[0].gameObject))
-                {
-                    UpNoteList.RemoveAt(0);
-                    upAvailable = false;
-                }
+                GameObject temp = Instantiate(RightPrefab, noteController.transform);
+                temp.transform.position = Right.transform.position;
+                temp.transform.rotation = Right.transform.rotation;
             }
-            if (DownNoteList.Count != 0)
-            {
-                if (perfect.GetComponent<InputManager>().DownNoteList.Contains(DownNoteList[0].gameObject))
-                {
-                    DownNoteList.RemoveAt(0);
-                    downAvailable = false;
-                }
-            }
+
+        }
+
+        if (!editing)
+        {
+            //INPUTS
             if (LeftNoteList.Count != 0)
             {
-                if (perfect.GetComponent<InputManager>().LeftNoteList.Contains(LeftNoteList[0].gameObject))
+                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
                 {
-                    LeftNoteList.RemoveAt(0);
-                    leftAvailable = false;
+                    if (lateNoteList.Contains(LeftNoteList[0]))
+                    {
+                        LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList.RemoveAt(0);
+                        lateNoteList.RemoveAt(0);
+                        combatManagerRef.TooLate(EnemyAttack);
+                    }
+                    else if (perfectNoteList.Contains(LeftNoteList[0]))
+                    {
+                        LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList.RemoveAt(0);
+                        perfectNoteList.RemoveAt(0);
+                        combatManagerRef.Perfect();
+                    }
+                    else if (earlyNoteList.Contains(LeftNoteList[0]))
+                    {
+                        LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList.RemoveAt(0);
+                        earlyNoteList.RemoveAt(0);
+                        combatManagerRef.TooEarly(EnemyAttack);
+                    }
+
+
                 }
             }
             if (RightNoteList.Count != 0)
             {
-                if (perfect.GetComponent<InputManager>().RightNoteList.Contains(RightNoteList[0].gameObject))
+                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                 {
-                    RightNoteList.RemoveAt(0);
-                    rightAvailable = false;
-                }
-            }
 
-        }
-        if (name == "HitBox Perfect")
-        {
-            if (UpNoteList.Count != 0)
-            {
-                if (late.GetComponent<InputManager>().UpNoteList.Contains(UpNoteList[0].gameObject))
-                {
-                    UpNoteList.RemoveAt(0);
-                    upAvailable = false;
+                    if (lateNoteList.Contains(RightNoteList[0]))
+                    {
+                        RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList.RemoveAt(0);
+                        lateNoteList.RemoveAt(0);
+                        combatManagerRef.TooLate(EnemyAttack);
+                    }
+                    else if (perfectNoteList.Contains(RightNoteList[0]))
+                    {
+                        RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList.RemoveAt(0);
+                        perfectNoteList.RemoveAt(0);
+                        combatManagerRef.Perfect();
+                    }
+                    else if (earlyNoteList.Contains(RightNoteList[0]))
+                    {
+                        RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList.RemoveAt(0);
+                        earlyNoteList.RemoveAt(0);
+                        combatManagerRef.TooEarly(EnemyAttack);
+                    }
                 }
             }
             if (DownNoteList.Count != 0)
             {
-                if (late.GetComponent<InputManager>().DownNoteList.Contains(DownNoteList[0].gameObject))
+                if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
                 {
-                    DownNoteList.RemoveAt(0);
-                    downAvailable = false;
+                    if (lateNoteList.Contains(DownNoteList[0]))
+                    {
+                        DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList.RemoveAt(0);
+                        lateNoteList.RemoveAt(0);
+                        combatManagerRef.TooLate(EnemyAttack);
+                    }
+                    else if (perfectNoteList.Contains(DownNoteList[0]))
+                    {
+                        DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList.RemoveAt(0);
+                        perfectNoteList.RemoveAt(0);
+                        combatManagerRef.Perfect();
+                    }
+                    else if (earlyNoteList.Contains(DownNoteList[0]))
+                    {
+                        DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList.RemoveAt(0);
+                        earlyNoteList.RemoveAt(0);
+                        combatManagerRef.TooEarly(EnemyAttack);
+                    }
+
                 }
             }
-            if (LeftNoteList.Count != 0)
+            if (UpNoteList.Count != 0)
             {
-                if (late.GetComponent<InputManager>().LeftNoteList.Contains(LeftNoteList[0].gameObject))
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                 {
-                    LeftNoteList.RemoveAt(0);
-                    leftAvailable = false;
-                }
-            }
-            if (RightNoteList.Count != 0)
-            {
-                if (late.GetComponent<InputManager>().RightNoteList.Contains(RightNoteList[0].gameObject))
-                {
-                    RightNoteList.RemoveAt(0);
-                    rightAvailable = false;
+
+                    if (lateNoteList.Contains(UpNoteList[0]))
+                    {
+                        UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList.RemoveAt(0);
+                        lateNoteList.RemoveAt(0);
+                        combatManagerRef.TooLate(EnemyAttack);
+                    }
+                    else if (perfectNoteList.Contains(UpNoteList[0]))
+                    {
+                        UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList.RemoveAt(0);
+                        perfectNoteList.RemoveAt(0);
+                        combatManagerRef.Perfect();
+                    }
+                    else if (earlyNoteList.Contains(UpNoteList[0]))
+                    {
+                        UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
+                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList.RemoveAt(0);
+                        earlyNoteList.RemoveAt(0);
+                        combatManagerRef.TooEarly(EnemyAttack);
+                    }
                 }
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void OnNoteEnter(Collider note, GameObject timingOverlap)
     {
-        //checking if note is active
-        if (other.GetComponent<ActivationScript>().isEnabled == true)
+        if (note.GetComponent<ActivationScript>().isEnabled == true && !editing)
         {
-
-            if (other.tag == "DownBlock")
+            if (timingOverlap == early)
             {
-                downAvailable = true;
-                DownNoteList.Add(other.gameObject);
-            }
-            if (other.tag == "UpBlock")
-            {
-                upAvailable = true;
-                UpNoteList.Add(other.gameObject);
-            }
-            if (other.tag == "LeftBlock")
-            {
-                leftAvailable = true;
-                LeftNoteList.Add(other.gameObject);
-            }
-            if (other.tag == "RightBlock")
-            {
-                rightAvailable = true;
-                RightNoteList.Add(other.gameObject);
-            }
+                earlyNoteList.Add(note.gameObject);
+                if (note.tag == "DownBlock")
+                {
+                    DownNoteList.Add(note.gameObject);
+                }
+                if (note.tag == "UpBlock")
+                {
+                    UpNoteList.Add(note.gameObject);
+                }
+                if (note.tag == "LeftBlock")
+                {
+                    LeftNoteList.Add(note.gameObject);
+                }
+                if (note.tag == "RightBlock")
+                {
+                    RightNoteList.Add(note.gameObject);
+                }
 
-
-            //missed note
-            if (gameObject.name == "HitBox Miss")
-            {
-                other.GetComponent<ActivationScript>().isEnabled = false;
-                combatManagerRef.Missed(EnemyAttack);
-                other.gameObject.GetComponent<MeshRenderer>().enabled = false;
             }
+            if (timingOverlap == perfect)
+            {
+                if (earlyNoteList.Contains(note.gameObject))
+                {
+                    earlyNoteList.Remove(note.gameObject);
+                    perfectNoteList.Add(note.gameObject);
+                }
 
+            }
+            if (timingOverlap == late)
+            {
+                if (perfectNoteList.Contains(note.gameObject))
+                {
+                    perfectNoteList.Remove(note.gameObject);
+                    lateNoteList.Add(note.gameObject);
+                }
 
+            }
         }
-
     }
-    private void OnTriggerExit(Collider other)
+
+
+
+    public void OnNoteExit(Collider note, GameObject timingOverlap)
     {
-        if (RightNoteList.Contains(other.gameObject))
+        if (timingOverlap == late)
         {
-            rightAvailable = false;
-            RightNoteList.Remove(other.gameObject);
-        }
-        if (LeftNoteList.Contains(other.gameObject))
-        {
-            leftAvailable = false;
-            LeftNoteList.Remove(other.gameObject);
+            if (RightNoteList.Contains(note.gameObject))
+            {
+                RightNoteList.Remove(note.gameObject);
+            }
+            if (LeftNoteList.Contains(note.gameObject))
+            {
+                LeftNoteList.Remove(note.gameObject);
+            }
+            if (UpNoteList.Contains(note.gameObject))
+            {
+                UpNoteList.Remove(note.gameObject);
+            }
+            if (DownNoteList.Contains(note.gameObject))
+            {
+                DownNoteList.Remove(note.gameObject);
+            }
 
-        }
-        if (UpNoteList.Contains(other.gameObject))
-        {
-            upAvailable = false;
-            UpNoteList.Remove(other.gameObject);
 
+            if (lateNoteList.Contains(note.gameObject))
+            {
+                lateNoteList.Remove(note.gameObject);
+            }
         }
-        if (DownNoteList.Contains(other.gameObject))
-        {
-            downAvailable = false;
-            DownNoteList.Remove(other.gameObject);
 
-        }
+
+
 
 
 
