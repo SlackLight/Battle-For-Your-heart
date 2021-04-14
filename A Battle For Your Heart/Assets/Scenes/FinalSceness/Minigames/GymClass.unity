@@ -1175,12 +1175,17 @@ PrefabInstance:
     - target: {fileID: 7097814535052782407, guid: be4ffe7fae5b54e4999175e00bbc424d,
         type: 3}
       propertyPath: mainTimer
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7097814535052782407, guid: be4ffe7fae5b54e4999175e00bbc424d,
         type: 3}
       propertyPath: testingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097814535052782407, guid: be4ffe7fae5b54e4999175e00bbc424d,
+        type: 3}
+      propertyPath: successReadout
+      value: Scored!
       objectReference: {fileID: 0}
     - target: {fileID: 7097814535052782407, guid: be4ffe7fae5b54e4999175e00bbc424d,
         type: 3}
@@ -1217,5 +1222,10 @@ PrefabInstance:
       propertyPath: scored.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1185599250}
+    - target: {fileID: 7097814535361488763, guid: be4ffe7fae5b54e4999175e00bbc424d,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Score : '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be4ffe7fae5b54e4999175e00bbc424d, type: 3}

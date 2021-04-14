@@ -63,7 +63,7 @@ public class TimingTest : Minigame
                 if (slider.value < winRangeMax && slider.value > winRangeMin)
                 {
                     scoreValue++;
-                    score.text = "Score - " + scoreValue;
+                    score.text = "Score : " + scoreValue;
                     successTextParent.SetActive(true);
                     scored.Invoke();
                 }
