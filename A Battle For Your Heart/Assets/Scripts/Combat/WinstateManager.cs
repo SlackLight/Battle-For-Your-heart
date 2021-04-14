@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class WinstateManager : MonoBehaviour
 {
+    public static WinstateManager instance;
     public bool win;
-    public bool firstTimeThrough;
+    public bool firstTimeThrough= true;
     // Start is called before the first frame update
-    void Start()
+    
+    private void Awake()
     {
-        win = true;
-
-
-
+        if(instance == null)
+        {
+            WinstateManager.instance = this;
+            DontDestroyOnLoad(this);
+            firstTimeThrough = true;
+        }
     }
 
     // Update is called once per frame

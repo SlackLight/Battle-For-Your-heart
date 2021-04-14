@@ -18,7 +18,6 @@ public class CutsceneManager : MonoBehaviour
 
     public GameObject backgroundSpawnSpot;
 
-    public bool playConvoOnStart;
 
     //Games to be enabled in order
     public List<GameObject> gameParents;
@@ -26,20 +25,38 @@ public class CutsceneManager : MonoBehaviour
 
     private void Start()
     {
-        if (playConvoOnStart)
-        {
+       
             nextConvo();
-        }
+        
     }
 
     //Run this to begin the next convo in the list
     public void nextConvo()
     {
+
+
         if(currentConvo + 1 <= convoIDsToBeStarted.Count)
         {
-            var conversation = DialogueManager.masterDatabase.GetConversation(convoIDsToBeStarted[currentConvo]);
-            DialogueManager.StartConversation(conversation.Title);
-            currentConvo++;
+            if (FindObjectOfType<WinstateManager>().firstTimeThrough) // intro cutscene
+            {
+                var conversation = DialogueManager.masterDatabase.GetConversation(convoIDsToBeStarted[currentConvo]);
+                DialogueManager.StartConversation(conversation.Title);
+                
+            }else if (!FindObjectOfType<WinstateManager>().firstTimeThrough && FindObjectOfType<WinstateManager>().win) //if win battle
+            {
+                currentConvo=1;
+                var conversation = DialogueManager.masterDatabase.GetConversation(convoIDsToBeStarted[currentConvo]);
+                DialogueManager.StartConversation(conversation.Title);
+                FindObjectOfType<WinstateManager>().firstTimeThrough = true;
+            }
+            else if(!FindObjectOfType<WinstateManager>().firstTimeThrough && !FindObjectOfType<WinstateManager>().win) // if lose battle
+            {
+                currentConvo = 2;
+                var conversation = DialogueManager.masterDatabase.GetConversation(convoIDsToBeStarted[currentConvo]);
+                DialogueManager.StartConversation(conversation.Title);
+                FindObjectOfType<WinstateManager>().firstTimeThrough = true;
+            }
+          
         }
         else
         {

@@ -13,15 +13,15 @@ public class InteractionText : MonoBehaviour
 
     private void Start()
     {
-        if (InteractionText.instance)
+        if (instance == null)
         {
-            Destroy(gameObject);
+            instance = this;
+            interactionDefault = thisText.text;
+            gameObject.SetActive(false);
         }
         else
         {
-            InteractionText.instance = this;
-            interactionDefault = thisText.text;
-            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 }

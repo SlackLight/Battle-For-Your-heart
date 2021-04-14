@@ -45,7 +45,7 @@ public class WalkIn : MonoBehaviour
 
     public void Walk()
     {
-        print("tried to wak");
+        //print("tried to wak");
         walk = true;
         walkOut = false;
     }
@@ -53,7 +53,7 @@ public class WalkIn : MonoBehaviour
     public void WalkOut()
     {
         walk = false;
-        print("tried to wak out");
+        //print("tried to wak out");
         walkOut = true;
     }
 }

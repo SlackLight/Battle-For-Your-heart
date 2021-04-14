@@ -22,29 +22,29 @@ public class OpponentManager : MonoBehaviour
     public bool SongDone;
 
 
-    private void start()
+    private void Start()
     {
-        FindObjectOfType<WinstateManager>().CutscenePlayed();
-
-        if (TimeManager.instance.dayCounter == 1&& TimeManager.instance.weekCounter == 1)
+        if (TimeManager.instance.dayCounter == 1 && TimeManager.instance.weekCounter == 1)
         {
             opponent = Opponents.Tutorial;
         }
-        else if (TimeManager.instance.weekCounter == 1)
+        else if (TimeManager.instance.weekCounter == 2)
         {
             opponent = Opponents.Shou;
 
         }
-        else if (TimeManager.instance.weekCounter == 2)
+        else if (TimeManager.instance.weekCounter == 3)
         {
             opponent = Opponents.Kana;
 
         }
-        else if (TimeManager.instance.weekCounter == 3)
+        else if (TimeManager.instance.weekCounter == 4)
         {
             opponent = Opponents.Himeko;
 
         }
+
+
     }
     public void StartUp(Opponents opponent)
     {
@@ -131,6 +131,12 @@ public class OpponentManager : MonoBehaviour
     void Update()
     {//update stats if they dont match the selected opponent
 
+
+
+     
+
+
+
         healthBar.fillAmount = currentHealth / Health;
 
         if (currentOppopnent != opponent || Health == 0)
@@ -141,6 +147,7 @@ public class OpponentManager : MonoBehaviour
 
         if (currentHealth <= 0 && SongDone)
         {
+            FindObjectOfType<WinstateManager>().CutscenePlayed();
             FindObjectOfType<WinstateManager>().SetWin();
             ReturnToScene();
 
@@ -148,7 +155,7 @@ public class OpponentManager : MonoBehaviour
 
             //Display Winstuff here
             //win battle but finnish song first
-        }else if(currentHealth> 0 && SongDone)
+        }else if(currentHealth> 0 && SongDone &&opponent !=Opponents.Tutorial)
         {
             FindObjectOfType<WinstateManager>().SetLose();
             ReturnToScene();
@@ -170,6 +177,8 @@ public class OpponentManager : MonoBehaviour
     {
         if (opponent == Opponents.Tutorial)
         {
+            FindObjectOfType<WinstateManager>().SetWin();
+
             SceneManager.LoadScene("TutorialCutscene");
         }
         else if(opponent== Opponents.Shou)

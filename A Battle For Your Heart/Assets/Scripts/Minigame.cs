@@ -41,6 +41,7 @@ public class Minigame : MonoBehaviour
     {
         score.text = "Score : 0";
         successText.text = successReadout;
+        testingMode = false;
     }
 
     public virtual void Update()
@@ -66,15 +67,15 @@ public class Minigame : MonoBehaviour
             if (sceneTransferTimer <= 0)
             {
                 //If in minigame testing mode reloads scene on win
-                if (testingMode)
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
+                //if (testingMode)
+                //{
+                //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //}
                 //Otherwise loads the scene specified in inspector
-                else
-                {
+                //else
+                //{
                     TimeManager.instance.LoadEndHallwayScene();
-                }
+                //}
             }
             //Counts down scene transfer as soon as main timers done
             else

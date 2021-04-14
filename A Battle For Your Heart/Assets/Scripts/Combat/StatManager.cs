@@ -8,26 +8,26 @@ public class StatManager : MonoBehaviour
     public int Defence;
     public int Health;
 
-    public static StatManager _Stats;
-    public static StatManager Stats
-    {
-        get
-        {
-            if (_Stats == null)
-            {
-                _Stats = GameObject.FindObjectOfType<StatManager>();
-            }
 
-            return _Stats;
-        }
+    public static StatManager Stats;
+    
+       
+          
+          
+        
 
-    }
+    
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (Stats == null)
+        {
+            Stats = this;
+            DontDestroyOnLoad(this);
+        }
+
     }
 
     // Update is called once per frame
