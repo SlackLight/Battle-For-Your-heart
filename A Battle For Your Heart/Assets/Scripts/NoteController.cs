@@ -24,11 +24,10 @@ public class NoteController : MonoBehaviour
     {
         if (!hasStarted)
         {
-            if (Input.anyKeyDown)
-            {
+            
                 hasStarted = true;
                 song.Play();
-            }
+            
         }
         else
         {

@@ -23,10 +23,10 @@ public class TimeManager : MonoBehaviour
 
     public int endingScene;
 
-    //In order of appearance
-    public List<int> bossFightSceneID;
-
     public int weekLength;
+
+    [Tooltip("Put the cutscenes in order of appearance here")]
+    public List<string> cutsceneSceneNames;
 
     private void Awake()
     {
@@ -78,19 +78,18 @@ public class TimeManager : MonoBehaviour
         //Increment the NPCs convo changes from the hallway end scene
         //NPCManager.instance.IncrementLinearNPCs();
         //If the final boss fight is done load the final scene
-        if (weekCounter == 4)
+        if(weekCounter == 1 && dayCounter == 1)
         {
-            dayCounter++;
-            NPCManager.instance.DespawnTheNPCs();
-            SceneManager.LoadScene(endingScene);
+            //Loads tutorial
+            SceneManager.LoadScene(cutsceneSceneNames[0]);
         }
         //Checks if it should be loading a bossfight
-        else if (dayCounter == (weekCounter) * weekLength)
+        else if (dayCounter == (weekCounter) * weekLength && weekCounter < 3)
         {
             weekCounter++;
             dayCounter = 1;
             NPCManager.instance.DespawnTheNPCs();
-            SceneManager.LoadScene(bossFightSceneID[weekCounter - 1]);
+            SceneManager.LoadScene(cutsceneSceneNames[weekCounter]);
         }
         else
         {

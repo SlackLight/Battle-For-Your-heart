@@ -12,8 +12,9 @@ public class CombatManager : MonoBehaviour
     [SerializeField] int Defence;
     [SerializeField] int Health;
     [SerializeField] int currentHealth;
+    [SerializeField] OpponentManager OManager;
 
-    private int outgoingDamage;
+    [SerializeField] float outgoingDamage;
     public int incomingDamage;
     [SerializeField] private int AppliedDamage;
     int missedCount = 0;
@@ -33,6 +34,8 @@ public class CombatManager : MonoBehaviour
             currentHealth = Health;
             healthbar = GameObject.Find("Tomomi Health").GetComponent<Image>();
             comboCounter = GameObject.Find("Combo Counter").GetComponent<Text>();
+            OManager = FindObjectOfType<OpponentManager>();
+
             //incomingDamage = GetHashCode enemy stats
 
         }
@@ -128,6 +131,6 @@ public class CombatManager : MonoBehaviour
         {
 
         }
-        OpponentManager.OManager.TakeDamage(outgoingDamage);
+        OManager.TakeDamage(outgoingDamage);
     }
 }

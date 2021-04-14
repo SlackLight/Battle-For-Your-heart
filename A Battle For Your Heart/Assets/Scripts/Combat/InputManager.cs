@@ -35,6 +35,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] Transform noteController;
     [SerializeField] GameObject miss;
 
+    [SerializeField] Animator animator;
+
 
 
 
@@ -169,6 +171,8 @@ public class InputManager : MonoBehaviour
                         LeftNoteList.RemoveAt(0);
                         lateNoteList.RemoveAt(0);
                         combatManagerRef.TooLate(EnemyAttack);
+                        //animator.GetParameter("") = true;
+
                     }
                     else if (perfectNoteList.Contains(LeftNoteList[0]))
                     {
@@ -288,6 +292,10 @@ public class InputManager : MonoBehaviour
 
     public void OnNoteEnter(Collider note, GameObject timingOverlap)
     {
+        if(note.tag == "End")
+        {
+            FindObjectOfType<OpponentManager>().WinSet = true;
+        }
         if (note.GetComponent<ActivationScript>().isEnabled == true && !editing)
         {
             if (timingOverlap == early)
@@ -330,6 +338,7 @@ public class InputManager : MonoBehaviour
 
             }
         }
+        //if(timingOverlap == End)
     }
 
 

@@ -7,40 +7,27 @@ public class OpponentManager : MonoBehaviour
 {
     public enum Opponents { Shou, Kana, Himeko }
     public Opponents opponent;
-    Opponents currentOppopnent;
+    [SerializeField] Opponents currentOppopnent;
     public int Strength;
     public int Defence;
     public int Health;
-    [SerializeField] int currentHealth;
+    [SerializeField] float currentHealth;
     [SerializeField] Image healthBar;
-    [SerializeField] InputManager input;
 
     [SerializeField] GameObject ShouBattle;
     [SerializeField] GameObject KanaBattle;
     [SerializeField] GameObject HimekoBattle;
+    public bool WinSet;
 
 
-    public static OpponentManager _OpponentManager;
-    public static OpponentManager OManager
-    {
-        get
-        {
-            if (_OpponentManager == null)
-            {
-                _OpponentManager = GameObject.FindObjectOfType<OpponentManager>();
-            }
-
-            return _OpponentManager;
-        }
-
-    }
     private void start()
     {
 
-        
+        if (TimeManager.instance.dayCounter == 1)
+        {
 
-
-        if (TimeManager.instance.weekCounter == 1)
+        }
+        else if (TimeManager.instance.weekCounter == 1)
         {
             opponent = Opponents.Shou;
 
@@ -58,8 +45,8 @@ public class OpponentManager : MonoBehaviour
     }
     public void StartUp(Opponents opponent)
     {
-        
-       
+
+
         switch (opponent)
         {
             case Opponents.Shou:
@@ -111,39 +98,42 @@ public class OpponentManager : MonoBehaviour
         }
         currentOppopnent = opponent;
         currentHealth = Health;
-        for (int i = 0; i < FindObjectsOfType<InputManager>().Length; i++)
-        {
-            FindObjectsOfType<InputManager>()[i].EnemyAttack = Strength;
-        }
+        FindObjectOfType<InputManager>().EnemyAttack = Strength;
+
 
 
     }
- 
+
     // Update is called once per frame
     void Update()
     {//update stats if they dont match the selected opponent
 
-        healthBar.fillAmount = (float)currentHealth /(float)Health ;
+        healthBar.fillAmount = currentHealth / Health;
 
-        if (currentOppopnent != opponent ||Health==0)
+        if (currentOppopnent != opponent || Health == 0)
         {
             StartUp(opponent);
-            
+
 
         }
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && WinSet)
         {
-            
+            //Display Winstuff here
             //win battle but finnish song first
         }
     }
 
-    public void TakeDamage (int damage)
+    public void TakeDamage(float damage)
     {
-        int appliedDamage = damage / Defence;
+        float appliedDamage = damage / Defence;
+        print(appliedDamage);
+        //if(appliedDamage <= 0)
+        //{
+        //    appliedDamage = 1;
+        //}
         currentHealth = currentHealth - appliedDamage;
-        
+
     }
 
 }
