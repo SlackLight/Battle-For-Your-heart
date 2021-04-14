@@ -143,7 +143,7 @@ public class MatchingTest : Minigame
     public void SpawnItems()
     {
 
-        int currentWinner = Random.Range(0, spawnablePrefabs.Count - 1);
+        int currentWinner = Random.Range(0, spawnablePrefabs.Count);
 
         for (int i = 0; i < spawnablePrefabs.Count; i++)
         {

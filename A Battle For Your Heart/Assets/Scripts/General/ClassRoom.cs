@@ -38,7 +38,7 @@ public class ClassRoom : MonoBehaviour
 
     public void NotActive()
     {
-        sr.color = Color.black;
+        //sr.color = Color.black;
         bc.enabled = false;
     }
 

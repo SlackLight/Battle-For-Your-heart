@@ -24,7 +24,7 @@ public class OpponentManager : MonoBehaviour
 
     private void Start()
     {
-        if (TimeManager.instance.dayCounter == 1 && TimeManager.instance.weekCounter == 1)
+        if (TimeManager.instance == null)
         {
             opponent = Opponents.Tutorial;
         }

@@ -72,7 +72,9 @@ public class TimeManager : MonoBehaviour
         //Increment the NPCs convo changes from the hallway scene
         NPCManager.instance.IncrementLinearNPCs();
 
-        //InteractionText.instance.gameObject.SetActive(false);////why this off??
+        NPCManager.instance.DespawnTheNPCs();
+
+        InteractionText.instance.gameObject.SetActive(false);
 
         beginningOfDay = true;
         //Increment the NPCs convo changes from the hallway end scene

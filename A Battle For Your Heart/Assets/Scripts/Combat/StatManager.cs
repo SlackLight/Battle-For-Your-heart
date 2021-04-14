@@ -22,11 +22,16 @@ public class StatManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (Stats == null)
+        if (StatManager.Stats != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else if (StatManager.Stats == null)
         {
             Stats = this;
             DontDestroyOnLoad(this);
         }
+        
 
     }
 

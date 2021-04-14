@@ -877,7 +877,7 @@ MonoBehaviour:
   scoreValue: 0
   scoreToWin: 3
   time: {fileID: 1880357422}
-  mainTimer: 30
+  mainTimer: 15
   successText: {fileID: 674066219}
   successReadout: Matched!
   successTextParent: {fileID: 1582640340}
