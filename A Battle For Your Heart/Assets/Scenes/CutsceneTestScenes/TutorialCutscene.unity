@@ -2508,7 +2508,7 @@ PrefabInstance:
     - target: {fileID: 1639532046614259462, guid: 4bbb8945366072b4ba4068b40cce6753,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1639532046614259462, guid: 4bbb8945366072b4ba4068b40cce6753,
         type: 3}
@@ -2560,7 +2560,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1639532046614259460, guid: 4bbb8945366072b4ba4068b40cce6753, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4bbb8945366072b4ba4068b40cce6753, type: 3}
 --- !u!1 &678626694
 GameObject:
@@ -4092,7 +4093,7 @@ PrefabInstance:
         type: 3}
       propertyPath: backgroundPrefabsToChangeTo.Array.data[0]
       value: 
-      objectReference: {fileID: 5113952091080918225, guid: 38430323be316bb478899367dcdc70c0,
+      objectReference: {fileID: 460941676314896405, guid: f0c9282436378254c80d311fc2cfca03,
         type: 3}
     - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
@@ -4103,7 +4104,7 @@ PrefabInstance:
     - target: {fileID: 686424190529634725, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 686424190529634725, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
@@ -5583,7 +5584,7 @@ PrefabInstance:
     - target: {fileID: 3158369824211194607, guid: 1155e9022166cc04595cad46ac972816,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3158369824211194607, guid: 1155e9022166cc04595cad46ac972816,
         type: 3}
@@ -6051,7 +6052,7 @@ PrefabInstance:
     - target: {fileID: 6293128340238591393, guid: e637da9fca08da242be1be5ed42d4e98,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6293128340238591393, guid: e637da9fca08da242be1be5ed42d4e98,
         type: 3}
@@ -6108,7 +6109,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinstateManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8914428053986278319, guid: e637da9fca08da242be1be5ed42d4e98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e637da9fca08da242be1be5ed42d4e98, type: 3}
 --- !u!1 &1696069680
 GameObject:
