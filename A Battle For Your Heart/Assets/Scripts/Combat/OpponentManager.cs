@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class OpponentManager : MonoBehaviour
 {
-    public enum Opponents { Shou, Kana, Himeko,Tutorial }
+    public enum Opponents { Shou, Kana, Himeko, Tutorial }
     public Opponents opponent;
     [SerializeField] Opponents currentOppopnent;
     public int Strength;
@@ -100,7 +100,7 @@ public class OpponentManager : MonoBehaviour
 
                 break;
             case Opponents.Tutorial:
-                Strength = 0;
+                Strength = 1;
                 Defence = 5;
                 Health = 100;
 
@@ -133,7 +133,7 @@ public class OpponentManager : MonoBehaviour
 
 
 
-     
+
 
 
 
@@ -155,10 +155,25 @@ public class OpponentManager : MonoBehaviour
 
             //Display Winstuff here
             //win battle but finnish song first
-        }else if(currentHealth> 0 && SongDone &&opponent !=Opponents.Tutorial)
+        }
+        else if (currentHealth > 0 && SongDone)
         {
-            FindObjectOfType<WinstateManager>().SetLose();
-            ReturnToScene();
+            if (opponent == Opponents.Tutorial)
+            {
+                FindObjectOfType<WinstateManager>().CutscenePlayed();
+
+                FindObjectOfType<WinstateManager>().SetWin();
+                ReturnToScene();
+
+            }
+            else
+            {
+                FindObjectOfType<WinstateManager>().CutscenePlayed();
+
+                FindObjectOfType<WinstateManager>().SetLose();
+                ReturnToScene();
+            }
+
         }
     }
 
@@ -181,7 +196,7 @@ public class OpponentManager : MonoBehaviour
 
             SceneManager.LoadScene("TutorialCutscene");
         }
-        else if(opponent== Opponents.Shou)
+        else if (opponent == Opponents.Shou)
         {
             SceneManager.LoadScene("ShouCutscenes");
         }
