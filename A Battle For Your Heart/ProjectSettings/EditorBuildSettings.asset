@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CutsceneTestScenes/HimekoCutscene.unity
     guid: 36db3cebe5f3a6a4ca157721ca4c33f3
   - enabled: 1
-    path: Assets/Scenes/CutsceneTestScenes/AiCutscne.unity
+    path: Assets/Scenes/CutsceneTestScenes/AiCutscene.unity
     guid: 908f2372d328f7b43b47ddf8ea1bfad2
   m_configObjects: {}
