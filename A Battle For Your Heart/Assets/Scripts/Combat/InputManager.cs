@@ -292,9 +292,9 @@ public class InputManager : MonoBehaviour
 
     public void OnNoteEnter(Collider note, GameObject timingOverlap)
     {
-        if(note.tag == "End")
+        if(note.tag == "EndBlock")
         {
-            FindObjectOfType<OpponentManager>().WinSet = true;
+            FindObjectOfType<OpponentManager>().SongDone = true;
         }
         if (note.GetComponent<ActivationScript>().isEnabled == true && !editing)
         {

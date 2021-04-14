@@ -19,7 +19,7 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject KanaBattle;
     [SerializeField] GameObject HimekoBattle;
     [SerializeField] GameObject TutorialBattle;
-    public bool WinSet;
+    public bool SongDone;
 
 
     private void start()
@@ -139,7 +139,7 @@ public class OpponentManager : MonoBehaviour
 
         }
 
-        if (currentHealth <= 0 && WinSet)
+        if (currentHealth <= 0 && SongDone)
         {
             FindObjectOfType<WinstateManager>().SetWin();
             ReturnToScene();
@@ -148,13 +148,17 @@ public class OpponentManager : MonoBehaviour
 
             //Display Winstuff here
             //win battle but finnish song first
+        }else if(currentHealth> 0 && SongDone)
+        {
+            FindObjectOfType<WinstateManager>().SetLose();
+            ReturnToScene();
         }
     }
 
     public void TakeDamage(float damage)
     {
         float appliedDamage = damage / Defence;
-
+        print(appliedDamage);
         //if(appliedDamage <= 0)
         //{
         //    appliedDamage = 1;
