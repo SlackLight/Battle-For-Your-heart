@@ -887,7 +887,7 @@ MonoBehaviour:
   restartTimerValue: 1.5
   restartTimer: 1.5
   sceneTransferTimer: 3
-  testingMode: 1
+  testingMode: 0
   sceneToTransferTo: 0
   scored:
     m_PersistentCalls:
