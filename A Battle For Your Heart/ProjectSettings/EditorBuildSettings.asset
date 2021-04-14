@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HallwayBackup.unity
-    guid: f0b23d7f4b7c29143a71b8282c0a3671
+    path: Assets/Scenes/FinalSceness/Hallway.unity
+    guid: 0b6dab068b3ade44da4bf198d1b029e0
   - enabled: 1
     path: Assets/Scenes/FinalSceness/Minigames/GymClass.unity
     guid: badd92a772385554794497a1e4f23ecf
@@ -15,9 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalSceness/EndOfDayHallway.unity
     guid: 7592824dc5d2a5a4ebc0b3f2b6974d46
   - enabled: 1
-    path: Assets/Scenes/FinalSceness/Minigames/CookingClass.unity
-    guid: 2b2b91a2a1a79054e9eccaf846cf51d0
+    path: Assets/Scenes/RythmTest.unity
+    guid: 6c0f7d0c225cde34d9ae5cd0b143eb17
   - enabled: 1
-    path: Assets/Scenes/FinalSceness/Minigames/ScienceClass.unity
-    guid: 209ccd562b545ac4ba45e25c0375cb91
+    path: Assets/Scenes/CutsceneTestScenes/TutorialCutscene.unity
+    guid: a701cb0eeaca8374d8d4dc475d91d268
+  - enabled: 1
+    path: Assets/Scenes/CutsceneTestScenes/ShouCutscenes.unity
+    guid: d87b9109649752f4aaa5d208d8678269
+  - enabled: 1
+    path: Assets/Scenes/CutsceneTestScenes/KanaCutscenes.unity
+    guid: 478b0d2c0805a2745aabf894ecda08e3
+  - enabled: 1
+    path: Assets/Scenes/CutsceneTestScenes/HimekoCutscene.unity
+    guid: 36db3cebe5f3a6a4ca157721ca4c33f3
+  - enabled: 1
+    path: Assets/Scenes/CutsceneTestScenes/AiCutscene.unity
+    guid: 908f2372d328f7b43b47ddf8ea1bfad2
   m_configObjects: {}
