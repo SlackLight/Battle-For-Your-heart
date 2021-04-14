@@ -1275,8 +1275,8 @@ MonoBehaviour:
   player: {fileID: 0}
   beginningOfDay: 1
   endingScene: 0
-  bossFightSceneID: 
   weekLength: 5
+  cutsceneSceneNames: []
 --- !u!4 &837921425
 Transform:
   m_ObjectHideFlags: 0
