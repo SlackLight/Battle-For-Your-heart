@@ -1357,8 +1357,8 @@ MonoBehaviour:
   successText: {fileID: 961462051}
   successReadout: Hypersaturated!
   successTextParent: {fileID: 397284642}
-  missText: {fileID: 0}
-  missReadout: 
+  missText: {fileID: 649072188}
+  missReadout: Lose
   missTextParent: {fileID: 0}
   restartTimerValue: 1.5
   restartTimer: 1.5
