@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OpponentManager : MonoBehaviour
 {
-    public enum Opponents { Shou, Kana, Himeko }
+    public enum Opponents { Shou, Kana, Himeko,Tutorial }
     public Opponents opponent;
     [SerializeField] Opponents currentOppopnent;
     public int Strength;
@@ -17,15 +18,17 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject ShouBattle;
     [SerializeField] GameObject KanaBattle;
     [SerializeField] GameObject HimekoBattle;
+    [SerializeField] GameObject TutorialBattle;
     public bool WinSet;
 
 
     private void start()
     {
+        FindObjectOfType<WinstateManager>().CutscenePlayed();
 
-        if (TimeManager.instance.dayCounter == 1)
+        if (TimeManager.instance.dayCounter == 1&& TimeManager.instance.weekCounter == 1)
         {
-
+            opponent = Opponents.Tutorial;
         }
         else if (TimeManager.instance.weekCounter == 1)
         {
@@ -60,6 +63,7 @@ public class OpponentManager : MonoBehaviour
                     ShouBattle.SetActive(true);
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
+                    TutorialBattle.SetActive(false);
                 }
 
 
@@ -74,6 +78,8 @@ public class OpponentManager : MonoBehaviour
                     ShouBattle.SetActive(false);
                     KanaBattle.SetActive(true);
                     HimekoBattle.SetActive(false);
+                    TutorialBattle.SetActive(false);
+
                 }
 
 
@@ -88,6 +94,23 @@ public class OpponentManager : MonoBehaviour
                     ShouBattle.SetActive(false);
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(true);
+                    TutorialBattle.SetActive(false);
+
+                }
+
+                break;
+            case Opponents.Tutorial:
+                Strength = 0;
+                Defence = 5;
+                Health = 100;
+
+                if (!TutorialBattle.activeInHierarchy)
+                {
+                    ShouBattle.SetActive(false);
+                    KanaBattle.SetActive(false);
+                    HimekoBattle.SetActive(false);
+                    TutorialBattle.SetActive(true);
+
                 }
 
                 break;
@@ -114,11 +137,15 @@ public class OpponentManager : MonoBehaviour
         {
             StartUp(opponent);
 
-
         }
 
         if (currentHealth <= 0 && WinSet)
         {
+            FindObjectOfType<WinstateManager>().SetWin();
+            ReturnToScene();
+
+
+
             //Display Winstuff here
             //win battle but finnish song first
         }
@@ -127,12 +154,36 @@ public class OpponentManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         float appliedDamage = damage / Defence;
-        print(appliedDamage);
+
         //if(appliedDamage <= 0)
         //{
         //    appliedDamage = 1;
         //}
         currentHealth = currentHealth - appliedDamage;
+
+    }
+    void ReturnToScene()
+    {
+        if (opponent == Opponents.Tutorial)
+        {
+            SceneManager.LoadScene("TutorialCutscene");
+        }
+        else if(opponent== Opponents.Shou)
+        {
+            SceneManager.LoadScene("ShouCutscenes");
+        }
+        else if (opponent == Opponents.Kana)
+        {
+            SceneManager.LoadScene("KanaCutscenes");
+        }
+        else if (opponent == Opponents.Himeko)
+        {
+            SceneManager.LoadScene("HimekoCutscenes");
+        }
+        else
+        {
+
+        }
 
     }
 

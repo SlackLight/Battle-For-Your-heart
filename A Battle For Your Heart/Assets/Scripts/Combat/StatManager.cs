@@ -23,16 +23,32 @@ public class StatManager : MonoBehaviour
 
     }
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+    public void MatchingWin()
+    {
+        Strength += 10;
+        
+       
+    }public void GymWin()
+    {
+        Health += 25;
+        
+       
+    }public void ScienceWin()
+    {
+        Health += 10;
+        
+       
     }
 }
