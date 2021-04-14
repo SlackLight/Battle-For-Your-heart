@@ -39,7 +39,8 @@ public class Minigame : MonoBehaviour
 
     public virtual void Start()
     {
-        score.text = "Score - 0";
+        score.text = "Score : 0";
+        successText.text = successReadout;
     }
 
     public virtual void Update()
