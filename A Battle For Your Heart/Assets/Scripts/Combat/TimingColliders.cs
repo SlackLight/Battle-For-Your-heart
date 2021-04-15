@@ -31,7 +31,7 @@ public class TimingColliders : MonoBehaviour
             {
                 other.GetComponent<ActivationScript>().isEnabled = false;
                 combatManagerRef.Missed(inputManager.EnemyAttack);
-                other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
     }

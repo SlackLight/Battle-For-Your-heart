@@ -101,8 +101,8 @@ public class OpponentManager : MonoBehaviour
                 break;
             case Opponents.Tutorial:
                 Strength = 1;
-                Defence = 5;
-                Health = 100;
+                Defence = 2;
+                Health = 50;
 
                 if (!TutorialBattle.activeInHierarchy)
                 {
@@ -180,7 +180,7 @@ public class OpponentManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         float appliedDamage = damage / Defence;
-        print(appliedDamage);
+
         //if(appliedDamage <= 0)
         //{
         //    appliedDamage = 1;

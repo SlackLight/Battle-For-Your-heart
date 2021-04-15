@@ -22,12 +22,17 @@ public class CombatManager : MonoBehaviour
     int earlyCount = 0;
     int lateCount = 0;
     public string LatestRating;
+    public bool AttackMode=false;
+    [SerializeField] SpriteRenderer BattleSheet;
+    [SerializeField] Color DefenceColor;
+    [SerializeField] Color AttackColor;
 
     // Start is called before the first frame update
     void Awake()
     {
         if (gameObject)
         {
+            BattleSheet.color= DefenceColor; 
             Defence = StatManager.Stats.Defence;
             Strength = StatManager.Stats.Strength;
             Health = StatManager.Stats.Health;
@@ -35,6 +40,7 @@ public class CombatManager : MonoBehaviour
             healthbar = GameObject.Find("Tomomi Health").GetComponent<Image>();
             comboCounter = GameObject.Find("Combo Counter").GetComponent<Text>();
             OManager = FindObjectOfType<OpponentManager>();
+            
 
             //incomingDamage = GetHashCode enemy stats
 
@@ -44,8 +50,17 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (AttackMode)
+        {
+            BattleSheet.color = AttackColor;
+        }
+        else
+        {
+            BattleSheet.color = DefenceColor;
+        }
         healthbar.fillAmount = (float)currentHealth / Health;
-        comboCounter.text =( "Combo Count: " + comboCount);
+        if (comboCount > 0) comboCounter.text = (comboCount + " COMBO!");
+        else comboCounter.text = null;
 
 
         ////Test Damage
@@ -73,7 +88,7 @@ public class CombatManager : MonoBehaviour
 
     public void Perfect()
     {
-        LatestRating = "Perfect!";
+        LatestRating = "PERFECT!!!";
       
            incomingDamage = 0;
         perfectCount++;
@@ -85,7 +100,7 @@ public class CombatManager : MonoBehaviour
     }
     public void TooEarly(int inwardDamage)
     {
-        LatestRating = "Too Early!";
+        LatestRating = "Too Early";
 
         comboCount++;
         earlyCount++;
@@ -98,7 +113,7 @@ public class CombatManager : MonoBehaviour
     }
     public void TooLate(int inwardDamage)
     {
-        LatestRating = "Too Late!";
+        LatestRating = "Too Late";
 
         comboCount++;
         lateCount++;
@@ -111,7 +126,7 @@ public class CombatManager : MonoBehaviour
     }
     public void Missed(int inwardDamage)
     {
-        LatestRating = "Miss!";
+        LatestRating = "Miss";
 
         incomingDamage = inwardDamage;
         comboCount = 0;
@@ -126,11 +141,23 @@ public class CombatManager : MonoBehaviour
     {
 
 
-        currentHealth = currentHealth - AppliedDamage;
+        
+       
+        if (AttackMode)
+        {
+            OManager.TakeDamage(outgoingDamage);
+
+        }
+        else
+        {
+            currentHealth = currentHealth - AppliedDamage;
+        }
+
         if (currentHealth <= 0)
         {
             FindObjectOfType<WinstateManager>().SetLose();
+            // Lose the game and load scene immediatly
+
         }
-        OManager.TakeDamage(outgoingDamage);
     }
 }
