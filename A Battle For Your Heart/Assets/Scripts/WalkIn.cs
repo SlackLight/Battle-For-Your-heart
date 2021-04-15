@@ -35,18 +35,17 @@ public class WalkIn : MonoBehaviour
         if (walk && Vector2.Distance(walkToPosition, spriteToWalkIn.transform.position) > 0.1f)
         {
             spriteToWalkIn.transform.position = Vector2.Lerp(spriteToWalkIn.transform.position, walkToPosition, lerpRatio);
-            print(Vector2.Lerp(spriteToWalkIn.transform.position, walkToPosition, lerpRatio));
+
         }
         if (walkOut && Vector2.Distance(walkOutPosition, spriteToWalkIn.transform.position) > 0.1f)
         {
             spriteToWalkIn.transform.position = Vector2.Lerp(spriteToWalkIn.transform.position, walkOutPosition, lerpRatio);
-            print(Vector2.Lerp(spriteToWalkIn.transform.position, walkOutPosition, lerpRatio));
         }
     }
 
     public void Walk()
     {
-        print("tried to wak");
+        //print("tried to wak");
         walk = true;
         walkOut = false;
     }
@@ -54,7 +53,7 @@ public class WalkIn : MonoBehaviour
     public void WalkOut()
     {
         walk = false;
-        print("tried to wak out");
+        //print("tried to wak out");
         walkOut = true;
     }
 }

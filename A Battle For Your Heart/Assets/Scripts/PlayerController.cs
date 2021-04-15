@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove = true;
 
-    public Renderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         if (PlayerController.instance != null)
@@ -32,7 +33,6 @@ public class PlayerController : MonoBehaviour
             PlayerController.instance = this;
         }
         rb = this.GetComponent<Rigidbody>();
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -45,6 +45,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             canMove = true;
+        }
+
+        if(hInput > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if(hInput < 0)
+        {
+            spriteRenderer.flipX = false;
         }
 
         hInput = Input.GetAxis("Horizontal");

@@ -72,24 +72,40 @@ public class TimeManager : MonoBehaviour
         //Increment the NPCs convo changes from the hallway scene
         NPCManager.instance.IncrementLinearNPCs();
 
+        NPCManager.instance.DespawnTheNPCs();
+
         InteractionText.instance.gameObject.SetActive(false);
 
         beginningOfDay = true;
         //Increment the NPCs convo changes from the hallway end scene
         //NPCManager.instance.IncrementLinearNPCs();
         //If the final boss fight is done load the final scene
-        if(weekCounter == 1 && dayCounter == 1)
-        {
-            //Loads tutorial
-            SceneManager.LoadScene(cutsceneSceneNames[0]);
-        }
+        //if(weekCounter == 1 && dayCounter == 1)
+        //{
+        //    //Loads tutorial
+        //    //SceneManager.LoadScene(cutsceneSceneNames[0]);
+        //}
         //Checks if it should be loading a bossfight
-        else if (dayCounter == (weekCounter) * weekLength && weekCounter < 3)
+         if (dayCounter == (weekCounter) * weekLength && weekCounter < 3)
         {
+           
+
+            NPCManager.instance.DespawnTheNPCs();
+            if(weekCounter == 1)
+            {
+                SceneManager.LoadScene("ShouCutscenes");
+            }
+            else if (weekCounter == 2)
+            {
+                SceneManager.LoadScene("KanaCutscenes");
+            }else if (weekCounter == 3)
+            {
+                SceneManager.LoadScene("HimekoCutscenes");
+            }
             weekCounter++;
             dayCounter = 1;
-            NPCManager.instance.DespawnTheNPCs();
-            SceneManager.LoadScene(cutsceneSceneNames[weekCounter]);
+
+            //SceneManager.LoadScene(cutsceneSceneNames[weekCounter]);
         }
         else
         {

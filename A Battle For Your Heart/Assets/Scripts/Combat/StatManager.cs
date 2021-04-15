@@ -8,25 +8,30 @@ public class StatManager : MonoBehaviour
     public int Defence;
     public int Health;
 
-    public static StatManager _Stats;
-    public static StatManager Stats
-    {
-        get
-        {
-            if (_Stats == null)
-            {
-                _Stats = GameObject.FindObjectOfType<StatManager>();
-            }
 
-            return _Stats;
-        }
+    public static StatManager Stats;
+    
+       
+          
+          
+        
 
-    }
+    
 
-   
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        if (StatManager.Stats != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else if (StatManager.Stats == null)
+        {
+            Stats = this;
+            DontDestroyOnLoad(this);
+        }
+        
 
     }
 
@@ -34,5 +39,21 @@ public class StatManager : MonoBehaviour
     void Update()
     {
 
+    }
+    public void MatchingWin()
+    {
+        Strength += 10;
+        
+       
+    }public void GymWin()
+    {
+        Health += 25;
+        
+       
+    }public void ScienceWin()
+    {
+        Health += 10;
+        
+       
     }
 }

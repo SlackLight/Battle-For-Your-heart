@@ -101,6 +101,7 @@ public class MatchingTest : Minigame
                 scoreValue++;
                 score.text = "Score : " + scoreValue;
                 successTextParent.SetActive(true);
+                StatManager.Stats.MatchingWin();
                 scored.Invoke();
             }
             else
@@ -142,7 +143,7 @@ public class MatchingTest : Minigame
     public void SpawnItems()
     {
 
-        int currentWinner = Random.Range(0, spawnablePrefabs.Count - 1);
+        int currentWinner = Random.Range(0, spawnablePrefabs.Count);
 
         for (int i = 0; i < spawnablePrefabs.Count; i++)
         {
@@ -166,7 +167,7 @@ public class MatchingTest : Minigame
                 {
                     Instantiate(spawnablePrefabs[i], RandomPointInBounds(panelSpawnZone.GetComponent<BoxCollider2D>().bounds), Quaternion.identity, ItemSpawnLocation.transform);
                 }
-                
+
             }
         }
 

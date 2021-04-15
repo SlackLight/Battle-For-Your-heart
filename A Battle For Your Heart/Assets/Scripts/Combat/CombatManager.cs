@@ -129,7 +129,7 @@ public class CombatManager : MonoBehaviour
         currentHealth = currentHealth - AppliedDamage;
         if (currentHealth <= 0)
         {
-
+            FindObjectOfType<WinstateManager>().SetLose();
         }
         OManager.TakeDamage(outgoingDamage);
     }
