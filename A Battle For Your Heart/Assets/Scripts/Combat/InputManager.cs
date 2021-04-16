@@ -49,6 +49,11 @@ public class InputManager : MonoBehaviour
     [SerializeField] ParticleSystem RightPartO;
 
 
+    [SerializeField] ParticleSystem PlayerPerfect;
+
+    [SerializeField] Animator Tomomi;
+
+
 
 
 
@@ -125,7 +130,7 @@ public class InputManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         LeftArrowO.DisableKeyword("_EMISSION");
     }
-
+  
     void Update()
     {
         switch (Mode)
@@ -223,6 +228,8 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         LeftPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(LeftNoteList[0]))
                     {
@@ -232,7 +239,7 @@ public class InputManager : MonoBehaviour
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
-
+                    Tomomi.SetTrigger("DanceLeft");
 
                 }
             }
@@ -257,6 +264,8 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         RightPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(RightNoteList[0]))
                     {
@@ -266,7 +275,11 @@ public class InputManager : MonoBehaviour
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceRight");
+
+
                 }
+
             }
             if (DownNoteList.Count != 0)
             {
@@ -288,6 +301,8 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         DownPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(DownNoteList[0]))
                     {
@@ -297,6 +312,8 @@ public class InputManager : MonoBehaviour
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceDown");
+
 
                 }
             }
@@ -321,6 +338,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         UpPart.Play();
+                        //PlayerPerfect.Play();
                     }
                     else if (earlyNoteList.Contains(UpNoteList[0]))
                     {
@@ -330,6 +348,9 @@ public class InputManager : MonoBehaviour
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceUp");
+
+
                 }
             }
         }

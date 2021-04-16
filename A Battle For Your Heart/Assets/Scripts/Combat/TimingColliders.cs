@@ -6,6 +6,8 @@ public class TimingColliders : MonoBehaviour
 {
     InputManager inputManager;
     CombatManager combatManagerRef;
+    [SerializeField] Animator Tomomi;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class TimingColliders : MonoBehaviour
         {
             if (other.GetComponent<ActivationScript>().isEnabled)
             {
+                Tomomi.SetTrigger("Hit");
                 other.GetComponent<ActivationScript>().isEnabled = false;
                 combatManagerRef.Missed(inputManager.EnemyAttack);
                 other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
