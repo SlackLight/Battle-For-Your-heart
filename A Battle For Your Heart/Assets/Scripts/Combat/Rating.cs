@@ -24,21 +24,21 @@ public class Rating : MonoBehaviour
     void Update()
     {
         myText.text = managerRef.LatestRating;
-        if (managerRef.LatestRating == "Perfect!")
+        if (managerRef.LatestRating == "PERFECT!!!")
         {
             
             myText.color = Color.yellow;
 
         }
-        else if (managerRef.LatestRating == "Too Early!")
+        else if (managerRef.LatestRating == "Too Early")
         {
             myText.color = Color.white;
         }
-        else if (managerRef.LatestRating == "Too Late!")
+        else if (managerRef.LatestRating == "Too Late")
         {
             myText.color = Color.white;
         }
-        else if (managerRef.LatestRating == "Miss!")
+        else if (managerRef.LatestRating == "Miss")
         {
             myText.color = Color.black;
         }

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
     Image healthbar;
     Text comboCounter;
+    [SerializeField] Text ModeText;
+
     int comboCount = 0;
     [SerializeField] int Strength;
     [SerializeField] int Defence;
@@ -22,12 +25,30 @@ public class CombatManager : MonoBehaviour
     int earlyCount = 0;
     int lateCount = 0;
     public string LatestRating;
+    public bool AttackMode = false;
+    [SerializeField] SpriteRenderer BattleSheet;
+    [SerializeField] SpriteRenderer OBattleSheet;
+    [SerializeField] SpriteRenderer HeartIcon;
+    [SerializeField] Color DefenceColor;
+    [SerializeField] Color AttackColor;
+    [SerializeField] Color H_DefenceColor;
+    [SerializeField] Color H_AttackColor;
+    [SerializeField] Color O_DefaultColor;
+    [SerializeField] ParticleSystem hurtPart;
+    [SerializeField] float hoverDist;
+    [SerializeField] Animator Tomomi;
+
+
 
     // Start is called before the first frame update
     void Awake()
     {
         if (gameObject)
         {
+            ModeText.text = "Defend";
+            OBattleSheet.color = O_DefaultColor;
+            HeartIcon.color = H_DefenceColor;
+            BattleSheet.color = DefenceColor;
             Defence = StatManager.Stats.Defence;
             Strength = StatManager.Stats.Strength;
             Health = StatManager.Stats.Health;
@@ -35,6 +56,8 @@ public class CombatManager : MonoBehaviour
             healthbar = GameObject.Find("Tomomi Health").GetComponent<Image>();
             comboCounter = GameObject.Find("Combo Counter").GetComponent<Text>();
             OManager = FindObjectOfType<OpponentManager>();
+
+
 
             //incomingDamage = GetHashCode enemy stats
 
@@ -44,9 +67,30 @@ public class CombatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthbar.fillAmount = (float)currentHealth / Health;
-        comboCounter.text =( "Combo Count: " + comboCount);
+        if (AttackMode)
+        {
+            ModeText.text = "Attack";
+            BattleSheet.color = AttackColor;
+            HeartIcon.color = H_AttackColor;
+            OBattleSheet.color = O_DefaultColor;
 
+
+
+        }
+        else
+        {
+            ModeText.text = "Defend";
+
+            BattleSheet.color = DefenceColor;
+            HeartIcon.color = H_DefenceColor;
+            OBattleSheet.color = AttackColor;
+
+        }
+        healthbar.fillAmount = (float)currentHealth / Health;
+        if (comboCount > 0) comboCounter.text = (comboCount + " COMBO!");
+        else comboCounter.text = null;
+
+        HeartIcon.gameObject.transform.position = new Vector3(HeartIcon.gameObject.transform.position.x, HeartIcon.gameObject.transform.position.y, HeartIcon.gameObject.transform.position.z + hoverDist * Mathf.Sin(Time.time));
 
         ////Test Damage
         //if (Input.GetKeyDown(KeyCode.Space))
@@ -73,9 +117,9 @@ public class CombatManager : MonoBehaviour
 
     public void Perfect()
     {
-        LatestRating = "Perfect!";
-      
-           incomingDamage = 0;
+        LatestRating = "PERFECT!!!";
+
+        incomingDamage = 0;
         perfectCount++;
         AppliedDamage = 0;
         outgoingDamage = Strength;
@@ -85,7 +129,7 @@ public class CombatManager : MonoBehaviour
     }
     public void TooEarly(int inwardDamage)
     {
-        LatestRating = "Too Early!";
+        LatestRating = "Too Early";
 
         comboCount++;
         earlyCount++;
@@ -98,7 +142,7 @@ public class CombatManager : MonoBehaviour
     }
     public void TooLate(int inwardDamage)
     {
-        LatestRating = "Too Late!";
+        LatestRating = "Too Late";
 
         comboCount++;
         lateCount++;
@@ -111,7 +155,7 @@ public class CombatManager : MonoBehaviour
     }
     public void Missed(int inwardDamage)
     {
-        LatestRating = "Miss!";
+        LatestRating = "Miss";
 
         incomingDamage = inwardDamage;
         comboCount = 0;
@@ -126,11 +170,35 @@ public class CombatManager : MonoBehaviour
     {
 
 
-        currentHealth = currentHealth - AppliedDamage;
+
+
+        if (AttackMode)
+        {
+            OManager.TakeDamage(outgoingDamage);
+
+        }
+        else
+        {
+            if (AppliedDamage > 0)
+            {
+                Tomomi.SetTrigger("Hit");
+                hurtPart.Play();
+            }
+            currentHealth = currentHealth - AppliedDamage;
+
+        }
+
         if (currentHealth <= 0)
         {
+            hurtPart.Play();
+            //PLAY DEATH THING HERERERERER
+
             FindObjectOfType<WinstateManager>().SetLose();
+            FindObjectOfType<OpponentManager>().ReturnToScene();
+
+
+            // Lose the game and load scene immediatly
+
         }
-        OManager.TakeDamage(outgoingDamage);
     }
 }

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LeftNote
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.21568628, g: 0, b: 0.21568628, a: 1}
-    - _EmissionColor: {r: 0.56919944, g: 0, b: 0.56919944, a: 1}
+    - _Color: {r: 0.735849, g: 0.2672659, b: 0.30427682, a: 1}
+    - _EmissionColor: {r: 0.6037736, g: 0.2306871, b: 0.27568728, a: 1}
