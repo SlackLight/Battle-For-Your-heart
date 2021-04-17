@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 162943060}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1271885272}
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &162943060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,7 +1003,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 903078710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1271885272}
+        m_MethodName: CloseControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &903078710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,6 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d52abdf8df623478d61f422b6482ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlsPanel: {fileID: 174887279}
 --- !u!4 &1271885273
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,7 +1250,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1285935274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1271885272}
+        m_MethodName: ControlsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1285935274
 MonoBehaviour:
   m_ObjectHideFlags: 0

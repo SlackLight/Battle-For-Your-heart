@@ -12,17 +12,17 @@ public class MenuScene : MonoBehaviour
         controlsPanel.SetActive(false);
     }
 
-    void PlayGame()
+    public void PlayGame()
     {
         SceneManager.LoadScene(1);
     }
 
-    void ControlsMenu()
+    public void ControlsMenu()
     {
         controlsPanel.SetActive(true);
     }
 
-    void CloseControls()
+    public void CloseControls()
     {
         controlsPanel.SetActive(false);
     }
