@@ -31,7 +31,7 @@ public class NoteController : MonoBehaviour
         }
         else
         {
-            transform.position -= new Vector3(0f, 0f, (bps + spacing) * Time.deltaTime);
+            transform.position += new Vector3(0f, 0f, (bps + spacing) * Time.deltaTime);
         }
     }
 }

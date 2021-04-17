@@ -20,6 +20,7 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject HimekoBattle;
     [SerializeField] GameObject TutorialBattle;
     public bool SongDone;
+    [SerializeField] Text OpponentName;
 
 
     private void Start()
@@ -64,6 +65,7 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Shou";
                 }
 
 
@@ -79,6 +81,8 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(true);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Kana";
+
 
                 }
 
@@ -95,14 +99,15 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(true);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Himeko";
 
                 }
 
                 break;
             case Opponents.Tutorial:
                 Strength = 1;
-                Defence = 5;
-                Health = 100;
+                Defence = 2;
+                Health = 50;
 
                 if (!TutorialBattle.activeInHierarchy)
                 {
@@ -110,6 +115,8 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(true);
+                    OpponentName.text = "Club Grunt";
+
 
                 }
 
@@ -180,7 +187,7 @@ public class OpponentManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         float appliedDamage = damage / Defence;
-        print(appliedDamage);
+
         //if(appliedDamage <= 0)
         //{
         //    appliedDamage = 1;
@@ -188,7 +195,7 @@ public class OpponentManager : MonoBehaviour
         currentHealth = currentHealth - appliedDamage;
 
     }
-    void ReturnToScene()
+    public void ReturnToScene()
     {
         if (opponent == Opponents.Tutorial)
         {

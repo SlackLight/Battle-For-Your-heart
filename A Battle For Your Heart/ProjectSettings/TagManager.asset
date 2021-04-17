@@ -14,6 +14,7 @@ TagManager:
   - FrontWall
   - BackWall
   - EndBlock
+  - AttackMode
   layers:
   - Default
   - TransparentFX

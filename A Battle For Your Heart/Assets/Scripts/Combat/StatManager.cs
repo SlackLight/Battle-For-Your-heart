@@ -42,17 +42,17 @@ public class StatManager : MonoBehaviour
     }
     public void MatchingWin()
     {
-        Strength += 10;
+        Strength += 5;
         
        
     }public void GymWin()
     {
-        Health += 25;
+        Health += 15;
         
        
     }public void ScienceWin()
     {
-        Health += 10;
+        Health += 5;
         
        
     }

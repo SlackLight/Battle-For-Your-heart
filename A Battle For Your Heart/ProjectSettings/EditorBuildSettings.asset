@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 63934e2c5f76afd459dd548af4a3864f
+  - enabled: 1
     path: Assets/Scenes/CutsceneTestScenes/TutorialCutscene.unity
     guid: a701cb0eeaca8374d8d4dc475d91d268
   - enabled: 1
@@ -38,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalSceness/Minigames/CookingClass.unity
     guid: 2b2b91a2a1a79054e9eccaf846cf51d0
+  - enabled: 1
+    path: Assets/Scenes/FinalSceness/Minigames/GymClass2.unity
+    guid: 1e8defb12c61e084c875e11f15e403ff
   m_configObjects: {}
