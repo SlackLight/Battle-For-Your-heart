@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba371d11430a37f47808c0cbe7bdb212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convoIDsToBeStarted: 
+  convoIDsToBeStarted: 32000000
   currentBackground: {fileID: 0}
-  backgroundPrefabsToChangeTo: []
+  backgroundPrefabsToChangeTo:
+  - {fileID: 2337025100503541224, guid: 700ce059dee39d743afc914475a228ff, type: 3}
   backgroundSpawnSpot: {fileID: 686424191980499376}
-  playConvoOnStart: 1
   gameParents: []
 --- !u!1 &686424191980499376
 GameObject:
