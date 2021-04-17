@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class OpponentManager : MonoBehaviour
 {
-    public enum Opponents { Shou, Kana, Himeko,Tutorial }
+    public enum Opponents { Shou, Kana, Himeko, Tutorial }
     public Opponents opponent;
     [SerializeField] Opponents currentOppopnent;
     public int Strength;
@@ -20,6 +20,7 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject HimekoBattle;
     [SerializeField] GameObject TutorialBattle;
     public bool SongDone;
+    [SerializeField] Text OpponentName;
 
 
     private void Start()
@@ -64,6 +65,7 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Shou";
                 }
 
 
@@ -79,6 +81,8 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(true);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Kana";
+
 
                 }
 
@@ -95,14 +99,15 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(true);
                     TutorialBattle.SetActive(false);
+                    OpponentName.text = "Himeko";
 
                 }
 
                 break;
             case Opponents.Tutorial:
-                Strength = 0;
-                Defence = 5;
-                Health = 100;
+                Strength = 1;
+                Defence = 2;
+                Health = 50;
 
                 if (!TutorialBattle.activeInHierarchy)
                 {
@@ -110,6 +115,8 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(true);
+                    OpponentName.text = "Club Grunt";
+
 
                 }
 
@@ -133,7 +140,7 @@ public class OpponentManager : MonoBehaviour
 
 
 
-     
+
 
 
 
@@ -155,17 +162,32 @@ public class OpponentManager : MonoBehaviour
 
             //Display Winstuff here
             //win battle but finnish song first
-        }else if(currentHealth> 0 && SongDone &&opponent !=Opponents.Tutorial)
+        }
+        else if (currentHealth > 0 && SongDone)
         {
-            FindObjectOfType<WinstateManager>().SetLose();
-            ReturnToScene();
+            if (opponent == Opponents.Tutorial)
+            {
+                FindObjectOfType<WinstateManager>().CutscenePlayed();
+
+                FindObjectOfType<WinstateManager>().SetWin();
+                ReturnToScene();
+
+            }
+            else
+            {
+                FindObjectOfType<WinstateManager>().CutscenePlayed();
+
+                FindObjectOfType<WinstateManager>().SetLose();
+                ReturnToScene();
+            }
+
         }
     }
 
     public void TakeDamage(float damage)
     {
         float appliedDamage = damage / Defence;
-        print(appliedDamage);
+
         //if(appliedDamage <= 0)
         //{
         //    appliedDamage = 1;
@@ -173,7 +195,7 @@ public class OpponentManager : MonoBehaviour
         currentHealth = currentHealth - appliedDamage;
 
     }
-    void ReturnToScene()
+    public void ReturnToScene()
     {
         if (opponent == Opponents.Tutorial)
         {
@@ -181,7 +203,7 @@ public class OpponentManager : MonoBehaviour
 
             SceneManager.LoadScene("TutorialCutscene");
         }
-        else if(opponent== Opponents.Shou)
+        else if (opponent == Opponents.Shou)
         {
             SceneManager.LoadScene("ShouCutscenes");
         }

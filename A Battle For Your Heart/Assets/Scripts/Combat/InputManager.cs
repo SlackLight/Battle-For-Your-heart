@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     public enum mode { Edit, Play };
     public mode Mode;
     [SerializeField] Material UpArrow, DownArrow, RightArrow, LeftArrow;
+    [SerializeField] Material UpArrowO, DownArrowO, RightArrowO, LeftArrowO;
     public int EnemyAttack = 8;
     bool editing = false;
     [SerializeField] CombatManager combatManagerRef;
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] GameObject perfect;
     [SerializeField] GameObject early;
     [SerializeField] GameObject late;
+    [SerializeField] GameObject opponentNotes;
 
     [SerializeField] GameObject upPrefab;
     [SerializeField] GameObject DownPrefab;
@@ -36,6 +38,20 @@ public class InputManager : MonoBehaviour
     [SerializeField] GameObject miss;
 
     [SerializeField] Animator animator;
+
+    [SerializeField] ParticleSystem UpPart;
+    [SerializeField] ParticleSystem DownPart;
+    [SerializeField] ParticleSystem LeftPart;
+    [SerializeField] ParticleSystem RightPart;
+    [SerializeField] ParticleSystem UpPartO;
+    [SerializeField] ParticleSystem DownPartO;
+    [SerializeField] ParticleSystem LeftPartO;
+    [SerializeField] ParticleSystem RightPartO;
+
+
+    [SerializeField] ParticleSystem PlayerPerfect;
+
+    [SerializeField] Animator Tomomi;
 
 
 
@@ -85,6 +101,36 @@ public class InputManager : MonoBehaviour
         LeftArrow.DisableKeyword("_EMISSION");
     }
 
+    IEnumerator DownO()
+    {
+        DownPartO.Play();
+        DownArrowO.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(.1f);
+        DownArrowO.DisableKeyword("_EMISSION");
+
+    }
+    IEnumerator UpO()
+    {
+        UpPartO.Play();
+        UpArrowO.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(.1f);
+        UpArrowO.DisableKeyword("_EMISSION");
+    }
+    IEnumerator RightO()
+    {
+        RightPartO.Play();
+        RightArrowO.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(.1f);
+        RightArrowO.DisableKeyword("_EMISSION");
+    }
+    IEnumerator LeftO()
+    {
+        LeftPartO.Play();
+        LeftArrowO.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(.1f);
+        LeftArrowO.DisableKeyword("_EMISSION");
+    }
+  
     void Update()
     {
         switch (Mode)
@@ -167,7 +213,7 @@ public class InputManager : MonoBehaviour
                     if (lateNoteList.Contains(LeftNoteList[0]))
                     {
                         LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         LeftNoteList.RemoveAt(0);
                         lateNoteList.RemoveAt(0);
                         combatManagerRef.TooLate(EnemyAttack);
@@ -177,20 +223,23 @@ public class InputManager : MonoBehaviour
                     else if (perfectNoteList.Contains(LeftNoteList[0]))
                     {
                         LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         LeftNoteList.RemoveAt(0);
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
+                        LeftPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(LeftNoteList[0]))
                     {
                         LeftNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        LeftNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        LeftNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         LeftNoteList.RemoveAt(0);
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
-
+                    Tomomi.SetTrigger("DanceLeft");
 
                 }
             }
@@ -202,7 +251,7 @@ public class InputManager : MonoBehaviour
                     if (lateNoteList.Contains(RightNoteList[0]))
                     {
                         RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         RightNoteList.RemoveAt(0);
                         lateNoteList.RemoveAt(0);
                         combatManagerRef.TooLate(EnemyAttack);
@@ -210,20 +259,27 @@ public class InputManager : MonoBehaviour
                     else if (perfectNoteList.Contains(RightNoteList[0]))
                     {
                         RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         RightNoteList.RemoveAt(0);
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
+                        RightPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(RightNoteList[0]))
                     {
                         RightNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        RightNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        RightNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         RightNoteList.RemoveAt(0);
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceRight");
+
+
                 }
+
             }
             if (DownNoteList.Count != 0)
             {
@@ -232,7 +288,7 @@ public class InputManager : MonoBehaviour
                     if (lateNoteList.Contains(DownNoteList[0]))
                     {
                         DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         DownNoteList.RemoveAt(0);
                         lateNoteList.RemoveAt(0);
                         combatManagerRef.TooLate(EnemyAttack);
@@ -240,19 +296,24 @@ public class InputManager : MonoBehaviour
                     else if (perfectNoteList.Contains(DownNoteList[0]))
                     {
                         DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         DownNoteList.RemoveAt(0);
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
+                        DownPart.Play();
+                        //PlayerPerfect.Play();
+
                     }
                     else if (earlyNoteList.Contains(DownNoteList[0]))
                     {
                         DownNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        DownNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        DownNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         DownNoteList.RemoveAt(0);
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceDown");
+
 
                 }
             }
@@ -264,7 +325,7 @@ public class InputManager : MonoBehaviour
                     if (lateNoteList.Contains(UpNoteList[0]))
                     {
                         UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         UpNoteList.RemoveAt(0);
                         lateNoteList.RemoveAt(0);
                         combatManagerRef.TooLate(EnemyAttack);
@@ -272,19 +333,24 @@ public class InputManager : MonoBehaviour
                     else if (perfectNoteList.Contains(UpNoteList[0]))
                     {
                         UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         UpNoteList.RemoveAt(0);
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
+                        UpPart.Play();
+                        //PlayerPerfect.Play();
                     }
                     else if (earlyNoteList.Contains(UpNoteList[0]))
                     {
                         UpNoteList[0].gameObject.GetComponent<ActivationScript>().isEnabled = false;
-                        UpNoteList[0].gameObject.GetComponent<MeshRenderer>().enabled = false;
+                        UpNoteList[0].gameObject.GetComponent<SpriteRenderer>().enabled = false;
                         UpNoteList.RemoveAt(0);
                         earlyNoteList.RemoveAt(0);
                         combatManagerRef.TooEarly(EnemyAttack);
                     }
+                    Tomomi.SetTrigger("DanceUp");
+
+
                 }
             }
         }
@@ -292,7 +358,43 @@ public class InputManager : MonoBehaviour
 
     public void OnNoteEnter(Collider note, GameObject timingOverlap)
     {
-        if(note.tag == "EndBlock")
+        if (timingOverlap == opponentNotes)
+        {
+            if (note.tag == "AttackMode")
+            {
+                combatManagerRef.AttackMode = true;
+                //combat manager attack mode = true
+            }
+            else
+            {
+                note.GetComponent<SpriteRenderer>().enabled = false;
+                earlyNoteList.Add(note.gameObject);
+                if (note.tag == "DownBlock")
+                {
+                    StartCoroutine("DownO");
+                }
+                if (note.tag == "UpBlock")
+                {
+                    StartCoroutine("UpO");
+                }
+                if (note.tag == "LeftBlock")
+                {
+                    StartCoroutine("LeftO");
+                }
+                if (note.tag == "RightBlock")
+                {
+                    StartCoroutine("RightO");
+                }
+
+                combatManagerRef.AttackMode = false;
+
+            }
+        }
+
+
+
+
+        if (note.tag == "EndBlock")
         {
             FindObjectOfType<OpponentManager>().SongDone = true;
         }
@@ -363,8 +465,6 @@ public class InputManager : MonoBehaviour
             {
                 DownNoteList.Remove(note.gameObject);
             }
-
-
             if (lateNoteList.Contains(note.gameObject))
             {
                 lateNoteList.Remove(note.gameObject);
