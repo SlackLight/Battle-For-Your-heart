@@ -1723,8 +1723,8 @@ MonoBehaviour:
   dayCounter: 0
   weekCounter: 1
   nextWeekCount: 0
-  hallWaySceneID: 1
-  hallWayEndOfDayID: 3
+  hallWaySceneName: Hallway
+  hallWayEndOfDayName: EndOfDayHallway
   currentClassroom: 0
   classRoomSpawnLocations:
   - {fileID: 631884595}
@@ -1764,6 +1764,26 @@ PrefabInstance:
         type: 3}
       propertyPath: interactionText
       value: Science Class
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[0]
+      value: ScienceClass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[1]
+      value: ScienceClass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
+      value: ScienceClass
       objectReference: {fileID: 0}
     - target: {fileID: 1752084628245538493, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
@@ -1846,6 +1866,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[0]
+      value: CookingClass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[1]
+      value: CookingClass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
+      value: CookingClass
+      objectReference: {fileID: 0}
     - target: {fileID: 1752084629007730386, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: m_Size.x
@@ -1927,6 +1967,26 @@ PrefabInstance:
         type: 3}
       propertyPath: interactionText
       value: Gym Class
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629044017559, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629044017559, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[0]
+      value: GymClass2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629044017559, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[1]
+      value: GymClass2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084629044017559, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
+      value: GymClass2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85b75ed194deac458d6a53e876441a5, type: 3}
@@ -2586,7 +2646,7 @@ SpriteRenderer:
   m_Size: {x: 6.41, y: 6.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &580866811
@@ -2749,6 +2809,10 @@ PrefabInstance:
       objectReference: {fileID: 373829347}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.showNPCSubtitlesDuringLine
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22325660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -4790,6 +4854,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1199349273}
     m_Modifications:
+    - target: {fileID: 125092, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 196456, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_Name
       value: VN Template Standard Dialogue UI
@@ -4818,9 +4886,29 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 11442620, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11465848, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_Text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11476756, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -772.2421
+      objectReference: {fileID: 0}
+    - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -330.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: 22416996, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -9402,7 +9490,7 @@ SpriteRenderer:
   m_Size: {x: 6.41, y: 6.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2136695936
