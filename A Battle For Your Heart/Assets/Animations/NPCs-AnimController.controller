@@ -63,7 +63,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4038864796110819525}
-    m_Position: {x: 670, y: 100, z: 0}
+    m_Position: {x: 50, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2068569525535740046}
     m_Position: {x: 660, y: 180, z: 0}
@@ -79,14 +79,17 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 2371222439751940028}
     m_Position: {x: 440, y: 10, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6958766635224798464}
+    m_Position: {x: 660, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 680, y: 90, z: 0}
   m_EntryPosition: {x: 460, y: 100, z: 0}
-  m_ExitPosition: {x: 880, y: 120, z: 0}
+  m_ExitPosition: {x: 50, y: -40, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -6137704446588715620}
 --- !u!91 &9100000
@@ -210,6 +213,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: e1f7275ec3493694d97f51e5b34f2392, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &6958766635224798464
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NPCs-HallwayIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 22270bc0613bc024298f59bf528a309c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
