@@ -36,30 +36,48 @@ public class NpcSelector : MonoBehaviour
 
     apPortrait ap;
 
+    public GameObject NPC;
+
     void Awake()
     {
-      if (transform.childCount > 0)
+        if (transform.childCount > 0)
         {
-            ap = transform.GetChild(0).gameObject.GetComponent<apPortrait>();
-
-            //connect the parameters
-            mouth = ap.GetControlParam("MouthSet");
-            head = ap.GetControlParam("HeadSet");
-            clubBand = ap.GetControlParam("Club Member");
-            skinTone = ap.GetControlParam("SkinTone");
-            frontHand = ap.GetControlParam("FrontHandPose");
-            backHand = ap.GetControlParam("BackHandPose");
-            legStyle = ap.GetControlParam("LegTone/Style");
-            hair = ap.GetControlParam("Extras hairSet");
-            eyes = ap.GetControlParam("Extras EyeSet");
-            skirt = ap.GetControlParam("SkirtStyle");
+            ap = this.gameObject.transform.GetChild(0).gameObject.GetComponent<apPortrait>();
+            ConnectControllerParameters();
+        }
+        else
+        {
+            NPC = Instantiate(NPC,new Vector3(0,0,0),Quaternion.identity,this.gameObject.transform);
+            ap = NPC.GetComponent<apPortrait>();
+            ConnectControllerParameters();
         }
     }
 
     private void Start()
     {
+        StartCoroutine("SetAfterStart");
+    }
+
+    IEnumerator SetAfterStart()
+    {
+        yield return new WaitForFixedUpdate();
         SetNPC();
         SetMouth();
+        yield break;
+    }
+
+    void ConnectControllerParameters()
+    {
+        mouth = ap.GetControlParam("MouthSet");
+        head = ap.GetControlParam("HeadSet");
+        clubBand = ap.GetControlParam("Club Member");
+        skinTone = ap.GetControlParam("SkinTone");
+        frontHand = ap.GetControlParam("FrontHandPose");
+        backHand = ap.GetControlParam("BackHandPose");
+        legStyle = ap.GetControlParam("LegTone/Style");
+        hair = ap.GetControlParam("Extras hairSet");
+        eyes = ap.GetControlParam("Extras EyeSet");
+        skirt = ap.GetControlParam("SkirtStyle");
     }
 
     void SetNPC()
@@ -259,17 +277,7 @@ public class NpcSelector : MonoBehaviour
             ap.SetControlParamInt(mouth, 3);
     }
 
-
-    IEnumerator SetAfterStart()
-    {
-        yield return new WaitForEndOfFrame();
-        SetNPC();
-        SetMouth();
-        yield break;
-    }
-
-
-
+    //for testing
     //private void Update()
     //{
     //    if (Input.GetKeyUp("q"))
