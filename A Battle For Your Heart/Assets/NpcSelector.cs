@@ -259,6 +259,17 @@ public class NpcSelector : MonoBehaviour
             ap.SetControlParamInt(mouth, 3);
     }
 
+
+    IEnumerator SetAfterStart()
+    {
+        yield return new WaitForEndOfFrame();
+        SetNPC();
+        SetMouth();
+        yield break;
+    }
+
+
+
     //private void Update()
     //{
     //    if (Input.GetKeyUp("q"))
