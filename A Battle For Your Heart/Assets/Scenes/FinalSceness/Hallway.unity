@@ -458,6 +458,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator R
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: mouthSet
@@ -622,6 +632,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator L
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: mouthSet
@@ -735,6 +755,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -860,6 +890,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -2441,6 +2481,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -2587,6 +2637,26 @@ PrefabInstance:
         type: 3}
       propertyPath: interactionText
       value: Science Class
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538483, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.535096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538483, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.6981778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538483, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.2500298
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752084628245538483, guid: e85b75ed194deac458d6a53e876441a5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -20.63685
       objectReference: {fileID: 0}
     - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
@@ -3221,6 +3291,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -3244,6 +3324,11 @@ PrefabInstance:
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: extraStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: characterSet
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
@@ -3389,6 +3474,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -3813,6 +3908,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -4364,6 +4469,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -4521,6 +4636,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -4966,6 +5091,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -5408,6 +5543,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -7016,6 +7161,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -7392,6 +7547,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -7416,6 +7581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: extraStyle
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: characterSet
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -7641,6 +7811,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -7765,6 +7945,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -8033,6 +8223,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -8294,6 +8494,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -9208,6 +9418,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'NPCCreator L '
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: mouthSet
@@ -9795,6 +10015,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -9819,6 +10049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: extraStyle
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: characterSet
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -11059,6 +11294,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -11500,6 +11745,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -11800,6 +12055,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: clubSet
@@ -11963,6 +12228,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCCreator R
       objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
+      objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
       propertyPath: mouthSet
@@ -12061,6 +12336,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
@@ -12186,6 +12471,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137948471143342004, guid: 896ff0f89f9c0a34eba722eee87a36e9,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPCPortrait
       objectReference: {fileID: 0}
     - target: {fileID: 6137948471143342005, guid: 896ff0f89f9c0a34eba722eee87a36e9,
         type: 3}
