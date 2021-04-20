@@ -132,7 +132,14 @@ public class NPCManager : MonoBehaviour
                 temporaryValues.Add(randomSpawnNumber);
                 //Move the NPC to the position
                 currentWeekList[currentDay - 1].list[i].transform.position = NPCSpawnSpots[randomSpawnNumber].position;
-
+                foreach (Transform child in currentWeekList[currentDay - 1].list[i].gameObject.transform)
+                {
+                    if (child.gameObject.tag == "NPCPortrait")
+                    {
+                        child.gameObject.SetActive(true);
+                        child.gameObject.GetComponent<NpcSelector>().CreatePortrait();
+                    }
+                }
             }
         }
     }
@@ -146,13 +153,28 @@ public class NPCManager : MonoBehaviour
             //If they haven't despawned
             if(!(NPCList[i].transform.position == NPCReturnPosition.transform.position))
             {
-                //If the NPC being removed is non-linear increment their convo
-                if (NPCList[i].GetComponent<NPCTalk>().linear == false)
+                //get the child object with the npctalk component
+                NPCTalk npcTalkComp = null;
+                foreach (Transform child in NPCList[i].transform)
                 {
-                    NPCList[i].GetComponent<NPCTalk>().convoCounter++;
+                    if (child.gameObject.tag != "NPCPortrait")
+                        npcTalkComp = child.GetComponent<NPCTalk>();
+                }
+                //If the NPC being removed is non-linear increment their convo
+                if (npcTalkComp.linear == false)
+                {
+                    npcTalkComp.convoCounter++;
                 }
 
                 NPCList[i].transform.position = NPCReturnPosition.transform.position;
+                foreach (Transform child in NPCList[i].transform)
+                {
+                    if (child.gameObject.tag == "NPCPortrait")
+                    {
+                        child.gameObject.SetActive(false);
+                        child.gameObject.GetComponent<NpcSelector>().DestroyPortrait();
+                    }
+                }
             }
         }
     }
@@ -163,7 +185,12 @@ public class NPCManager : MonoBehaviour
         newDay = true;
         foreach (Transform child in NPCHolder.transform)
         {
-            DialogueLua.SetVariable(child.GetComponent<NPCTalk>().talkedToVariableName, false);
+            foreach (Transform grandchild in child)
+            {
+                if (grandchild.gameObject.tag != "NPCPortrait")
+                    DialogueLua.SetVariable(grandchild.GetComponent<NPCTalk>().talkedToVariableName, false);
+            }
+            
         }
     }
 
@@ -171,7 +198,12 @@ public class NPCManager : MonoBehaviour
     {
         foreach (Transform child in NPCHolder.transform)
         {
-            NPCTalk temp = child.GetComponent<NPCTalk>();
+            NPCTalk temp = null;
+            foreach (Transform grandchild in child)
+            {
+                    if (grandchild.gameObject.tag != "NPCPortrait")
+                    temp = grandchild.GetComponent<NPCTalk>();
+            }
             //If it's linear and the talked to variable for this scene is true 
             if (temp.linear == true && DialogueLua.GetVariable(temp.talkedToVariableName).asBool)
             {
