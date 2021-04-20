@@ -804,13 +804,19 @@ PrefabInstance:
     - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
       propertyPath: backgroundPrefabsToChangeTo.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
       propertyPath: backgroundPrefabsToChangeTo.Array.data[0]
       value: 
       objectReference: {fileID: 5113952091080918225, guid: 38430323be316bb478899367dcdc70c0,
+        type: 3}
+    - target: {fileID: 686424190529634724, guid: 926af9462d613334f8ade7c16ea74be1,
+        type: 3}
+      propertyPath: backgroundPrefabsToChangeTo.Array.data[1]
+      value: 
+      objectReference: {fileID: 460941676314896405, guid: f0c9282436378254c80d311fc2cfca03,
         type: 3}
     - target: {fileID: 686424190529634725, guid: 926af9462d613334f8ade7c16ea74be1,
         type: 3}
@@ -4315,6 +4321,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 116612509}
           m_MethodName: Walk
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 879820890}
+          m_MethodName: transitionBackground
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

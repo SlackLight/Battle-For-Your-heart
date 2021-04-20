@@ -19301,7 +19301,7 @@ MonoBehaviour:
         y: 470
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 158.76288}
     canvasZoom: 0.97
   - id: 37
     fields:
@@ -21135,8 +21135,8 @@ MonoBehaviour:
         y: 470
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 0, y: 223.38458}
+    canvasZoom: 1.0899999
   - id: 39
     fields:
     - title: Title
@@ -21667,7 +21667,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 733e8631-7240-41f7-a122-6ce6449f073d
+        value: 
         type: 0
         typeString: 
       conversationID: 39
@@ -21762,7 +21762,7 @@ MonoBehaviour:
         y: 370
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 168}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 40
     fields:
@@ -22315,8 +22315,8 @@ MonoBehaviour:
         y: 326
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 57}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 41
     fields:
     - title: Title
@@ -24395,6 +24395,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: eea2ee1b-f07e-482e-a16e-8981d23d4b92
+        type: 0
+        typeString: 
       conversationID: 43
       isRoot: 0
       isGroup: 0
@@ -24683,6 +24687,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
       conversationID: 43
       isRoot: 0
       isGroup: 0
@@ -24775,8 +24783,8 @@ MonoBehaviour:
         y: 447
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 199.99997}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 1.3157959, y: 0}
+    canvasZoom: 0.7600002
   - id: 44
     fields:
     - title: Title
@@ -25903,7 +25911,7 @@ MonoBehaviour:
         y: 745
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 388.23523}
+    canvasScrollPosition: {x: 19.583904, y: 329.3831}
     canvasZoom: 0.85000014
   - id: 45
     fields:
@@ -28112,7 +28120,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
@@ -29073,8 +29081,8 @@ MonoBehaviour:
         y: 670
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 420}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.67000014
   - id: 48
     fields:
     - title: Title
@@ -34934,8 +34942,8 @@ MonoBehaviour:
         y: 2070
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 478.6176}
-    canvasZoom: 0.97000015
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.28000057
   - id: 51
     fields:
     - title: Title
