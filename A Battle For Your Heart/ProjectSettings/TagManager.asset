@@ -15,6 +15,7 @@ TagManager:
   - BackWall
   - EndBlock
   - AttackMode
+  - NPCPortrait
   layers:
   - Default
   - TransparentFX
