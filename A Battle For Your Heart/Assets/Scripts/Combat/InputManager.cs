@@ -130,7 +130,7 @@ public class InputManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         LeftArrowO.DisableKeyword("_EMISSION");
     }
-  
+
     void Update()
     {
         switch (Mode)
@@ -390,54 +390,57 @@ public class InputManager : MonoBehaviour
 
             }
         }
-
-
-
-
-        if (note.tag == "EndBlock")
+        else
         {
-            FindObjectOfType<OpponentManager>().SongDone = true;
-        }
-        if (note.GetComponent<ActivationScript>().isEnabled == true && !editing)
-        {
-            if (timingOverlap == early)
-            {
-                earlyNoteList.Add(note.gameObject);
-                if (note.tag == "DownBlock")
-                {
-                    DownNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "UpBlock")
-                {
-                    UpNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "LeftBlock")
-                {
-                    LeftNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "RightBlock")
-                {
-                    RightNoteList.Add(note.gameObject);
-                }
 
+
+
+
+            if (note.tag == "EndBlock")
+            {
+                FindObjectOfType<OpponentManager>().SongDone = true;
             }
-            if (timingOverlap == perfect)
+            if (note.GetComponent<ActivationScript>().isEnabled == true && !editing && timingOverlap != opponentNotes)
             {
-                if (earlyNoteList.Contains(note.gameObject))
+                if (timingOverlap == early)
                 {
-                    earlyNoteList.Remove(note.gameObject);
-                    perfectNoteList.Add(note.gameObject);
-                }
+                    earlyNoteList.Add(note.gameObject);
+                    if (note.tag == "DownBlock")
+                    {
+                        DownNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "UpBlock")
+                    {
+                        UpNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "LeftBlock")
+                    {
+                        LeftNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "RightBlock")
+                    {
+                        RightNoteList.Add(note.gameObject);
+                    }
 
-            }
-            if (timingOverlap == late)
-            {
-                if (perfectNoteList.Contains(note.gameObject))
+                }
+                if (timingOverlap == perfect)
                 {
-                    perfectNoteList.Remove(note.gameObject);
-                    lateNoteList.Add(note.gameObject);
-                }
+                    if (earlyNoteList.Contains(note.gameObject))
+                    {
+                        earlyNoteList.Remove(note.gameObject);
+                        perfectNoteList.Add(note.gameObject);
+                    }
 
+                }
+                if (timingOverlap == late)
+                {
+                    if (perfectNoteList.Contains(note.gameObject))
+                    {
+                        perfectNoteList.Remove(note.gameObject);
+                        lateNoteList.Add(note.gameObject);
+                    }
+
+                }
             }
         }
         //if(timingOverlap == End)
