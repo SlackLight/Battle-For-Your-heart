@@ -135,7 +135,10 @@ public class NPCManager : MonoBehaviour
                 foreach (Transform child in currentWeekList[currentDay - 1].list[i].gameObject.transform)
                 {
                     if (child.gameObject.tag == "NPCPortrait")
+                    {
                         child.gameObject.SetActive(true);
+                        child.gameObject.GetComponent<NpcSelector>().CreatePortrait();
+                    }
                 }
             }
         }
@@ -167,7 +170,10 @@ public class NPCManager : MonoBehaviour
                 foreach (Transform child in NPCList[i].transform)
                 {
                     if (child.gameObject.tag == "NPCPortrait")
+                    {
                         child.gameObject.SetActive(false);
+                        child.gameObject.GetComponent<NpcSelector>().DestroyPortrait();
+                    }
                 }
             }
         }
