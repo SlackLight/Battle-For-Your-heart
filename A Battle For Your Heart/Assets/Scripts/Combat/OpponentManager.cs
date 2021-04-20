@@ -115,7 +115,7 @@ public class OpponentManager : MonoBehaviour
                     KanaBattle.SetActive(false);
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(true);
-                    OpponentName.text = "Club Grunt";
+                    OpponentName.text = "Grunt";
 
 
                 }

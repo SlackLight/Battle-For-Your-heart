@@ -228,7 +228,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         LeftPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(LeftNoteList[0]))
@@ -264,7 +264,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         RightPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(RightNoteList[0]))
@@ -301,7 +301,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         DownPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(DownNoteList[0]))
@@ -338,7 +338,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         UpPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
                     }
                     else if (earlyNoteList.Contains(UpNoteList[0]))
                     {
