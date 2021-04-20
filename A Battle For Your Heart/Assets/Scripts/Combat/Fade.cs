@@ -5,26 +5,28 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
-    [SerializeField] Color defaultCol;
+    
     [SerializeField] Color hiddenCol;
-    Text current;
+    Image current;
+    [SerializeField]
+    [Min(0)] float time;
     // Start is called before the first frame update
     void Start()
     {
-        current.color = defaultCol;
-        current = GetComponent<Text>();
+        
+        current = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(current.color == defaultCol)
+        if(current.color == Color.yellow || current.color == Color.white || current.color == Color.black)
         {
 
-           StartCoroutine(DoAThingOverTime(current.color, hiddenCol, 1f));
+           //StartCoroutine(DoAThingOverTime(current.color, hiddenCol, time));
 
         }
-
     }
 
 
