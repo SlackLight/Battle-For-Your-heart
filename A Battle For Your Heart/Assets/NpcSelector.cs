@@ -38,29 +38,36 @@ public class NpcSelector : MonoBehaviour
 
     public GameObject NPC;
 
-    void Awake()
+    public void CreatePortrait()
     {
         if (transform.childCount > 0)
-        {
-            ap = this.gameObject.transform.GetChild(0).gameObject.GetComponent<apPortrait>();
-            ConnectControllerParameters();
-        }
-        else
-        {
-            NPC = Instantiate(NPC,new Vector3(0,0,0),Quaternion.identity,this.gameObject.transform);
-            ap = NPC.GetComponent<apPortrait>();
-            ConnectControllerParameters();
-        }
+            Destroy(this.gameObject.transform.GetChild(0).gameObject);
+
+        //GameObject temp;
+        //temp = Instantiate(NPC, new Vector3(0, 0, 0), Quaternion.identity, this.gameObject.transform);
+        //ap = temp.GetComponent<apPortrait>();
+        //ConnectControllerParameters();
+        StartCoroutine("SetAfterStart");
+
     }
 
-    private void Start()
+    public void DestroyPortrait()
     {
-        StartCoroutine("SetAfterStart");
+        if (transform.childCount > 0)
+            Destroy(this.gameObject.transform.GetChild(0).gameObject);
     }
 
     IEnumerator SetAfterStart()
     {
         yield return new WaitForFixedUpdate();
+
+        GameObject temp;
+        temp = Instantiate(NPC, new Vector3(0, 0, 0), Quaternion.identity, this.gameObject.transform);
+        ap = temp.GetComponent<apPortrait>();
+        ConnectControllerParameters();
+
+        yield return new WaitForFixedUpdate();
+
         SetNPC();
         SetMouth();
         yield break;
@@ -278,12 +285,16 @@ public class NpcSelector : MonoBehaviour
     }
 
     //for testing
-    //private void Update()
-    //{
-    //    if (Input.GetKeyUp("q"))
-    //    {
-    //        SetNPC();
-    //        SetMouth();
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyUp("q"))
+        {
+            //GameObject temp;
+            //temp = Instantiate(NPC, new Vector3(0, 0, 0), Quaternion.identity, this.gameObject.transform);
+            //ap = temp.GetComponent<apPortrait>();
+            //ConnectControllerParameters();
+            //StartCoroutine("SetAfterStart");
+            CreatePortrait();
+        }
+    }
 }
