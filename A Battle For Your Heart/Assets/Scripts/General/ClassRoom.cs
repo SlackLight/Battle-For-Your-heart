@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ClassRoom : MonoBehaviour
 {
+    //Put in 3 in order
+    public List<string> sceneNamesToBeLoadedForEachWeek;
 
-    public string sceneIDToBeLoaded;
     //Starts at 1 in bottom left
     public int classRoomNumber;
 
@@ -32,7 +33,7 @@ public class ClassRoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && inTrigger)
         {
-            TimeManager.instance.LoadClassMinigame(sceneIDToBeLoaded, classRoomNumber);
+            TimeManager.instance.LoadClassMinigame(sceneNamesToBeLoadedForEachWeek[TimeManager.instance.weekCounter - 1], classRoomNumber);
         }
     }
 

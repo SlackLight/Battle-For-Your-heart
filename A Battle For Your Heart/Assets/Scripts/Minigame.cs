@@ -26,7 +26,7 @@ public class Minigame : MonoBehaviour
     public float restartTimerValue = 1.5f;
     public float restartTimer = 1.5f;
 
-    public float sceneTransferTimer = 3;
+    public float minigameResultTime = 3;
 
     public bool testingMode = false;
     public int sceneToTransferTo;
@@ -36,6 +36,8 @@ public class Minigame : MonoBehaviour
     public UnityEvent clear;
 
     public bool gameStillGoing;
+
+    bool won;
 
     public virtual void Start()
     {
@@ -54,33 +56,41 @@ public class Minigame : MonoBehaviour
             {
                 successText.text = "WIN!";
                 successTextParent.SetActive(true);
+                if (missTextParent.activeSelf)
+                {
+                    missTextParent.SetActive(false);
+                }
+                won = true;
             }
             else
             {
                 missText.text = "Lose...";
                 missTextParent.SetActive(true);
+                if (successTextParent.activeSelf)
+                {
+                    successTextParent.SetActive(false);
+                }
+                won = false;
             }
 
             gameStillGoing = false;
 
             //If its time to scene transfer
-            if (sceneTransferTimer <= 0)
+            if (minigameResultTime <= 0)
             {
-                //If in minigame testing mode reloads scene on win
-                //if (testingMode)
-                //{
-                //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                //}
-                //Otherwise loads the scene specified in inspector
-                //else
-                //{
+                if (won)
+                {
+                    MinigameManager.instance.nextMinigame();
+                }
+                else
+                {
                     TimeManager.instance.LoadEndHallwayScene();
-                //}
+                }
             }
             //Counts down scene transfer as soon as main timers done
             else
             {
-                sceneTransferTimer -= Time.deltaTime;
+                minigameResultTime -= Time.deltaTime;
             }
 
         }

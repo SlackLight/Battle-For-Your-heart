@@ -29,8 +29,11 @@ public class ItemScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     public void OnDrag(PointerEventData eventData)
     {
         //follow mouse position until end
-        //transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
+        //Vector3 mouse = Camera.main.ScreenToWorldPoint(eventData.delta);
+
+        //transform.position = new Vector3(mouse.x, mouse.y, transform.position.z);
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor / 100;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)

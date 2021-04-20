@@ -11,8 +11,8 @@ public class TimeManager : MonoBehaviour
     public int weekCounter = 1;
     public int nextWeekCount;
     
-    public int hallWaySceneID;
-    public int hallWayEndOfDayID;
+    public string hallWaySceneName;
+    public string hallWayEndOfDayName;
     public int currentClassroom;
     public List<GameObject> classRoomSpawnLocations;
     public bool toBeSpawned;
@@ -110,7 +110,7 @@ public class TimeManager : MonoBehaviour
         else
         {
             dayCounter++;
-            SceneManager.LoadScene(hallWaySceneID);
+            SceneManager.LoadScene(hallWaySceneName);
             //Resets all the talked to variables for the scene
             NPCManager.instance.SpawnTheNPCs();
             NPCManager.instance.ResetTalkedTo();
@@ -120,7 +120,7 @@ public class TimeManager : MonoBehaviour
     public void LoadEndHallwayScene()
     {
         beginningOfDay = false;
-        SceneManager.LoadScene(hallWayEndOfDayID);
+        SceneManager.LoadScene(hallWayEndOfDayName);
         toBeSpawned = true;
         //Resets all the talked to variables for the scene
         NPCManager.instance.SpawnTheNPCs();
