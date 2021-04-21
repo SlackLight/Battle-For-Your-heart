@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PixelCrushers.DialogueSystem;
 
 public class TimeManager : MonoBehaviour
 {
@@ -58,6 +59,8 @@ public class TimeManager : MonoBehaviour
     {   //Increment the NPCs convo changes from the hallway scene
         NPCManager.instance.IncrementLinearNPCs();
 
+        DialogueManager.StopConversation();
+
         //Sets current classroom for return spawn
         currentClassroom = classRoomNumber;
         SceneManager.LoadScene(sceneToLoad);
@@ -77,8 +80,7 @@ public class TimeManager : MonoBehaviour
         InteractionText.instance.gameObject.SetActive(false);
 
         beginningOfDay = true;
-        //Increment the NPCs convo changes from the hallway end scene
-        //NPCManager.instance.IncrementLinearNPCs();
+  
         //If the final boss fight is done load the final scene
         //if(weekCounter == 1 && dayCounter == 1)
         //{
@@ -86,10 +88,8 @@ public class TimeManager : MonoBehaviour
         //    //SceneManager.LoadScene(cutsceneSceneNames[0]);
         //}
         //Checks if it should be loading a bossfight
-         if (dayCounter == (weekCounter) * weekLength && weekCounter < 3)
+         if (dayCounter == (weekCounter) * weekLength && weekCounter < 4)
         {
-           
-
             NPCManager.instance.DespawnTheNPCs();
             if(weekCounter == 1)
             {

@@ -19,6 +19,10 @@ public class MinigameManager : MonoBehaviour
     float currentHealth;
     float currentDefense;
 
+    public Text originalStrength;
+    public Text originalHealth;
+    public Text originalDefense;
+
     public Text strengthText;
     public Text healthText;
     public Text defenseText;
@@ -54,6 +58,10 @@ public class MinigameManager : MonoBehaviour
             healthIncrease = currentHealth;
             strengthIncrease = currentStrength;
         }
+
+        originalDefense.text = ((int)currentDefense).ToString();
+        originalHealth.text = ((int)currentHealth).ToString();
+        originalStrength.text = ((int)currentStrength).ToString();
     }
 
     private void Update()
@@ -105,7 +113,7 @@ public class MinigameManager : MonoBehaviour
             }
             else if(healthIncrease == currentHealth)
             {
-
+                healthText.text = ((int)currentHealth).ToString();
             }
 
             if (currentStrength == strengthIncrease && currentHealth == healthIncrease && currentDefense == defenseIncrease)
