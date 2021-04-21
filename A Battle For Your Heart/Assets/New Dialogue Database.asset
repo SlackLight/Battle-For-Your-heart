@@ -18533,7 +18533,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hey there, Tomomi. Ready for our battle?
+        value: Shou - Hey there, Tomomi. Ready for our battle?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18752,8 +18752,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hehe, awesome.~ I hope you aren't underestimating me, just 'cuz I'm
-          pretty chill doesn't mean I'll let you off easy.
+        value: Shou - Hehe, awesome.~ I hope you aren't underestimating me, just
+          'cuz I'm pretty chill doesn't mean I'll let you off easy.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18824,7 +18824,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Waaaaa, Shou is gonna show off her skills!~
+        value: Fangirl #1 - Waaaaa, Shou is gonna show off her skills!~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18899,7 +18899,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mhmm, and I hope you all cheer me on while I do.~
+        value: Shou - Mhmm, and I hope you all cheer me on while I do.~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18970,7 +18970,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Go Shou, you can do it!
+        value: Fangirl #2 - Go Shou, you can do it!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -19190,7 +19190,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Alright, let's get onto battling then!~
+        value: Shou - Alright, let's get onto battling then!~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -19302,7 +19302,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasZoom: 1
   - id: 37
     fields:
     - title: Title
@@ -19453,8 +19453,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Impressive... You seem to have gotten a lot more charming since the
-          last we've met.
+        value: Shou - Impressive... You seem to have gotten a lot more charming since
+          the last we've met.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19673,7 +19673,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Your enthusiam has proven you're worthy enough in my eyes.
+        value: Shou - Your enthusiam has proven you're worthy enough in my eyes.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19744,8 +19744,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Not in mine. Just because you beat Shou doesn't mean you've become
-          anymore worthy.
+        value: Kana - Not in mine. Just because you beat Shou doesn't mean you've
+          become anymore worthy.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19820,8 +19820,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Eeeeh? I think I'm pretty skilled though, Tomomi gave it her all out
-          there.~
+        value: Shou - Eeeeh? I think I'm pretty skilled though, Tomomi gave it her
+          all out there.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19892,7 +19892,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Regardless, this is only one step for Tomomi.
+        value: Kana - Regardless, this is only one step for Tomomi.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19963,7 +19963,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Right, each of you three are going to bother me each week... haha...
+        value: Tomomi - Right, each of you three are going to bother me each week...
+          haha...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20034,7 +20035,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Correct, and prepare yourself. If you thought Shou was bothersome,
+        value: Kana - Correct, and prepare yourself. If you thought Shou was bothersome,
           I will prove a more lofty challenge.
         type: 0
         typeString: CustomFieldType_Text
@@ -20106,7 +20107,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Don't you underestimate me too, I've been preparing myself for this!
+        value: Tomomi - Don't you underestimate me too, I've been preparing myself
+          for this!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20177,8 +20179,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You are not worthy for Ai yet. I will meet you again by the end of
-          next week. Prove to me that you have actually been preparing yourself well.
+        value: Kana - You are not worthy for Ai yet. I will meet you again by the
+          end of next week. Prove to me that you have actually been preparing yourself
+          well.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20289,8 +20292,8 @@ MonoBehaviour:
         y: 570
         width: 160
         height: 30
-    canvasScrollPosition: {x: 11.475403, y: 72.1311}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   - id: 38
     fields:
     - title: Title
@@ -20441,7 +20444,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: It seems you haven't changed much since we met.
+        value: Shou - It seems you haven't changed much since we met.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20660,7 +20663,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hey, keep your chin up. You did your best.
+        value: Shou - Hey, keep your chin up. You did your best.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20731,7 +20734,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I just can't believe it...
+        value: Tomomi   I just can't believe it...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20802,7 +20805,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Unfortunately, this means it's the end of the road for you.
+        value: Shou - Unfortunately, this means it's the end of the road for you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20948,7 +20951,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ah, she left... Thank you for the battle, Tomomi.
+        value: Shou - Ah, she left... Thank you for the battle, Tomomi.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21019,8 +21022,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hehe, I never saw myself having to battle someone for love. This fight
-          has made me realize how much Ai means to me.
+        value: Shou - Hehe, I never saw myself having to battle someone for love.
+          This fight has made me realize how much Ai means to me.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21060,7 +21063,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 119.08255
         y: 420
         width: 160
         height: 30
@@ -21091,7 +21094,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I think I might just sweep her away myself...~
+        value: Shou - I think I might just sweep her away myself...~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21135,7 +21138,7 @@ MonoBehaviour:
         y: 470
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 227.52296}
+    canvasScrollPosition: {x: 0, y: 254.00569}
     canvasZoom: 1.0899999
   - id: 39
     fields:
@@ -21287,8 +21290,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Right, I have to forfeit my confession now... A-at least they seem
-          happy.
+        value: Tomomi - Right, I have to forfeit my confession now... A-at least
+          they seem happy.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21359,7 +21362,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: When did they get so close..?
+        value: Tomomi - When did they get so close..?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21474,8 +21477,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 220
+        x: 28
+        y: 221
         width: 160
         height: 30
     - id: 19
@@ -21505,7 +21508,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hm?
+        value: Tomomi - Hm?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21576,7 +21579,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ugh, what a week...
+        value: Tomomi - Ugh, what a week...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21762,8 +21765,8 @@ MonoBehaviour:
         y: 370
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 178}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 40
     fields:
     - title: Title
@@ -21914,7 +21917,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Tomomi, I hope you're ready for our battle.
+        value: Kana - Tomomi, I hope you're ready for our battle.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22133,7 +22136,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: We'll see about that.
+        value: Kana - We'll see about that.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22204,7 +22207,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I hope you've prepared yourself well enough, I won't hold back.
+        value: Kana - I hope you've prepared yourself well enough, I won't hold back.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22315,8 +22318,8 @@ MonoBehaviour:
         y: 326
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 246.39174}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 161.7021}
+    canvasZoom: 0.94000006
   - id: 41
     fields:
     - title: Title
@@ -22467,7 +22470,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hm, so it seem you've beat me...
+        value: Kana - Hm, so it seem you've beat me...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22686,7 +22689,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Congratulations, you seem to be much more worthy of Ai now.
+        value: Kana - Congratulations, you seem to be much more worthy of Ai now.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22757,7 +22760,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ehehe, you realy think so?~
+        value: Tomomi - Ehehe, you realy think so?~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22828,7 +22831,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Perhaps, but remember that this is only the next step.
+        value: Kana - Perhaps, but remember that this is only the next step.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22899,7 +22902,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Don't forget, you still have to go through me.~
+        value: Himeko - Don't forget, you still have to go through me.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22974,7 +22977,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I forgot about you, Himeko...
+        value: Tomomi - I forgot about you, Himeko...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23045,8 +23048,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: And you better not forget about me again, if you want to actually
-          have a chance to be with Ai.
+        value: Himeko - And you better not forget about me again, if you want to
+          actually have a chance to be with Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23117,8 +23120,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You have until the end of next week. I'll be your final judge of whether
-          or not you're even remotely worthy of Ai.
+        value: Himeko - You have until the end of next week. I'll be your final judge
+          of whether or not you're even remotely worthy of Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23189,8 +23192,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You should prepare yourself, Himeko. I really won't be holding back
-          against you!
+        value: Tomomi - You should prepare yourself, Himeko. I really won't be holding
+          back against you!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23301,8 +23304,8 @@ MonoBehaviour:
         y: 570
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 263.41458}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7900002
   - id: 42
     fields:
     - title: Title
@@ -23453,7 +23456,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hmft, as I thought.
+        value: Kana - Hmft, as I thought.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23672,7 +23675,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You really aren't worthy of Ai.
+        value: Kana - You really aren't worthy of Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23743,7 +23746,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I prepared though, I studied as much as I could!
+        value: Tomomi - I prepared though, I studied as much as I could!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23814,8 +23817,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You underestimated me, Tomomi. Don't think you could easily beat the
-          student council president fighting for her fellow council member.
+        value: Kana - You underestimated me, Tomomi. Don't think you could easily
+          beat the student council president fighting for her fellow council member.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23961,8 +23964,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: How troublesome, she would have avoided all of this if she just forfeited
-          from the start.
+        value: Kana - How troublesome, she would have avoided all of this if she
+          just forfeited from the start.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24033,8 +24036,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: But thanks to her, I think I have the courage now to tell Ai how I
-          feel.
+        value: Kana - But thanks to her, I think I have the courage now to tell Ai
+          how I feel.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24078,7 +24081,7 @@ MonoBehaviour:
         y: 420
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 132.87668}
     canvasZoom: 0.73000026
   - id: 43
     fields:
@@ -24305,7 +24308,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I did lose our battle... I hope they're happy together.
+        value: Tomomi - I did lose our battle... I hope they're happy together.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24376,7 +24379,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Oh, they seem closer...
+        value: Tomomi - Oh, they seem closer...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24526,7 +24529,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: E-eh? Is that...?
+        value: Tomomi - E-eh? Is that...?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24597,7 +24600,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I still can't believe after all my efforts...
+        value: Tomomi - I still can't believe after all my efforts...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24783,7 +24786,7 @@ MonoBehaviour:
         y: 447
         width: 160
         height: 30
-    canvasScrollPosition: {x: 1.369873, y: 82.19171}
+    canvasScrollPosition: {x: 0, y: 204.10951}
     canvasZoom: 0.73000026
   - id: 44
     fields:
@@ -24904,7 +24907,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 120
         y: 20
         width: 160
         height: 30
@@ -24935,7 +24938,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Tomomi, it's time that we battle!
+        value: Himeko - Tomomi, it's time that we battle!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -24981,8 +24984,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 118
+        x: 120
+        y: 70
         width: 160
         height: 30
     - id: 31
@@ -25054,7 +25057,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 168
+        y: 120
         width: 160
         height: 30
     - id: 32
@@ -25124,8 +25127,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 242
-        y: 166
+        x: 210
+        y: 120
         width: 160
         height: 30
     - id: 33
@@ -25155,8 +25158,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You'll have to beat me first to prove that you've actually grown at
-          all these past 3 weeks.
+        value: Himeko - You'll have to beat me first to prove that you've actually
+          grown at all these past 3 weeks.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25196,8 +25199,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 245
+        x: 120
+        y: 170
         width: 160
         height: 30
     - id: 34
@@ -25227,7 +25230,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Now, come. I have somewhere special we can duel it out.
+        value: Himeko - Now, come. I have somewhere special we can duel it out.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25267,8 +25270,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 295
+        x: 120
+        y: 220
         width: 160
         height: 30
     - id: 35
@@ -25298,7 +25301,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ah, alright..?
+        value: Tomomi - Ah, alright..?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25338,8 +25341,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 345
+        x: 120
+        y: 270
         width: 160
         height: 30
     - id: 36
@@ -25413,8 +25416,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 395
+        x: 120
+        y: 320
         width: 160
         height: 30
     - id: 37
@@ -25444,7 +25447,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Is this a-
+        value: Tomomi - Is this a-
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25484,8 +25487,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 445
+        x: 120
+        y: 370
         width: 160
         height: 30
     - id: 38
@@ -25515,7 +25518,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: A ballroom? Yes.
+        value: Himeko - A ballroom? Yes.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25555,8 +25558,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 495
+        x: 120
+        y: 420
         width: 160
         height: 30
     - id: 39
@@ -25586,7 +25589,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I have several questions.
+        value: Tomomi - I have several questions.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25626,8 +25629,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 545
+        x: 120
+        y: 470
         width: 160
         height: 30
     - id: 40
@@ -25657,8 +25660,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: No need. All you need to understand is that this place is the only
-          area fit for a battle with me.~
+        value: Himeko - No need. All you need to understand is that this place is
+          the only area fit for a battle with me.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25698,8 +25701,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 595
+        x: 120
+        y: 520
         width: 160
         height: 30
     - id: 41
@@ -25729,7 +25732,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Right...
+        value: Tomomi - Right...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25769,8 +25772,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 645
+        x: 120
+        y: 570
         width: 160
         height: 30
     - id: 42
@@ -25800,7 +25803,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Now, no more talking. Let's battle!
+        value: Himeko - Now, no more talking. Let's battle!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25840,8 +25843,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 695
+        x: 120
+        y: 620
         width: 160
         height: 30
     - id: 43
@@ -25907,12 +25910,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129
-        y: 745
+        x: 120
+        y: 670
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 563.5007}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 361.3151}
+    canvasZoom: 0.7900002
   - id: 45
     fields:
     - title: Title
@@ -26032,7 +26035,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 120
         y: 20
         width: 160
         height: 30
@@ -26063,7 +26066,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: ...
+        value: Himeko - ...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26109,8 +26112,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.882355
-        y: 87.58826
+        x: 120
+        y: 70
         width: 160
         height: 30
     - id: 41
@@ -26180,8 +26183,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 167
+        x: 30
+        y: 120
         width: 160
         height: 30
     - id: 42
@@ -26251,8 +26254,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 266
-        y: 168
+        x: 210
+        y: 120
         width: 160
         height: 30
     - id: 43
@@ -26282,8 +26285,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You did. I'm surprised actually, you've changed a lot since we were
-          kids.
+        value: Himeko - You did. I'm surprised actually, you've changed a lot since
+          we were kids.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26323,8 +26326,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 259
+        x: 120
+        y: 170
         width: 160
         height: 30
     - id: 44
@@ -26354,8 +26357,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Well, I did tell you from the start that I wouldn't let anything stop
-          me from confessing to Ai.
+        value: Tomomi - Well, I did tell you from the start that I wouldn't let anything
+          stop me from confessing to Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26395,8 +26398,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 309
+        x: 120
+        y: 220
         width: 160
         height: 30
     - id: 45
@@ -26426,8 +26429,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I thought the same about myself, but it looks like you've become much
-          more worthy of Ai.
+        value: Himeko - I thought the same about myself, but it looks like you've
+          become much more worthy of Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26467,8 +26470,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 359
+        x: 120
+        y: 270
         width: 160
         height: 30
     - id: 46
@@ -26498,7 +26501,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: So... this means you won't try to stop me anymore?
+        value: Tomomi - So... this means you won't try to stop me anymore?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26538,8 +26541,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 409
+        x: 120
+        y: 320
         width: 160
         height: 30
     - id: 47
@@ -26569,8 +26572,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I will call off the rest of the fan club. You won't hear from us anymore.
-          That is, if Ai accepts your feelings.
+        value: Himeko - I will call off the rest of the fan club. You won't hear
+          from us anymore. That is, if Ai accepts your feelings.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26610,8 +26613,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 459
+        x: 120
+        y: 370
         width: 160
         height: 30
     - id: 48
@@ -26641,8 +26644,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Even if she doesn't, I just want to tell her how I feel. It's better
-          if I get it off my chest than to never tell her at all.
+        value: Tomomi - Even if she doesn't, I just want to tell her how I feel.
+          It's better if I get it off my chest than to never tell her at all.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26682,8 +26685,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 509
+        x: 120
+        y: 420
         width: 160
         height: 30
     - id: 49
@@ -26713,7 +26716,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I mean, who knows what the future has in store yknow?
+        value: Tomomi - I mean, who knows what the future has in store yknow?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26753,8 +26756,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 559
+        x: 120
+        y: 470
         width: 160
         height: 30
     - id: 50
@@ -26784,7 +26787,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hmft, who knew you'd be so mature?~
+        value: Himeko - Hmft, who knew you'd be so mature?~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26824,8 +26827,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 609
+        x: 120
+        y: 520
         width: 160
         height: 30
     - id: 51
@@ -26855,7 +26858,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hehe, well I've changed a lot since you challenged me.
+        value: Tomomi - Hehe, well I've changed a lot since you challenged me.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26895,8 +26898,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 659
+        x: 120
+        y: 570
         width: 160
         height: 30
     - id: 52
@@ -26926,7 +26929,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Eeeh you're right, maybe I really shouldn't have underestimated you.
+        value: Himeko - Eeeh you're right, maybe I really shouldn't have underestimated
+          you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26966,8 +26970,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 139
-        y: 709
+        x: 120
+        y: 620
         width: 160
         height: 30
     - id: 53
@@ -26997,7 +27001,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I told yooouuuuuu!~
+        value: Tomomi - I told yooouuuuuu!~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27037,8 +27041,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 759
+        x: 120
+        y: 670
         width: 160
         height: 30
     - id: 54
@@ -27068,8 +27072,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Himeko... I know we've been rivals since childhood, but do you think
-          we could try being friends for a change?
+        value: Tomomi - Himeko... I know we've been rivals since childhood, but do
+          you think we could try being friends for a change?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27109,8 +27113,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 809
+        x: 120
+        y: 720
         width: 160
         height: 30
     - id: 55
@@ -27140,7 +27144,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hmmmmm, well you did prove yourself to me... I wonder.~
+        value: Himeko - Hmmmmm, well you did prove yourself to me... I wonder.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27180,8 +27184,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 859
+        x: 120
+        y: 770
         width: 160
         height: 30
     - id: 56
@@ -27211,7 +27215,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Good luck, Tomomi.
+        value: Himeko - Good luck, Tomomi.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27251,8 +27255,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 909
+        x: 120
+        y: 820
         width: 160
         height: 30
     - id: 57
@@ -27282,7 +27286,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thank you, Himeko!
+        value: Tomomi - Thank you, Himeko!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27322,8 +27326,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 959
+        x: 120
+        y: 870
         width: 160
         height: 30
     - id: 58
@@ -27389,11 +27393,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 138
-        y: 1009
+        x: 120
+        y: 920
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 672.9409}
     canvasZoom: 0.85000014
   - id: 46
     fields:
@@ -27514,7 +27518,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 120
         y: 20
         width: 160
         height: 30
@@ -27545,7 +27549,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ahahahahahahahahahahaha!~
+        value: Himeko - Ahahahahahahahahahahaha!~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27585,8 +27589,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 115
+        x: 120
+        y: 70
         width: 160
         height: 30
     - id: 18
@@ -27616,8 +27620,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Is that really all you got? After battling Shou and Kana, you still
-          haven't improved at all?
+        value: Himeko - Is that really all you got? After battling Shou and Kana,
+          you still haven't improved at all?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27663,8 +27667,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 165
+        x: 120
+        y: 120
         width: 160
         height: 30
     - id: 19
@@ -27734,8 +27738,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28.03093
-        y: 215
+        x: 30
+        y: 170
         width: 160
         height: 30
     - id: 20
@@ -27805,8 +27809,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 234.03093
-        y: 215
+        x: 210
+        y: 170
         width: 160
         height: 30
     - id: 21
@@ -27836,7 +27840,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You really aren't worth of Ai's affection!
+        value: Tomomi - You really aren't worth of Ai's affection!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27876,8 +27880,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 128.03093
-        y: 298
+        x: 120
+        y: 220
         width: 160
         height: 30
     - id: 22
@@ -27951,8 +27955,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 128.03093
-        y: 348
+        x: 120
+        y: 270
         width: 160
         height: 30
     - id: 23
@@ -27982,8 +27986,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hehe, well thanks to your defeat there's no one else to stand in my
-          way.
+        value: Himeko - Hehe, well thanks to your defeat there's no one else to stand
+          in my way.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28023,11 +28027,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 129.35544
-        y: 405.94708
+        x: 120
+        y: 320
         width: 160
         height: 30
-    canvasScrollPosition: {x: 3.125, y: 159.37494}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.6400003
   - id: 47
     fields:
@@ -28250,7 +28254,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: After all that work...
+        value: Tomomi - After all that work...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28396,7 +28400,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ah-!
+        value: Tomomi - Ah-!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28467,7 +28471,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hey, watch where you're- Ooh, it's Tomomi.~
+        value: Himeko - Hey, watch where you're- Ooh, it's Tomomi.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28538,7 +28542,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Tomomi, are you okay? Sorry, we didn't you there.
+        value: Ai - Tomomi, are you okay? Sorry, we didn't you there.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28609,8 +28613,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I-it's okay. I'm fine... I'm surprised to see you two together so
-          early in the morning.
+        value: Tomomi - I-it's okay. I'm fine... I'm surprised to see you two together
+          so early in the morning.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28681,8 +28685,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Well, thanks to our talk the other day, I got the courage to tell
-          Ai how I feel.~
+        value: Himeko - Well, thanks to our talk the other day, I got the courage
+          to tell Ai how I feel.~
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28753,7 +28757,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Oh, I see...
+        value: Tomomi - Oh, I see...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28824,7 +28828,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I-I hope everything works out for you two. I'll see you later, Ai!
+        value: Tomomi - I-I hope everything works out for you two. I'll see you later,
+          Ai!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28970,7 +28975,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Eh? Tomomi?
+        value: Ai - Eh? Tomomi?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -29081,7 +29086,7 @@ MonoBehaviour:
         y: 670
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 355.22385}
+    canvasScrollPosition: {x: 0, y: 362.68646}
     canvasZoom: 0.67000014
   - id: 48
     fields:
@@ -29174,7 +29179,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: 
       - title: EventGuid
@@ -29304,8 +29309,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I'm challenging you to a battle! If you win, you can make your next
-          move. If you lose, say goodbye to confessing your feelings to Ai.
+        value: Club Grunt - I'm challenging you to a battle! If you win, you can
+          make your next move. If you lose, say goodbye to confessing your feelings
+          to Ai.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -29380,7 +29386,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Wait what?
+        value: Tomomi - Wait what?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29451,9 +29457,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Defintely, but it's fine... You just set yourself up for failure anyway.
-          No way is a member of Ai's fanclub going to let you confess your feelings
-          to her!
+        value: Club Grunt - Defintely, but it's fine... You just set yourself up
+          for failure anyway. No way is a member of Ai's fanclub going to let you
+          confess your feelings to her!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29524,7 +29530,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Huh..? Oops, was I too loud?
+        value: Tomomi - Huh..? Oops, was I too loud?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29595,7 +29601,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hey, Tomomi... Did I just hear what I think I did?
+        value: Club Grunt - Hey, Tomomi... Did I just hear what I think I did?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29670,7 +29676,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is it, I'm gonna confess my feelings for sure!
+        value: Tomomi - This is it, I'm gonna confess my feelings for sure!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29741,8 +29747,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's the last month before graduation... If I don't tell Ai how I
-          feel before then, I might never be able to tell her.
+        value: Tomomi - It's the last month before graduation... If I don't tell
+          Ai how I feel before then, I might never be able to tell her.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29786,7 +29792,7 @@ MonoBehaviour:
         y: 70
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 162.49997}
+    canvasScrollPosition: {x: 0, y: 175}
     canvasZoom: 0.8800001
   - id: 49
     fields:
@@ -29934,8 +29940,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Well then, I'll be your first challenger.~ We'll see if you are anymore
-          stronger by the end of this week.
+        value: Shou - Well then, I'll be your first challenger.~ We'll see if you
+          are anymore stronger by the end of this week.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30002,8 +30008,8 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: I can do it! I won't let myself be beat, just you wait I'll become
-          a new and improved Tomomi to beat you guys!
+        value: Tomomi - I can do it! I won't let myself be beat, just you wait I'll
+          become a new and improved Tomomi to beat you guys!
         type: 0
         typeString: 
       - title: Dialogue Text
@@ -30078,7 +30084,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: And if you lose, say goodbye to your confession!
+        value: Himeko - And if you lose, say goodbye to your confession!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30149,9 +30155,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: At the end of every week until graduation one of us will come and
-          challenge you to a battle. If you win, you can go on to the next week and
-          be a step closer to confessing to Ai.
+        value: Kana - At the end of every week until graduation one of us will come
+          and challenge you to a battle. If you win, you can go on to the next week
+          and be a step closer to confessing to Ai.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30222,8 +30228,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Haha, she defintely needs the extra time! There's no way Tomomi is
-          even ready at all!
+        value: Himeko - Haha, she defintely needs the extra time! There's no way
+          Tomomi is even ready at all!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30294,7 +30300,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: We'll give you some time, it seems like you need it.
+        value: Kana - We'll give you some time, it seems like you need it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30507,8 +30513,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Good choice, it shows that you have the passion.~ But do you have
-          the skills?
+        value: Shou - Good choice, it shows that you have the passion.~ But do you
+          have the skills?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30585,7 +30591,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I-I made my decision already, I have to confess to her no matter what!
+        value: Tomomi - I-I made my decision already, I have to confess to her no
+          matter what!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30656,8 +30663,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: If you still think you want to confess your feelings to Ai, you will
-          have to go through us first.
+        value: Kana - If you still think you want to confess your feelings to Ai,
+          you will have to go through us first.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30728,9 +30735,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Of course some meddling girl like you is the one trying to mess with
-          our club. Don't think you'll be let off easy just because you beat one
-          of our members.
+        value: Himeko - Of course some meddling girl like you is the one trying to
+          mess with our club. Don't think you'll be let off easy just because you
+          beat one of our members.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30801,7 +30808,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hehe, we caught ya.~
+        value: Shou - Hehe, we caught ya.~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30872,7 +30879,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I-I guess...
+        value: Tomomi - I-I guess...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -30943,8 +30950,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You're the one our club member reported, the one who plans on confessing
-          her feelings to Ai?
+        value: Kana - You're the one our club member reported, the one who plans
+          on confessing her feelings to Ai?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31015,7 +31022,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Me? Wha?
+        value: Tomomi - Me? Wha?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31086,7 +31093,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Long time no talk, Tomomi.~ I'm not surprised it's you.
+        value: Himeko - Long time no talk, Tomomi.~ I'm not surprised it's you.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31303,7 +31310,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You there, with the pink hair!
+        value: Himeko - You there, with the pink hair!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31455,7 +31462,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hmft, just you wait till the Big Three hear about this..!
+        value: Club Grunt - Hmft, just you wait till the Big Three hear about this..!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31526,8 +31533,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: My goal is to tell Ai how I feel, I'm not going to let some fanclub
-          members get in my way.
+        value: Tomomi - My goal is to tell Ai how I feel, I'm not going to let some
+          fanclub members get in my way.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31740,7 +31747,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: N-no way... I can't believe you beat me...
+        value: Club Grunt - N-no way... I can't believe you beat me...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -31861,8 +31868,8 @@ MonoBehaviour:
         y: 1220
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 2.663998}
-    canvasZoom: 0.66999996
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.9399997
   - id: 50
     fields:
     - title: Title
@@ -32013,7 +32020,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: This is it..!
+        value: Tomomi - This is it..!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -32084,7 +32091,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I hope she'll meet me... *places a love letter in Ai's locker*
+        value: Tomomi - I hope she'll meet me... *places a love letter in Ai's locker*
         type: 0
         typeString: 
       - title: Parenthetical
@@ -32155,7 +32162,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Now we wait and see!
+        value: Tomomi - Now we wait and see!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -32301,7 +32308,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hm? A letter? *opens it*
+        value: Ai - Hm? A letter? *opens it*
         type: 0
         typeString: 
       - title: Parenthetical
@@ -32372,8 +32379,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '"Meet me on the school roof once the last bell rings, I have something
-          important to say."'
+        value: Ai - "Meet me on the school roof once the last bell rings, I have
+          something important to say."
         type: 0
         typeString: 
       - title: Parenthetical
@@ -32444,7 +32451,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hmm, I wish whoever wrote this put their name on it. Well, there's
+        value: Ai - Hmm, I wish whoever wrote this put their name on it. Well, there's
           no harm in meeting them.
         type: 0
         typeString: 
@@ -32516,7 +32523,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I wonder what it's about.~
+        value: Ai - I wonder what it's about.~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -32662,7 +32669,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hello? I was told to meet someone on the roof today to talk about
+        value: Ai - Hello? I was told to meet someone on the roof today to talk about
           something.
         type: 0
         typeString: 
@@ -32890,8 +32897,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Oh, it's you Tomomi! You could've just text me or asked me to meet
-          up hehe.
+        value: Ai - Oh, it's you Tomomi! You could've just text me or asked me to
+          meet up hehe.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -32966,7 +32973,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I know, but I wanted this to be special.
+        value: Tomomi - I know, but I wanted this to be special.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33037,7 +33044,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Eh? What do you mean?
+        value: Ai - Eh? What do you mean?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33108,8 +33115,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ai, I don't know if you've ever noticed, but you're a very popular
-          girl.
+        value: Tomomi - Ai, I don't know if you've ever noticed, but you're a very
+          popular girl.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33180,7 +33187,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Really? I mean, I just try being friendly with everyone is all...
+        value: Ai - Really? I mean, I just try being friendly with everyone is all...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33251,8 +33258,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You're always kind, Ai! But also kind of oblivious hehe. I'm surprised
-          you haven't noticed, you even have a whole fanclub.
+        value: Tomomi - You're always kind, Ai! But also kind of oblivious hehe.
+          I'm surprised you haven't noticed, you even have a whole fanclub.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33323,9 +33330,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Eeeh? No way, you're just seeing things weird! I don't think I've
-          ever seen a fanclub, but then again I have seen quite a bit of pink arm
-          band wearing girls around me sometimes...
+        value: Ai - Eeeh? No way, you're just seeing things weird! I don't think
+          I've ever seen a fanclub, but then again I have seen quite a bit of pink
+          arm band wearing girls around me sometimes...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33396,8 +33403,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Really, you are popular! And because of that I have to fight my way
-          through those people to get to you today.
+        value: Tomomi - Really, you are popular! And because of that I have to fight
+          my way through those people to get to you today.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33468,7 +33475,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Huh? What do you mean?
+        value: Ai - Huh? What do you mean?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33539,8 +33546,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: There's a lot of people who admire you, want to be friends with you,
-          who have feelings for you...
+        value: Tomomi - There's a lot of people who admire you, want to be friends
+          with you, who have feelings for you...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33611,8 +33618,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I mean, there's no question of course I admire you, and we've been
-          best friends since forever... I'm one of those people who have feelings
+        value: Tomomi - I mean, there's no question of course I admire you, and we've
+          been best friends since forever... I'm one of those people who have feelings
           for you.
         type: 0
         typeString: 
@@ -33684,7 +33691,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Tomomi...
+        value: Ai - Tomomi...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33755,8 +33762,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Fighting through your fanclub was something really random I never
-          expected, it was hard, but I did it.
+        value: Tomomi - Fighting through your fanclub was something really random
+          I never expected, it was hard, but I did it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33899,8 +33906,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The more we got closer, the stronger my feelings got. And I realized
-          recently that those feelings developed into love.
+        value: Tomomi - The more we got closer, the stronger my feelings got. And
+          I realized recently that those feelings developed into love.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -33971,8 +33978,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I fought through a bunch of people to be with you here today so I
-          could tell you that I love you, Ai.
+        value: Tomomi - I fought through a bunch of people to be with you here today
+          so I could tell you that I love you, Ai.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34043,7 +34050,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Tomomi...
+        value: Ai - Tomomi...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34114,10 +34121,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I-I mean, you don't have to respond to me or anything! I just really
-          felt that if I didn't tell you before graduation I'd regret it, and I wouldn't
-          be able to see you as much once we go to college so I mustered up the courage
-          and-
+        value: Tomomi - I-I mean, you don't have to respond to me or anything! I
+          just really felt that if I didn't tell you before graduation I'd regret
+          it, and I wouldn't be able to see you as much once we go to college so
+          I mustered up the courage and-
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34188,7 +34195,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I accept your feelings, Tomomi.
+        value: Ai - I accept your feelings, Tomomi.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34259,7 +34266,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: E-eh..?
+        value: Tomomi - E-eh..?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34330,8 +34337,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I've always wondered why you were the only person who sparked this
-          special kind of joy inside me whenever I laid my eyes on you.
+        value: Ai - I've always wondered why you were the only person who sparked
+          this special kind of joy inside me whenever I laid my eyes on you.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34402,8 +34409,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I always thought it was just because we were best friends, but having
-          you say how you truly feel about me...
+        value: Ai - I always thought it was just because we were best friends, but
+          having you say how you truly feel about me...
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34474,8 +34481,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I can't help but feel all nervous and excited at the same time!~ I
-          know now that I feel the same as you.
+        value: Ai - I can't help but feel all nervous and excited at the same time!~
+          I know now that I feel the same as you.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34546,7 +34553,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Waaaaa, Ai..!~
+        value: Tomomi - Waaaaa, Ai..!~
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34688,8 +34695,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I don't really know exactly what you had to go through to be able
-          to tell me this today, but I'm happy that you pulled through!
+        value: Ai - I don't really know exactly what you had to go through to be
+          able to tell me this today, but I'm happy that you pulled through!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34760,7 +34767,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I love you, Tomomi.
+        value: Ai-I love you, Tomomi.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34831,7 +34838,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I love you too, Ai!
+        value: Tomomi - I love you too, Ai!
         type: 0
         typeString: 
       - title: Parenthetical
@@ -34942,8 +34949,8 @@ MonoBehaviour:
         y: 2070
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.28000057
+    canvasScrollPosition: {x: 0, y: 1909.2557}
+    canvasZoom: 1.09
   - id: 51
     fields:
     - title: Title
