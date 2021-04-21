@@ -349,6 +349,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3950651087499738323, guid: 88cedd4cbf3139a4582ada5db966a54c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88cedd4cbf3139a4582ada5db966a54c, type: 3}
 --- !u!114 &64154036 stripped
@@ -4411,6 +4416,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1481632766}
+          m_MethodName: WalkOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1273556809
 Transform:
   m_ObjectHideFlags: 0
@@ -5060,32 +5076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3214055930387434738, guid: 88cedd4cbf3139a4582ada5db966a54c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -32.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214055931357927186, guid: 88cedd4cbf3139a4582ada5db966a54c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214055931357927186, guid: 88cedd4cbf3139a4582ada5db966a54c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214055931357927186, guid: 88cedd4cbf3139a4582ada5db966a54c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214055931357927187, guid: 88cedd4cbf3139a4582ada5db966a54c,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a4f202fc43ebbac4ba043777d6d9d6fc,
-        type: 3}
     - target: {fileID: 3214055932388222540, guid: 88cedd4cbf3139a4582ada5db966a54c,
         type: 3}
       propertyPath: m_Name
