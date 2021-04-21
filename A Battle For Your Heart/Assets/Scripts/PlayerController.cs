@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public GameObject tomomi;
+
+    public float deadZone = 0.1f;
+
     private void Awake()
     {
         if (PlayerController.instance != null)
@@ -35,7 +39,7 @@ public class PlayerController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (NPCManager.instance.convoInProgress)
         {
@@ -47,17 +51,33 @@ public class PlayerController : MonoBehaviour
             canMove = true;
         }
 
-        if(hInput > 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if(hInput < 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
+
+        
+
+        if (hInput > deadZone)
+        {
+            if(!tomomi.GetComponent<Animator>().GetBool("walking"))
+            {
+                tomomi.GetComponent<Animator>().SetBool("walking", true);
+            }
+
+            tomomi.transform.localScale = new Vector3(-1, tomomi.transform.localScale.y, tomomi.transform.localScale.z);
+        }
+        else if(hInput < -deadZone)
+        {
+            if (!tomomi.GetComponent<Animator>().GetBool("walking"))
+            {
+                tomomi.GetComponent<Animator>().SetBool("walking", true);
+            }
+
+            tomomi.transform.localScale = new Vector3(1, tomomi.transform.localScale.y, tomomi.transform.localScale.z);
+        }
+        else if((hInput > -deadZone && hInput < deadZone) && tomomi.GetComponent<Animator>().GetBool("walking"))
+        {
+            tomomi.GetComponent<Animator>().SetBool("walking", false);
+        }
 
         if (canMove)
         {
