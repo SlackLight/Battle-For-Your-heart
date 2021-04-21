@@ -52,6 +52,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] ParticleSystem PlayerPerfect;
 
     [SerializeField] Animator Tomomi;
+    [SerializeField] Animator opponentAnim;
+    [SerializeField] List<NpcSelector> temp = new List<NpcSelector>();
 
 
 
@@ -71,6 +73,8 @@ public class InputManager : MonoBehaviour
         RightArrow.DisableKeyword("_EMISSION");
         LeftArrow.DisableKeyword("_EMISSION");
         UpArrow.DisableKeyword("_EMISSION");
+
+
 
 
     }
@@ -130,9 +134,23 @@ public class InputManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         LeftArrowO.DisableKeyword("_EMISSION");
     }
-  
+
     void Update()
     {
+        if (!opponentAnim)
+        {
+
+
+            for (int i = 0; i < FindObjectsOfType<NpcSelector>().Length; i++)
+            {
+                if (FindObjectsOfType<NpcSelector>()[i].isActiveAndEnabled)
+                {
+                    opponentAnim = FindObjectOfType<NpcSelector>().GetComponentInChildren<Animator>();
+
+                }
+
+            }
+        }
         switch (Mode)
         {
             case mode.Edit:
@@ -228,7 +246,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         LeftPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(LeftNoteList[0]))
@@ -264,7 +282,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         RightPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(RightNoteList[0]))
@@ -301,7 +319,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         DownPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
 
                     }
                     else if (earlyNoteList.Contains(DownNoteList[0]))
@@ -338,7 +356,7 @@ public class InputManager : MonoBehaviour
                         perfectNoteList.RemoveAt(0);
                         combatManagerRef.Perfect();
                         UpPart.Play();
-                        //PlayerPerfect.Play();
+                        PlayerPerfect.Play();
                     }
                     else if (earlyNoteList.Contains(UpNoteList[0]))
                     {
@@ -363,6 +381,7 @@ public class InputManager : MonoBehaviour
             if (note.tag == "AttackMode")
             {
                 combatManagerRef.AttackMode = true;
+                opponentAnim.SetTrigger("EIdle");
                 //combat manager attack mode = true
             }
             else
@@ -371,73 +390,84 @@ public class InputManager : MonoBehaviour
                 earlyNoteList.Add(note.gameObject);
                 if (note.tag == "DownBlock")
                 {
+                    opponentAnim.SetTrigger("EDown");
                     StartCoroutine("DownO");
                 }
                 if (note.tag == "UpBlock")
                 {
+                    opponentAnim.SetTrigger("EUp");
+
                     StartCoroutine("UpO");
                 }
                 if (note.tag == "LeftBlock")
                 {
+                    opponentAnim.SetTrigger("ELeft");
+
                     StartCoroutine("LeftO");
                 }
                 if (note.tag == "RightBlock")
                 {
+                    opponentAnim.SetTrigger("ERight");
+
                     StartCoroutine("RightO");
                 }
+                
 
                 combatManagerRef.AttackMode = false;
 
             }
         }
-
-
-
-
-        if (note.tag == "EndBlock")
+        else
         {
-            FindObjectOfType<OpponentManager>().SongDone = true;
-        }
-        if (note.GetComponent<ActivationScript>().isEnabled == true && !editing)
-        {
-            if (timingOverlap == early)
-            {
-                earlyNoteList.Add(note.gameObject);
-                if (note.tag == "DownBlock")
-                {
-                    DownNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "UpBlock")
-                {
-                    UpNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "LeftBlock")
-                {
-                    LeftNoteList.Add(note.gameObject);
-                }
-                if (note.tag == "RightBlock")
-                {
-                    RightNoteList.Add(note.gameObject);
-                }
 
+
+
+
+            if (note.tag == "EndBlock")
+            {
+                FindObjectOfType<OpponentManager>().SongDone = true;
             }
-            if (timingOverlap == perfect)
+            if (note.GetComponent<ActivationScript>().isEnabled == true && !editing && timingOverlap != opponentNotes)
             {
-                if (earlyNoteList.Contains(note.gameObject))
+                if (timingOverlap == early)
                 {
-                    earlyNoteList.Remove(note.gameObject);
-                    perfectNoteList.Add(note.gameObject);
-                }
+                    earlyNoteList.Add(note.gameObject);
+                    if (note.tag == "DownBlock")
+                    {
+                        DownNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "UpBlock")
+                    {
+                        UpNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "LeftBlock")
+                    {
+                        LeftNoteList.Add(note.gameObject);
+                    }
+                    if (note.tag == "RightBlock")
+                    {
+                        RightNoteList.Add(note.gameObject);
+                    }
 
-            }
-            if (timingOverlap == late)
-            {
-                if (perfectNoteList.Contains(note.gameObject))
+                }
+                if (timingOverlap == perfect)
                 {
-                    perfectNoteList.Remove(note.gameObject);
-                    lateNoteList.Add(note.gameObject);
-                }
+                    if (earlyNoteList.Contains(note.gameObject))
+                    {
+                        earlyNoteList.Remove(note.gameObject);
+                        perfectNoteList.Add(note.gameObject);
+                    }
 
+                }
+                if (timingOverlap == late)
+                {
+                    if (perfectNoteList.Contains(note.gameObject))
+                    {
+                        perfectNoteList.Remove(note.gameObject);
+                        lateNoteList.Add(note.gameObject);
+                    }
+
+                }
             }
         }
         //if(timingOverlap == End)
