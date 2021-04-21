@@ -16,11 +16,7 @@ public class TimingColliders : MonoBehaviour
         combatManagerRef = FindObjectOfType<CombatManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
     private void OnTriggerEnter(Collider other)
     {
 
@@ -31,10 +27,22 @@ public class TimingColliders : MonoBehaviour
         {
             if (other.GetComponent<ActivationScript>().isEnabled)
             {
-                Tomomi.SetTrigger("Hit");
+                if (combatManagerRef.AttackMode)
+                {
+                    Tomomi.SetTrigger("Hit");
+
+                }
+                else
+                {
+                    Tomomi.SetTrigger("BlockHit");
+
+                }
+
                 other.GetComponent<ActivationScript>().isEnabled = false;
                 combatManagerRef.Missed(inputManager.EnemyAttack);
                 other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+
             }
         }
     }

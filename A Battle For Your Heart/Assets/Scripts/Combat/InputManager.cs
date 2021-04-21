@@ -52,6 +52,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] ParticleSystem PlayerPerfect;
 
     [SerializeField] Animator Tomomi;
+    [SerializeField] Animator opponentAnim;
+    [SerializeField] List<NpcSelector> temp = new List<NpcSelector>();
 
 
 
@@ -71,6 +73,8 @@ public class InputManager : MonoBehaviour
         RightArrow.DisableKeyword("_EMISSION");
         LeftArrow.DisableKeyword("_EMISSION");
         UpArrow.DisableKeyword("_EMISSION");
+
+
 
 
     }
@@ -133,6 +137,20 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        if (!opponentAnim)
+        {
+
+
+            for (int i = 0; i < FindObjectsOfType<NpcSelector>().Length; i++)
+            {
+                if (FindObjectsOfType<NpcSelector>()[i].isActiveAndEnabled)
+                {
+                    opponentAnim = FindObjectOfType<NpcSelector>().GetComponentInChildren<Animator>();
+
+                }
+
+            }
+        }
         switch (Mode)
         {
             case mode.Edit:
@@ -363,6 +381,7 @@ public class InputManager : MonoBehaviour
             if (note.tag == "AttackMode")
             {
                 combatManagerRef.AttackMode = true;
+                opponentAnim.SetTrigger("EIdle");
                 //combat manager attack mode = true
             }
             else
@@ -371,20 +390,28 @@ public class InputManager : MonoBehaviour
                 earlyNoteList.Add(note.gameObject);
                 if (note.tag == "DownBlock")
                 {
+                    opponentAnim.SetTrigger("EDown");
                     StartCoroutine("DownO");
                 }
                 if (note.tag == "UpBlock")
                 {
+                    opponentAnim.SetTrigger("EUp");
+
                     StartCoroutine("UpO");
                 }
                 if (note.tag == "LeftBlock")
                 {
+                    opponentAnim.SetTrigger("ELeft");
+
                     StartCoroutine("LeftO");
                 }
                 if (note.tag == "RightBlock")
                 {
+                    opponentAnim.SetTrigger("ERight");
+
                     StartCoroutine("RightO");
                 }
+                
 
                 combatManagerRef.AttackMode = false;
 

@@ -21,27 +21,36 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject TutorialBattle;
     public bool SongDone;
     [SerializeField] Text OpponentName;
-
+    
+    
 
     private void Start()
     {
         if (TimeManager.instance == null)
         {
             opponent = Opponents.Tutorial;
+            TutorialBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+
         }
         else if (TimeManager.instance.weekCounter == 2)
         {
             opponent = Opponents.Shou;
+            ShouBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+
 
         }
         else if (TimeManager.instance.weekCounter == 3)
         {
             opponent = Opponents.Kana;
+            KanaBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+
 
         }
         else if (TimeManager.instance.weekCounter == 4)
         {
             opponent = Opponents.Himeko;
+            HimekoBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+
 
         }
 
@@ -66,6 +75,7 @@ public class OpponentManager : MonoBehaviour
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
                     OpponentName.text = "Shou";
+                    ShouBattle.transform.GetComponentInChildren<NpcSelector>().CreatePortrait();
                 }
 
 
@@ -82,6 +92,8 @@ public class OpponentManager : MonoBehaviour
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(false);
                     OpponentName.text = "Kana";
+                    KanaBattle.transform.GetComponentInChildren<NpcSelector>().CreatePortrait();
+
 
 
                 }
@@ -100,6 +112,8 @@ public class OpponentManager : MonoBehaviour
                     HimekoBattle.SetActive(true);
                     TutorialBattle.SetActive(false);
                     OpponentName.text = "Himeko";
+                    HimekoBattle.transform.GetComponentInChildren<NpcSelector>().CreatePortrait();
+
 
                 }
 
@@ -116,6 +130,8 @@ public class OpponentManager : MonoBehaviour
                     HimekoBattle.SetActive(false);
                     TutorialBattle.SetActive(true);
                     OpponentName.text = "Grunt";
+                    TutorialBattle.transform.GetComponentInChildren<NpcSelector>().CreatePortrait();
+
 
 
                 }
