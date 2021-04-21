@@ -2051,12 +2051,12 @@ PrefabInstance:
     - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[1]
-      value: ScienceClass
+      value: ScienceClass2
       objectReference: {fileID: 0}
     - target: {fileID: 1752084628245538492, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
-      value: ScienceClass
+      value: ScienceClass2
       objectReference: {fileID: 0}
     - target: {fileID: 1752084628245538493, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
@@ -2152,12 +2152,12 @@ PrefabInstance:
     - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[1]
-      value: CookingClass
+      value: CookingClass2
       objectReference: {fileID: 0}
     - target: {fileID: 1752084629007730385, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
-      value: CookingClass
+      value: CookingClass2
       objectReference: {fileID: 0}
     - target: {fileID: 1752084629007730386, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
@@ -2289,7 +2289,7 @@ PrefabInstance:
     - target: {fileID: 1752084629044017559, guid: e85b75ed194deac458d6a53e876441a5,
         type: 3}
       propertyPath: sceneNamesToBeLoadedForEachWeek.Array.data[2]
-      value: GymClass2
+      value: GymClass3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85b75ed194deac458d6a53e876441a5, type: 3}
@@ -5545,6 +5545,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VN Template Standard Dialogue UI
       objectReference: {fileID: 0}
+    - target: {fileID: 11400054, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400054, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onUnfocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11435646, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 3
@@ -5569,6 +5577,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 11440496, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11442500, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 3
@@ -5583,7 +5595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11465848, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_Text
-      value: Input Fiel
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11465848, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -5597,13 +5609,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11478606, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: clearTextOnClose
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478606, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478606, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onUnfocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490218, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490218, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
+      propertyPath: onUnfocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -772.2421
+      value: -658.7342
       objectReference: {fileID: 0}
     - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -330.00003
+      value: -256
       objectReference: {fileID: 0}
     - target: {fileID: 22408170, guid: d1b7749dcc0beaf4f8d455f24cc4f0f7, type: 3}
       propertyPath: m_AnchoredPosition.y
