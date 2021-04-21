@@ -16,6 +16,7 @@ TagManager:
   - EndBlock
   - AttackMode
   - NPCPortrait
+  - Active
   layers:
   - Default
   - TransparentFX
