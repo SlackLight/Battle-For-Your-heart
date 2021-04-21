@@ -48,6 +48,7 @@ public class CutsceneManager : MonoBehaviour
                 var conversation = DialogueManager.masterDatabase.GetConversation(convoIDsToBeStarted[currentConvo]);
                 DialogueManager.StartConversation(conversation.Title);
                 FindObjectOfType<WinstateManager>().firstTimeThrough = true;
+
             }
             else if(!FindObjectOfType<WinstateManager>().firstTimeThrough && !FindObjectOfType<WinstateManager>().win) // if lose battle
             {
