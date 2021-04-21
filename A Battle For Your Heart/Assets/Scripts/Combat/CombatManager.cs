@@ -23,7 +23,7 @@ public class CombatManager : MonoBehaviour
     int perfectCount = 0;
     int earlyCount = 0;
     int lateCount = 0;
-    public string LatestRating;
+    public Rating LatestRating;
     public bool AttackMode = false;
     [SerializeField] SpriteRenderer BattleSheet;
     [SerializeField] SpriteRenderer OBattleSheet;
@@ -36,6 +36,11 @@ public class CombatManager : MonoBehaviour
     [SerializeField] ParticleSystem hurtPart;
     [SerializeField] float hoverDist;
     [SerializeField] Animator Tomomi;
+    [SerializeField] Color fullCombo;
+    [SerializeField] Color halfCombo;
+    [SerializeField] Color quatCombo;
+    [SerializeField] Color noCombo;
+
 
 
 
@@ -44,6 +49,7 @@ public class CombatManager : MonoBehaviour
     {
         if (gameObject)
         {
+            LatestRating = FindObjectOfType<Rating>();
             ModeText.text = "Defend";
             OBattleSheet.color = O_DefaultColor;
             HeartIcon.color = H_DefenceColor;
@@ -56,7 +62,7 @@ public class CombatManager : MonoBehaviour
             comboCounter = GameObject.Find("Combo Counter").GetComponent<Text>();
             OManager = FindObjectOfType<OpponentManager>();
 
-
+            
 
             //incomingDamage = GetHashCode enemy stats
 
@@ -88,6 +94,12 @@ public class CombatManager : MonoBehaviour
         healthbar.fillAmount = (float)currentHealth / Health;
         if (comboCount > 0) comboCounter.text = (comboCount + " COMBO!");
         else comboCounter.text = null;
+        if (comboCount > 0) comboCounter.color = noCombo;
+        if (comboCount > 9) comboCounter.color = quatCombo;
+        if (comboCount > 24) comboCounter.color = halfCombo;
+        if (comboCount > 49) comboCounter.color = fullCombo;
+
+       
 
         HeartIcon.gameObject.transform.position = new Vector3(HeartIcon.gameObject.transform.position.x, HeartIcon.gameObject.transform.position.y, HeartIcon.gameObject.transform.position.z + hoverDist * Mathf.Sin(Time.time));
 
@@ -116,7 +128,7 @@ public class CombatManager : MonoBehaviour
 
     public void Perfect()
     {
-        LatestRating = "PERFECT!!!";
+        LatestRating.UpdateRating("Perfect");
 
         incomingDamage = 0;
         perfectCount++;
@@ -128,7 +140,8 @@ public class CombatManager : MonoBehaviour
     }
     public void TooEarly(int inwardDamage)
     {
-        LatestRating = "Too Early";
+        LatestRating.UpdateRating("Too Early");
+       
 
         comboCount++;
         earlyCount++;
@@ -141,7 +154,9 @@ public class CombatManager : MonoBehaviour
     }
     public void TooLate(int inwardDamage)
     {
-        LatestRating = "Too Late";
+        LatestRating.UpdateRating("Too Late");
+
+        
 
         comboCount++;
         lateCount++;
@@ -154,7 +169,9 @@ public class CombatManager : MonoBehaviour
     }
     public void Missed(int inwardDamage)
     {
-        LatestRating = "Miss";
+        LatestRating.UpdateRating("Miss");
+
+      
 
         incomingDamage = inwardDamage;
         comboCount = 0;
