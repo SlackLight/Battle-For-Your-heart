@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalSceness/Minigames/ScienceClass2.unity
     guid: 8d6e9c935929d8243867c599546aef81
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 311dc068649f5b840b1379bfa967bf08
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 1c0ddab52605e6e498219784503b60e7
   m_configObjects: {}
