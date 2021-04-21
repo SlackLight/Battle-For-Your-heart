@@ -184,10 +184,6 @@ public class CombatManager : MonoBehaviour
     }
     public void ResolveDamage()
     {
-
-
-
-
         if (AttackMode)
         {
             OManager.TakeDamage(outgoingDamage);

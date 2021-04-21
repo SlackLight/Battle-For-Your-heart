@@ -21,39 +21,41 @@ public class OpponentManager : MonoBehaviour
     [SerializeField] GameObject TutorialBattle;
     public bool SongDone;
     [SerializeField] Text OpponentName;
+    [SerializeField] bool testMode;
     
     
 
     private void Start()
     {
-        if (TimeManager.instance == null)
+        if (!testMode)
         {
-            opponent = Opponents.Tutorial;
-            TutorialBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+            if (TimeManager.instance == null)
+            {
+                opponent = Opponents.Tutorial;
+
+            }
+            else if (TimeManager.instance.weekCounter == 2)
+            {
+                opponent = Opponents.Shou;
+
+
+            }
+            else if (TimeManager.instance.weekCounter == 3)
+            {
+                opponent = Opponents.Kana;
+
+
+            }
+            else if (TimeManager.instance.weekCounter == 4)
+            {
+                opponent = Opponents.Himeko;
+
+
+            }
+            
 
         }
-        else if (TimeManager.instance.weekCounter == 2)
-        {
-            opponent = Opponents.Shou;
-            ShouBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
-
-
-        }
-        else if (TimeManager.instance.weekCounter == 3)
-        {
-            opponent = Opponents.Kana;
-            KanaBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
-
-
-        }
-        else if (TimeManager.instance.weekCounter == 4)
-        {
-            opponent = Opponents.Himeko;
-            HimekoBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
-
-
-        }
-
+        StartUp(opponent);
 
     }
     public void StartUp(Opponents opponent)
@@ -67,6 +69,7 @@ public class OpponentManager : MonoBehaviour
                 Strength = 30;
                 Defence = 10;
                 Health = 100;
+                ShouBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
 
                 if (!ShouBattle.activeInHierarchy)
                 {
@@ -82,8 +85,9 @@ public class OpponentManager : MonoBehaviour
                 break;
             case Opponents.Kana:
                 Strength = 30;
-                Defence = 60;
+                Defence = 23;
                 Health = 100;
+                KanaBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
 
                 if (!KanaBattle.activeInHierarchy)
                 {
@@ -101,9 +105,10 @@ public class OpponentManager : MonoBehaviour
 
                 break;
             case Opponents.Himeko:
-                Strength = 75;
-                Defence = 75;
+                Strength = 65;
+                Defence = 65;
                 Health = 100;
+                HimekoBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
 
                 if (!HimekoBattle.activeInHierarchy)
                 {
@@ -122,6 +127,8 @@ public class OpponentManager : MonoBehaviour
                 Strength = 1;
                 Defence = 2;
                 Health = 50;
+                TutorialBattle.transform.GetComponentInChildren<NpcSelector>().tag = "Active";
+
 
                 if (!TutorialBattle.activeInHierarchy)
                 {
