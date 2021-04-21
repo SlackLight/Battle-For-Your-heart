@@ -35,11 +35,6 @@ public class StatManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void MatchingWin()
     {
         Strength += 5;
