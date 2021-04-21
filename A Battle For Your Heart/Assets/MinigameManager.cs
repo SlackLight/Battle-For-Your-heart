@@ -50,9 +50,9 @@ public class MinigameManager : MonoBehaviour
         }
         else
         {
-            currentStrength = 0;
-            currentHealth = 0;
-            currentDefense = 0;
+            defenseIncrease = currentDefense;
+            healthIncrease = currentHealth;
+            strengthIncrease = currentStrength;
         }
     }
 
@@ -67,9 +67,13 @@ public class MinigameManager : MonoBehaviour
                 strengthText.text = ((int)currentStrength).ToString();
                 strengthText.color = Color.green;
             }
-            else
+            else if(currentStrength > strengthIncrease)
             {
                 currentStrength = strengthIncrease;
+            }
+            else if(strengthIncrease == currentStrength)
+            {
+                strengthText.text = ((int)currentStrength).ToString();
             }
 
             //If defense needs to keep increasing
@@ -79,9 +83,13 @@ public class MinigameManager : MonoBehaviour
                 defenseText.text = ((int)currentDefense).ToString();
                 defenseText.color = Color.green;
             }
-            else
+            else if (currentDefense > defenseIncrease)
             {
                 currentDefense = defenseIncrease;
+            }
+            else if (defenseIncrease == currentDefense)
+            {
+                defenseText.text = ((int)currentDefense).ToString();
             }
 
             //If health needs to keep increasing
@@ -91,9 +99,13 @@ public class MinigameManager : MonoBehaviour
                 healthText.text = ((int)currentHealth).ToString();
                 healthText.color = Color.green;
             }
-            else
+            else if(currentHealth > healthIncrease)
             {
                 currentHealth = healthIncrease;
+            }
+            else if(healthIncrease == currentHealth)
+            {
+
             }
 
             if (currentStrength == strengthIncrease && currentHealth == healthIncrease && currentDefense == defenseIncrease)

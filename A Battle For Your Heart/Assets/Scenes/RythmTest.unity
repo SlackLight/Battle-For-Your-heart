@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903e726aa8530f04b9ca4c9912968131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mode: 0
+  Mode: 1
   UpArrow: {fileID: 2100000, guid: 62720bacc512d2441a9852cb718f08e0, type: 2}
   DownArrow: {fileID: 2100000, guid: 4ed1a393c4f95eb4f9dc1a1c0003a7d5, type: 2}
   RightArrow: {fileID: 2100000, guid: 0a946b09dc5c98340b10299b216e0809, type: 2}

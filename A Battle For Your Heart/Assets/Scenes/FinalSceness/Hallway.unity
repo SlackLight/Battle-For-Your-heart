@@ -338,7 +338,7 @@ MonoBehaviour:
   convoIDs: 010000000f000000120000001f00000021000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &14153282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   convoIDs: 11000000200000003e000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &230623553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2219,7 +2219,7 @@ MonoBehaviour:
   convoIDs: 1c000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &274183047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2387,7 +2387,7 @@ MonoBehaviour:
   convoIDs: 14000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &296098293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2562,7 +2562,7 @@ MonoBehaviour:
   convoIDs: 3c000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &314398202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   convoIDs: 3a000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &397738153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4150,7 +4150,7 @@ MonoBehaviour:
   convoIDs: 08000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &439956820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5990,7 +5990,7 @@ MonoBehaviour:
   convoIDs: 3d000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &630665959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6870,7 +6870,7 @@ MonoBehaviour:
   convoIDs: 34000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &710736440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7101,6 +7101,133 @@ Transform:
   - {fileID: 1820029047}
   m_Father: {fileID: 426778588}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &726502984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726502986}
+  - component: {fileID: 726502985}
+  m_Layer: 0
+  m_Name: ABFYH_LaidBack3_C_140
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &726502985
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726502984}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fd19ab4cbeb0587439352bac889dbcc4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &726502986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726502984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &733968610
 Mesh:
@@ -7823,7 +7950,7 @@ MonoBehaviour:
   convoIDs: 06000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &857436167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8850,7 +8977,7 @@ MonoBehaviour:
   convoIDs: 0a0000001900000036000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &943144726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9241,7 +9368,7 @@ MonoBehaviour:
   convoIDs: 1a000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &997148080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9331,133 +9458,6 @@ Material:
     m_Floats: []
     m_Colors:
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
---- !u!1 &1009013350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1009013352}
-  - component: {fileID: 1009013351}
-  m_Layer: 0
-  m_Name: ABFYH_LaidBack2_Gm_16482_SAMPLE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1009013351
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009013350}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4f45af46ba504e143a8187844b7cc3e3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.25
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &1009013352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009013350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015489473
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,7 +9566,7 @@ MonoBehaviour:
   convoIDs: 35000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1022471336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12067,7 +12067,7 @@ MonoBehaviour:
   convoIDs: 1500000037000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1268930487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12999,7 +12999,7 @@ MonoBehaviour:
   convoIDs: 090000001800000023000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1353892784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14109,7 +14109,7 @@ MonoBehaviour:
   convoIDs: 10000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1382079061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14686,7 +14686,7 @@ MonoBehaviour:
   convoIDs: 22000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1461778632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17513,7 +17513,7 @@ MonoBehaviour:
   convoIDs: 0e000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1811444282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17961,7 +17961,7 @@ MonoBehaviour:
   convoIDs: 0c000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1834180734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18248,7 +18248,7 @@ MonoBehaviour:
   convoIDs: 17000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1906977479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18468,7 +18468,7 @@ MonoBehaviour:
   convoIDs: 02000000070000000d00000013000000160000001b0000001e00000033000000380000003b000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1922843293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18803,7 +18803,7 @@ MonoBehaviour:
   convoIDs: 0b00000039000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1969345621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19323,7 +19323,7 @@ MonoBehaviour:
   convoIDs: 04000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &1999183241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19606,7 +19606,7 @@ MonoBehaviour:
   convoIDs: 1d000000
   convoCounter: 0
   linear: 0
-  cooldownTimerStart: 0.1
+  cooldownTimerStart: 1.5
 --- !u!65 &2018456034
 BoxCollider:
   m_ObjectHideFlags: 0
