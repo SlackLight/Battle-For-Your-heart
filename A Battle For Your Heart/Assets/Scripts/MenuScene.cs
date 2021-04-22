@@ -26,4 +26,9 @@ public class MenuScene : MonoBehaviour
     {
         controlsPanel.SetActive(false);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
