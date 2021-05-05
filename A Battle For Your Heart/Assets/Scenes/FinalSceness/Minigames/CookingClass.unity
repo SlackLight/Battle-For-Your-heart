@@ -595,6 +595,7 @@ MonoBehaviour:
   defenseText: {fileID: 1015047661}
   reportCardUIParent: {fileID: 1015047660}
   reportCardTimer: 5
+  countUpSpeed: 2.5
 --- !u!114 &1015047666 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8114150766291375596, guid: 0eebb8dc1dc837b409141bcf3ed82679,

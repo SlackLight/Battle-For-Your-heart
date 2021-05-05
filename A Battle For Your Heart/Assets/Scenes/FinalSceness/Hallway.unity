@@ -3561,7 +3561,7 @@ MonoBehaviour:
   player: {fileID: 0}
   beginningOfDay: 1
   endingScene: 0
-  weekLength: 5
+  weekLength: 2
   cutsceneSceneNames: []
 --- !u!4 &426778588
 Transform:

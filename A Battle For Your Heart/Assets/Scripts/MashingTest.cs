@@ -19,6 +19,11 @@ public class MashingTest : Minigame
     public override void Start()
     {
         base.Start();
+
+        for (int i = 0; i < anim.Count; i++)
+        {
+           anim[i].speed = 0;
+        }
     }
 
     public override void Update()

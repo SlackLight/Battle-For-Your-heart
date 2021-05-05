@@ -2924,7 +2924,8 @@ MonoBehaviour:
   healthText: {fileID: 45658067}
   defenseText: {fileID: 1979311802}
   reportCardUIParent: {fileID: 446768730}
-  reportCardTimer: 5
+  reportCardTimer: 2
+  countUpSpeed: 2.5
 --- !u!4 &652049176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6278723375591356265, guid: 0eebb8dc1dc837b409141bcf3ed82679,
