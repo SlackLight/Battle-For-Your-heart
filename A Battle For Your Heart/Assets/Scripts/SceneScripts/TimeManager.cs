@@ -81,16 +81,8 @@ public class TimeManager : MonoBehaviour
 
         beginningOfDay = true;
   
-        //If the final boss fight is done load the final scene
-        //if(weekCounter == 1 && dayCounter == 1)
-        //{
-        //    //Loads tutorial
-        //    //SceneManager.LoadScene(cutsceneSceneNames[0]);
-        //}
-        //Checks if it should be loading a bossfight
-         if (dayCounter == (weekCounter) * weekLength && weekCounter < 4)
+        if (dayCounter == (weekCounter) * weekLength && weekCounter < 4)
         {
-            NPCManager.instance.DespawnTheNPCs();
             if(weekCounter == 1)
             {
                 SceneManager.LoadScene("ShouCutscenes");

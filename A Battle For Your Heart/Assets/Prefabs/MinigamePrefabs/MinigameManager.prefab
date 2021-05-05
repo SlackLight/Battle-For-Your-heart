@@ -550,7 +550,8 @@ MonoBehaviour:
   healthText: {fileID: 6278723375010737497}
   defenseText: {fileID: 6278723375580774458}
   reportCardUIParent: {fileID: 6278723375956717024}
-  reportCardTimer: 4
+  reportCardTimer: 2
+  countUpSpeed: 4
 --- !u!1 &6278723375820875796
 GameObject:
   m_ObjectHideFlags: 0
