@@ -587,11 +587,51 @@ MonoBehaviour:
   strengthIncrease: 0
   healthIncrease: 3
   defenseIncrease: 0
+  originalStrength: {fileID: 1015047668}
+  originalHealth: {fileID: 1015047667}
+  originalDefense: {fileID: 1015047666}
   strengthText: {fileID: 1015047663}
   healthText: {fileID: 1015047662}
   defenseText: {fileID: 1015047661}
   reportCardUIParent: {fileID: 1015047660}
   reportCardTimer: 5
+  countUpSpeed: 2.5
+--- !u!114 &1015047666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8114150766291375596, guid: 0eebb8dc1dc837b409141bcf3ed82679,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015047658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1015047667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1803429719934578564, guid: 0eebb8dc1dc837b409141bcf3ed82679,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015047658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1015047668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7983869785743136986, guid: 0eebb8dc1dc837b409141bcf3ed82679,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015047658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040340541
 GameObject:
   m_ObjectHideFlags: 0

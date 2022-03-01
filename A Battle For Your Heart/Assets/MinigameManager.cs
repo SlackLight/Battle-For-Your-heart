@@ -31,6 +31,8 @@ public class MinigameManager : MonoBehaviour
 
     public float reportCardTimer;
 
+    public float countUpSpeed = 0.1f;
+
     private void Start()
     {
         if (MinigameManager.instance)
@@ -71,7 +73,7 @@ public class MinigameManager : MonoBehaviour
             //If strength needs to keep increasing
             if(currentStrength < strengthIncrease)
             {
-                currentStrength += Time.deltaTime;
+                currentStrength += Time.deltaTime * countUpSpeed;
                 strengthText.text = ((int)currentStrength).ToString();
                 strengthText.color = Color.green;
             }
@@ -87,7 +89,7 @@ public class MinigameManager : MonoBehaviour
             //If defense needs to keep increasing
             if (currentDefense < defenseIncrease)
             {
-                currentDefense += Time.deltaTime;
+                currentDefense += Time.deltaTime * countUpSpeed;
                 defenseText.text = ((int)currentDefense).ToString();
                 defenseText.color = Color.green;
             }
@@ -103,7 +105,7 @@ public class MinigameManager : MonoBehaviour
             //If health needs to keep increasing
             if (currentHealth < healthIncrease)
             {
-                currentHealth += Time.deltaTime;
+                currentHealth += Time.deltaTime * countUpSpeed;
                 healthText.text = ((int)currentHealth).ToString();
                 healthText.color = Color.green;
             }

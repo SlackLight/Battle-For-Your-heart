@@ -10,6 +10,8 @@ public class MenuScene : MonoBehaviour
     void Start()
     {
         controlsPanel.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void PlayGame()

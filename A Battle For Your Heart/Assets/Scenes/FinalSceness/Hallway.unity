@@ -338,6 +338,7 @@ MonoBehaviour:
   convoIDs: 010000000f000000120000001f00000021000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &14153282
 BoxCollider:
@@ -1743,6 +1744,7 @@ MonoBehaviour:
   convoIDs: 11000000200000003e000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &230623553
 BoxCollider:
@@ -1795,7 +1797,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 64128b63b2347c7488496e3345f34fdc, type: 3}
+    m_Font: {fileID: 12800000, guid: 80a0137e3d8f78f41bfdb2aca0cfac44, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -2219,6 +2221,7 @@ MonoBehaviour:
   convoIDs: 1c000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &274183047
 BoxCollider:
@@ -2387,6 +2390,7 @@ MonoBehaviour:
   convoIDs: 14000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &296098293
 BoxCollider:
@@ -2562,6 +2566,7 @@ MonoBehaviour:
   convoIDs: 3c000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &314398202
 BoxCollider:
@@ -3311,6 +3316,7 @@ MonoBehaviour:
   convoIDs: 3a000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &397738153
 BoxCollider:
@@ -3555,7 +3561,7 @@ MonoBehaviour:
   player: {fileID: 0}
   beginningOfDay: 1
   endingScene: 0
-  weekLength: 5
+  weekLength: 2
   cutsceneSceneNames: []
 --- !u!4 &426778588
 Transform:
@@ -4150,6 +4156,7 @@ MonoBehaviour:
   convoIDs: 08000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &439956820
 BoxCollider:
@@ -5990,6 +5997,7 @@ MonoBehaviour:
   convoIDs: 3d000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &630665959
 BoxCollider:
@@ -6870,6 +6878,7 @@ MonoBehaviour:
   convoIDs: 34000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &710736440
 BoxCollider:
@@ -7823,6 +7832,7 @@ MonoBehaviour:
   convoIDs: 06000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &857436167
 BoxCollider:
@@ -8850,6 +8860,7 @@ MonoBehaviour:
   convoIDs: 0a0000001900000036000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &943144726
 BoxCollider:
@@ -9241,6 +9252,7 @@ MonoBehaviour:
   convoIDs: 1a000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &997148080
 BoxCollider:
@@ -9439,6 +9451,7 @@ MonoBehaviour:
   convoIDs: 35000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1022471336
 BoxCollider:
@@ -12067,6 +12080,7 @@ MonoBehaviour:
   convoIDs: 1500000037000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1268930487
 BoxCollider:
@@ -12999,6 +13013,7 @@ MonoBehaviour:
   convoIDs: 090000001800000023000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1353892784
 BoxCollider:
@@ -14109,6 +14124,7 @@ MonoBehaviour:
   convoIDs: 10000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1382079061
 BoxCollider:
@@ -14686,6 +14702,7 @@ MonoBehaviour:
   convoIDs: 22000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1461778632
 BoxCollider:
@@ -17513,6 +17530,7 @@ MonoBehaviour:
   convoIDs: 0e000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1811444282
 BoxCollider:
@@ -17961,6 +17979,7 @@ MonoBehaviour:
   convoIDs: 0c000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1834180734
 BoxCollider:
@@ -18248,6 +18267,7 @@ MonoBehaviour:
   convoIDs: 17000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1906977479
 BoxCollider:
@@ -18350,7 +18370,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0a180643185619b438addde776ef199a, type: 3}
+    m_Font: {fileID: 12800000, guid: 64128b63b2347c7488496e3345f34fdc, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -18468,6 +18488,7 @@ MonoBehaviour:
   convoIDs: 02000000070000000d00000013000000160000001b0000001e00000033000000380000003b000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1922843293
 BoxCollider:
@@ -18803,6 +18824,7 @@ MonoBehaviour:
   convoIDs: 0b00000039000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1969345621
 BoxCollider:
@@ -19323,6 +19345,7 @@ MonoBehaviour:
   convoIDs: 04000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &1999183241
 BoxCollider:
@@ -19606,6 +19629,7 @@ MonoBehaviour:
   convoIDs: 1d000000
   convoCounter: 0
   linear: 0
+  inTrigger: 0
   cooldownTimerStart: 1.5
 --- !u!65 &2018456034
 BoxCollider:

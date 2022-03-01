@@ -26,11 +26,15 @@ public class MatchingTest : Minigame
         placedList = new GameObject[3];
         base.Start();
         SpawnItems();
+        Cursor.visible = true;
     }
 
     public override void Update()
     {
         base.Update();
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         if (gameStillGoing)
         {

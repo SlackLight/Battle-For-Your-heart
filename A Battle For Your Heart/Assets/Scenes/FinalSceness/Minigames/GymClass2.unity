@@ -3503,8 +3503,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278723375591356266, guid: 0eebb8dc1dc837b409141bcf3ed82679,
         type: 3}
-      propertyPath: minigames.Array.size
+      propertyPath: defenseIncrease
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278723375591356266, guid: 0eebb8dc1dc837b409141bcf3ed82679,
+        type: 3}
+      propertyPath: strengthIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278723375591356266, guid: 0eebb8dc1dc837b409141bcf3ed82679,
+        type: 3}
+      propertyPath: minigames.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6278723375591356266, guid: 0eebb8dc1dc837b409141bcf3ed82679,
         type: 3}
@@ -3515,7 +3525,7 @@ PrefabInstance:
         type: 3}
       propertyPath: minigames.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1404005839}
     - target: {fileID: 6278723375591356267, guid: 0eebb8dc1dc837b409141bcf3ed82679,
         type: 3}
       propertyPath: m_Name

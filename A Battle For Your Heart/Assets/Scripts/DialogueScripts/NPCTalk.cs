@@ -16,7 +16,7 @@ public class NPCTalk : MonoBehaviour
 
     bool convoInProgess;
 
-    bool inTrigger;
+    public bool inTrigger;
 
     BoxCollider bc;
 
@@ -36,6 +36,7 @@ public class NPCTalk : MonoBehaviour
         {
             cooldownTimer = cooldownTimerStart;
             bc.enabled = false;
+            inTrigger = false;
         }
         else if(cooldownTimer < 0)
         {

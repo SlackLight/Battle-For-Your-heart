@@ -34,7 +34,7 @@ public class StairsScript : MonoBehaviour
            otherDoor.GetComponent<StairsScript>().cooldownTimer = timerStartValue;
            player.transform.position = otherDoorSpawnPosition.transform.position;
            cooldownTimer = timerStartValue;
-            DialogueManager.StopConversation();
+           //DialogueManager.StopConversation();
         }
         
     }
